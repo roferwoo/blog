@@ -1,2 +1,2 @@
 # Blog
-╕Ў╚╦▓й┐═гиhttp://blog.wuzhiwei.cnгй
+ф╕кф║║хНЪховя╝Иhttp://blog.wuzhiwei.cnя╝Й
