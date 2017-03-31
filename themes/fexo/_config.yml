@@ -14,6 +14,9 @@ keywords: PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,
 
 # 设置首页导航
 home_nav:
+  - name: 主页
+    url: http://wuzhiwei.cn
+    target_blank: true #不在新页面打开
   - name: Blog
     url: /archives/
     target_blank: false #不在新页面打开
@@ -65,7 +68,7 @@ search_slogan:
 # 友链页面
 link_slogan:
   isShow: true # true|fase
-  text: 友链交换可邮件 roferwoo[at]gmail[dot]com
+  text: 友链交换可邮件至：roferwoo[at]gmail[dot]com
 
 
 # set backtop show or hide
@@ -78,17 +81,17 @@ backtop:
   link: false
   about: false
 
-#donation:
-#  show: true
-#  btn_text: 支持一下
-#  tip: 扫一扫，支持杂记
-#  items:
-#    - type: 微信
-#      text: 微信扫一扫
-#      imgUrl: /images/qr-wechat.png
-#    - type: 支付宝
-#      text: 支付宝扫一扫
-#      imgUrl: /images/qr-alipay.png
+donation:
+  show: true
+  btn_text: 打赏一下
+  tip: 扫一扫，支持“杂记”
+  items:
+    - type: 微信
+      text: 微信扫一扫
+      imgUrl: /images/qr-wx-258.png
+    - type: 支付宝
+      text: 支付宝扫一扫
+      imgUrl: /images/qr-zfb.png
 
 # 设置文章标题对齐方式
 post:
@@ -161,14 +164,6 @@ about:
 
 # 友链
 link:
-  - name: 织网
-    info: 身体和灵魂，总有一个在路上
-    url: http://zheng-ji.info/
-    avatar: https://avatars3.githubusercontent.com/u/1414745?v=3&s=100
-  - name: Forsigner
-    info: Find the bug of the world
-    url: http://forsigner.com/
-    avatar: http://forsigner.com/images/avatar.jpg
   - name: Enjoy JavaScript
     info: 为者常成，行者常至
     url: http://nanchao.win/
