@@ -88,7 +88,7 @@ donation:
   items:
     - type: 微信
       text: 微信扫一扫
-      imgUrl: /images/qr-wx-258.png
+      imgUrl: /images/qr-wx.png
     - type: 支付宝
       text: 支付宝扫一扫
       imgUrl: /images/qr-zfb.png
