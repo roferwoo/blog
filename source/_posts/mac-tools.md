@@ -1,8 +1,7 @@
 ---
 title: Mac开发常用工具汇总
 date: 2017-04-01 11:49:14
-tags: [Mac]
-categories: [工具]
+categories: [Mac]
 description: iHosts,MacBook Pro,Mac,Tools,Mac开发常用工具
 ---
 汇总记录一些自己平常在Mac下开发时经常使用到的工具软件。

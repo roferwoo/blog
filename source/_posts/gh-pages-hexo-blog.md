@@ -1,8 +1,7 @@
 ---
 title: 诞生记——GitHub Pages+Hexo
 date: 2017-04-01 11:20:22
-tags: [Hexo]
-categories: [前端]
+categories: [Hexo,GitHub]
 description: GitHub Pages,Hexo,Git,静态博客
 ---
 ## 为什么要使用静态博客？

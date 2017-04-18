@@ -32,12 +32,12 @@ page_nav:
   - name: 分类
     url: /category/
     target_blank: false
-  - name: 标签
-    url: /tag/
-    target_blank: false
-  - name: 友链
-    url: /link/
-    target_blank: false
+#  - name: 标签
+#    url: /tag/
+#    target_blank: false
+#  - name: 友链
+#    url: /link/
+#    target_blank: false
   - name: 关于
     url: /about/
     target_blank: false
@@ -45,7 +45,7 @@ page_nav:
     url: /atom.xml
     target_blank: true # 在新页面打开
   - name: 搜索
-    url: /search/
+    url: /search/duoshuo_shortname
     target_blank: false # 在新页面打开
 
 # 设置页面导航样式
@@ -163,11 +163,11 @@ about:
     text_value: 上海
 
 # 友链
-link:
-  - name: Enjoy JavaScript
-    info: 为者常成，行者常至
-    url: http://nanchao.win/
-    avatar: http://i4.buimg.com/4851/1bc9a495d3eaad8a.jpg
+#link:
+#  - name: Enjoy JavaScript
+#    info: 为者常成，行者常至
+#    url: http://nanchao.win/
+#    avatar: http://i4.buimg.com/4851/1bc9a495d3eaad8a.jpg
 
 #project:
   #- type: personal

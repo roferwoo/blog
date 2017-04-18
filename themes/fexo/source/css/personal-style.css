@@ -34,3 +34,11 @@ html.page-home {
 /*html.page-home body {
   background: transparent;
 }*/
+
+.article-content p {
+    color: #555;
+    font-size: 15px;
+    line-height: 2em;
+    margin-bottom: 20px;
+    text-indent: 2em;
+}
