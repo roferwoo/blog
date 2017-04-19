@@ -61,7 +61,7 @@ hexo init #或 hexo init </path/to/hexo>
 ``` bash
 hexo generate # 生成静态文件，会在当前目录下生成一个pulic文件夹，可简写为：hexo g
 hexo server # 启动本地WEB服务，用于博客的预览，可简写为：hexo s
-hexo deploy # 部署到远端（如GitHub等），可简写为：hexo n
+hexo deploy # 部署到远端（如GitHub等），可简写为：hexo d
 
 hexo new "postName" # 新建文章
 hexo new page "pageName" # 新建页面
