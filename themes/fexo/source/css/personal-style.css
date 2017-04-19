@@ -35,10 +35,6 @@ html.page-home {
   background: transparent;
 }*/
 
-.article-content p {
-    color: #555;
-    font-size: 15px;
-    line-height: 2em;
-    margin-bottom: 20px;
+.article-content > p {
     text-indent: 2em;
 }
