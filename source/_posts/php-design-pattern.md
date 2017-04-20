@@ -16,29 +16,40 @@ categories: [PHP]
 
 ## 创建型模式
 
-**创建型模式**对类的实例化过程进行了抽象，将软件模块中对象的创建和对象的使用分离。为了使软件的结构更加清晰，外界对于这些对象只需要知道它们共同的接口，而不需要清楚其具体的实现细节，使整个系统的设计更加符合单一职责原则。
+**创建型模式(Creational Pattern)**对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离。为了使软件的结构更加清晰，外界对于这些对象只需要知道它们共同的接口，而不清楚其具体的实现细节，使整个系统的设计更加符合单一职责原则。
 
-创建型模式在*创建什么(What)，由谁创建(Who)，何时创建(When)*等方面都为软件设计者提供了尽可能大的灵活性。创建型模式隐藏了类的实例的创建细节，通过隐藏对象如何被创建，和组合在一起达到使整个系统独立的目的。
+创建型模式*在创建什么(What)*，*由谁创建(Who)*，*何时创建(When)*等方面都为软件设计者提供了尽可能大的灵活性。创建型模式隐藏了类的实例的创建细节，通过隐藏对象如何被创建和组合在一起达到使整个系统独立的目的。
 
-  1. [简单工厂模式（Simple Factory Pattern）](php-design-pattern-simple-factory.html)
-  2. [工厂方法模式（Factory Method Pattern）](php-design-pattern-factory-method.html)
-  3. [抽象工厂模式（Abstract Factory Pattern）](php-design-pattern-abstract-factory.html)
-  4. [建造者模式（Builder Pattern）](php-design-pattern-builder.html)
-  5. [单例模式（Singleton Pattern）](php-design-pattern-singleton.html)
+1. [简单工厂模式（Simple Factory Pattern）](php-design-pattern-simple-factory.html)
+2. [工厂方法模式（Factory Method Pattern）](php-design-pattern-factory-method.html)
+3. [抽象工厂模式（Abstract Factory Pattern）](php-design-pattern-abstract-factory.html)
+4. [建造者模式（Builder Pattern）](php-design-pattern-builder.html)
+5. [单例模式（Singleton Pattern）](php-design-pattern-singleton.html)
 
 ## 结构型模式
 
-  1. 适配器模式
-  2. 组合模式
-  3. 外观模式
-  4. 代理模式
+**结构型模式(Structural Pattern)**描述如何将类或者对 象结合在一起形成更大的结构，就像搭积木，可以通过 简单积木的组合形成复杂的、功能更为强大的结构。
+
+结构型模式可以分为*类结构型模式*和*对象结构型模式*：
+
+- 类结构型模式关心类的组合，由多个类可以组合成一个更大的系统，在类结构型模式中一般只存在继承关系和实现关系。
+- 对象结构型模式关心类与对象的组合，通过关联关系使得在一 个类中定义另一个类的实例对象，然后通过该对象调用其方法。根据“合成复用原则”，在系统中尽量使用关联关系来替代继 承关系，因此大部分结构型模式都是对象结构型模式。
+
+1. [适配器模式（Adapter Pattern）](php-design-pattern-adapter.html)
+2. [桥接模式（Bridge Pattern）](php-design-pattern-bridge.html)
+3. [组合模式（Composite Pattern）](php-design-pattern-composite.html)
+4. [装饰模式（Decorator Pattern）](php-design-pattern-decorator.html)
+5. [外观模式（Facade Pattern）](php-design-pattern-facade.html)
+6. [享元模式（Flyweight Pattern）](php-design-pattern-flyweight.html)
+7. [代理模式（Proxy Pattern）](php-design-pattern-proxy.html)
 
 ## 行为型模式
 
-  1. 命令模式
-  2. 迭代器模式
-  3. 策略模式
-  4. 观察者模式
+  1. [命令模式（Command Pattern）](php-design-pattern-command.html)
+  2. [中介者模式（Mediator Pattern）](php-design-pattern-mediator.html)
+  3. [观察者模式（Observer Pattern）](php-design-pattern-observer.html)
+  4. [状态模式（State Pattern）](php-design-pattern-state.html)
+  5. [策略模式（Strategy Pattern）](php-design-pattern-strategy.html)
 
 设计模式的**宗旨就是：重用**；在面向对象中，*类是用于生成对象的代码模版*，而*设计模式是用于解决共性问题的代码模版*。遵循这样的模板，我们可以设快速地设计出优秀的代码。
 
