@@ -45,11 +45,22 @@ categories: [PHP]
 
 ## 行为型模式
 
-  1. [命令模式（Command Pattern）](php-design-pattern-command.html)
-  2. [中介者模式（Mediator Pattern）](php-design-pattern-mediator.html)
-  3. [观察者模式（Observer Pattern）](php-design-pattern-observer.html)
-  4. [状态模式（State Pattern）](php-design-pattern-state.html)
-  5. [策略模式（Strategy Pattern）](php-design-pattern-strategy.html)
+**行为型模式(Behavioral Pattern)**是对在不同的对象之间划分责任和算法的抽象化。
+
+行为型模式不仅仅关注类和对象的结构，而且重点关注它们之间的相互作用。
+
+通过行为型模式，可以更加清晰地划分类与对象的职责，并研究系统在运行时实例对象之间的交互。在系统运行时，对象并不是孤立的，它们可以通过相互通信与协作完成某些复杂功能，一个对象在运行时也将影响到其他对象的运行。
+
+行为型模式分为*类行为型模式*和*对象行为型模式*两种：
+
+- 类行为型模式：类的行为型模式使用继承关系在几个类之间分配行为，类行为型模式主要通过多态等方式来分配父类与子类的职责。
+- 对象行为型模式：对象的行为型模式则使用对象的聚合关联关系来分配行为，对象行为型模式主要是通过对象关联等方式来分配两个或多个类的职责。根据“合成复用原则”，系统中要尽量使用关联关系来取代继承关系，因此大部分行为型设计模式都属于对象行为型设计模式。
+
+1. [命令模式（Command Pattern）](php-design-pattern-command.html)
+2. [中介者模式（Mediator Pattern）](php-design-pattern-mediator.html)
+3. [观察者模式（Observer Pattern）](php-design-pattern-observer.html)
+4. [状态模式（State Pattern）](php-design-pattern-state.html)
+5. [策略模式（Strategy Pattern）](php-design-pattern-strategy.html)
 
 设计模式的**宗旨就是：重用**；在面向对象中，*类是用于生成对象的代码模版*，而*设计模式是用于解决共性问题的代码模版*。遵循这样的模板，我们可以设快速地设计出优秀的代码。
 
