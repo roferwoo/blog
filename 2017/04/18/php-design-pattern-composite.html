@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>组合模式（Composite Pattern） | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,随笔,博客,好文,摄影,旅行,网球,blog.wuzhiwei.cn,wuzhiwei.cn" />
+  
+
+  <meta name="description" content="模式定义组合模式（Composite）：将对象组合成树形结构以表示“部分-整体”的层次结构。组合模式使用户对单个对象和组合对象的使用具有一致性。 代码实例安全式的组合模式// 抽象组件角色interface Component&amp;#123;    // 返回自己的实例    public function getComposite();    // 示例方法    public function o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="组合模式（Composite Pattern）">
+<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-composite.html">
+<meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
+<meta property="og:description" content="模式定义组合模式（Composite）：将对象组合成树形结构以表示“部分-整体”的层次结构。组合模式使用户对单个对象和组合对象的使用具有一致性。 代码实例安全式的组合模式// 抽象组件角色interface Component&amp;#123;    // 返回自己的实例    public function getComposite();    // 示例方法    public function o">
+<meta property="og:updated_time" content="2017-06-06T01:40:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="组合模式（Composite Pattern）">
+<meta name="twitter:description" content="模式定义组合模式（Composite）：将对象组合成树形结构以表示“部分-整体”的层次结构。组合模式使用户对单个对象和组合对象的使用具有一致性。 代码实例安全式的组合模式// 抽象组件角色interface Component&amp;#123;    // 返回自己的实例    public function getComposite();    // 示例方法    public function o">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0553623a66dcdf3168de8ecb48919f53";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">首页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">首页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#模式定义"><span class="toc-text">模式定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码实例"><span class="toc-text">代码实例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安全式的组合模式"><span class="toc-text">安全式的组合模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#透明式的组合模式"><span class="toc-text">透明式的组合模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#模式分析"><span class="toc-text">模式分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#优点"><span class="toc-text">优点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#缺点"><span class="toc-text">缺点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#适用环境"><span class="toc-text">适用环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-php-design-pattern-composite" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">组合模式（Composite Pattern）</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.04.18</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wzw</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>组合模式（Composite）：</strong>将对象组合成树形结构以表示“部分-整体”的层次结构。组合模式使用户对单个对象和组合对象的使用具有一致性。</p>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><h2 id="安全式的组合模式"><a href="#安全式的组合模式" class="headerlink" title="安全式的组合模式"></a>安全式的组合模式</h2><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象组件角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 返回自己的实例</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getComposite</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">// 示例方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 树枝组件角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Composite</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_composites;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_composites = <span class="keyword">array</span>();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getComposite</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 示例方法，调用各个子对象的operation方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Composite operation begin:&lt;br /&gt;'</span>;</div><div class="line">        <span class="keyword">foreach</span> (<span class="keyword">$this</span>-&gt;_composites <span class="keyword">as</span> $composite) &#123;</div><div class="line">            $composite-&gt;operation();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Composite operation end:&lt;br /&gt;&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 添加一个子对象</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_composites[] = $component;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 删除一个子对象</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     * <span class="doctag">@return</span> boolean  删除是否成功</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">remove</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">foreach</span> (<span class="keyword">$this</span>-&gt;_composites <span class="keyword">as</span> $key =&gt; $row) &#123;</div><div class="line">            <span class="keyword">if</span> ($component == $row) &#123;</div><div class="line">                <span class="keyword">unset</span>(<span class="keyword">$this</span>-&gt;_composites[$key]);</div><div class="line">                <span class="keyword">return</span> <span class="keyword">TRUE</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">        <span class="keyword">return</span> <span class="keyword">FALSE</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 聚集管理方法 返回所有的子对象</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getChild</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">       <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;_composites;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_name;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($name)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_name = $name;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Leaf operation '</span>, <span class="keyword">$this</span>-&gt;_name, <span class="string">'&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getComposite</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $leaf1 = <span class="keyword">new</span> Leaf(<span class="string">'first'</span>);</div><div class="line">        $leaf2 = <span class="keyword">new</span> Leaf(<span class="string">'second'</span>);</div><div class="line"> </div><div class="line">        $composite = <span class="keyword">new</span> Composite();</div><div class="line">        $composite-&gt;add($leaf1);</div><div class="line">        $composite-&gt;add($leaf2);</div><div class="line">        $composite-&gt;operation();</div><div class="line"> </div><div class="line">        $composite-&gt;remove($leaf2);</div><div class="line">        $composite-&gt;operation();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h2 id="透明式的组合模式"><a href="#透明式的组合模式" class="headerlink" title="透明式的组合模式"></a>透明式的组合模式</h2><p>在<em>Composite</em>类里面声明所有的用来管理子类对象的方法。这样做的是好处是所有的组件类都有相同的接口。在客户端看来，树叶类和合成类对象的区别起码在接口层次上消失了，客户端可以同等的对待所有的对象。这就是<strong>透明式的组合模式</strong>。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象组件角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 返回自己的实例</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getComposite</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">// 示例方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 添加一个子对象</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(Component $component)</span></span>;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 删除一个子对象</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     * <span class="doctag">@return</span> boolean  删除是否成功</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">remove</span><span class="params">(Component $component)</span></span>;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 返回所有的子对象</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getChild</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 树枝组件角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Composite</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_composites;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_composites = <span class="keyword">array</span>();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getComposite</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 示例方法，调用各个子对象的operation方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Composite operation begin:&lt;br /&gt;'</span>;</div><div class="line">        <span class="keyword">foreach</span> (<span class="keyword">$this</span>-&gt;_composites <span class="keyword">as</span> $composite) &#123;</div><div class="line">            $composite-&gt;operation();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Composite operation end:&lt;br /&gt;&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 添加一个子对象</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_composites[] = $component;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 删除一个子对象</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     * <span class="doctag">@return</span> boolean  删除是否成功</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">remove</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">foreach</span> (<span class="keyword">$this</span>-&gt;_composites <span class="keyword">as</span> $key =&gt; $row) &#123;</div><div class="line">            <span class="keyword">if</span> ($component == $row) &#123;</div><div class="line">                <span class="keyword">unset</span>(<span class="keyword">$this</span>-&gt;_composites[$key]);</div><div class="line">                <span class="keyword">return</span> <span class="keyword">TRUE</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">FALSE</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 聚集管理方法 返回所有的子对象</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getChild</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">       <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;_composites;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_name;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($name)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_name = $name;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Leaf operation '</span>, <span class="keyword">$this</span>-&gt;_name, <span class="string">'&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getComposite</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 添加一个子对象,此处没有具体实现，仅返回一个FALSE</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">FALSE</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 删除一个子对象</div><div class="line">     * <span class="doctag">@param</span> Component $component  子对象</div><div class="line">     * <span class="doctag">@return</span> boolean  此处没有具体实现，仅返回一个FALSE</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">remove</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">FALSE</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 聚集管理方法 返回所有的子对象 此处没有具体实现，返回null</div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getChild</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">       <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $leaf1 = <span class="keyword">new</span> Leaf(<span class="string">'first'</span>);</div><div class="line">        $leaf2 = <span class="keyword">new</span> Leaf(<span class="string">'second'</span>);</div><div class="line"></div><div class="line">        $composite = <span class="keyword">new</span> Composite();</div><div class="line">        $composite-&gt;add($leaf1);</div><div class="line">        $composite-&gt;add($leaf2);</div><div class="line">        $composite-&gt;operation();</div><div class="line"></div><div class="line">        $composite-&gt;remove($leaf2);</div><div class="line">        $composite-&gt;operation();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><ol>
+<li>简化客户代码；</li>
+<li>使得更容易增加新类型的组件。</li>
+</ol>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>使你的设计变得更加一般化，容易增加组件也会产生一些问题，那就是很难限制组合中的组件。</p>
+<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><ol>
+<li>你想表示对象的部分-整体层次结构；</li>
+<li>你希望用户忽略组合对象和单个对象的不同，用户将统一地使用组合结构中的所有对象。</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持“杂记”</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wx.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-zfb.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/04/18/php-design-pattern-proxy.html">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/04/18/php-design-pattern-mediator.html">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

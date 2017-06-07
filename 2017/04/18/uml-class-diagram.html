@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>UML类图介绍 | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,随笔,博客,好文,摄影,旅行,网球,blog.wuzhiwei.cn,wuzhiwei.cn" />
+  
+
+  <meta name="description" content="UML类图是一种结构图，用于描述一个系统的静态结构。类图以反映类结构和类之间关系为目的，用以描述软件系统的结构，是一种静态建模方法。类图中的类，与面向对象语言中的类的概念是对应的。 类结构在类的UML图中，使用长方形描述一个类的主要结构，长方形垂直地分为三层，分别放置类的名称、属性和方法。  其中，一般类的类名用正常字体粗体表示（如上图）；抽象类名用斜体字粗体，如User；接口则需在上方加上&amp;lt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UML类图介绍">
+<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/18/uml-class-diagram.html">
+<meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
+<meta property="og:description" content="UML类图是一种结构图，用于描述一个系统的静态结构。类图以反映类结构和类之间关系为目的，用以描述软件系统的结构，是一种静态建模方法。类图中的类，与面向对象语言中的类的概念是对应的。 类结构在类的UML图中，使用长方形描述一个类的主要结构，长方形垂直地分为三层，分别放置类的名称、属性和方法。  其中，一般类的类名用正常字体粗体表示（如上图）；抽象类名用斜体字粗体，如User；接口则需在上方加上&amp;lt">
+<meta property="og:image" content="http://blog.wuzhiwei.cn/pic/structure.png">
+<meta property="og:image" content="http://blog.wuzhiwei.cn/pic/arrow.png">
+<meta property="og:image" content="http://blog.wuzhiwei.cn/pic/whole.png">
+<meta property="og:updated_time" content="2017-06-06T01:40:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UML类图介绍">
+<meta name="twitter:description" content="UML类图是一种结构图，用于描述一个系统的静态结构。类图以反映类结构和类之间关系为目的，用以描述软件系统的结构，是一种静态建模方法。类图中的类，与面向对象语言中的类的概念是对应的。 类结构在类的UML图中，使用长方形描述一个类的主要结构，长方形垂直地分为三层，分别放置类的名称、属性和方法。  其中，一般类的类名用正常字体粗体表示（如上图）；抽象类名用斜体字粗体，如User；接口则需在上方加上&amp;lt">
+<meta name="twitter:image" content="http://blog.wuzhiwei.cn/pic/structure.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0553623a66dcdf3168de8ecb48919f53";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">首页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">首页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#类结构"><span class="toc-text">类结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#类关系"><span class="toc-text">类关系</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#继承"><span class="toc-text">继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组合"><span class="toc-text">组合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#聚合"><span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关联"><span class="toc-text">关联</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖"><span class="toc-text">依赖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-uml-class-diagram" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">UML类图介绍</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.04.18</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wzw</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/UML/">UML</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p><strong>UML类图</strong>是一种结构图，用于描述一个系统的静态结构。类图以反映类结构和类之间关系为目的，用以描述软件系统的结构，是一种静态建模方法。<em>类图中的类，与面向对象语言中的类的概念是对应的</em>。</p>
+<h1 id="类结构"><a href="#类结构" class="headerlink" title="类结构"></a>类结构</h1><p>在类的UML图中，使用长方形描述一个类的主要结构，长方形垂直地分为三层，分别放置类的<em>名称</em>、<em>属性</em>和<em>方法</em>。</p>
+<p><img src="/pic/structure.png" alt="类结构图"></p>
+<p>其中，一般类的类名用正常<strong>字体粗体</strong>表示（如上图）；抽象类名用<strong><em>斜体字粗体</em></strong>，如<strong><em>User</em></strong>；接口则需在上方加上<code>&lt;&lt;interface&gt;&gt;</code>。</p>
+<p>属性和方法都需要标注可见性符号，<code>+</code>代表<code>public</code>，<code>#</code>代表<code>protected</code>，<code>-</code>代表<code>private</code>。</p>
+<p>另外，还可以用冒号<code>:</code>表明属性的类型和方法的返回类型，如<code>+$name:string</code>、<code>+getName():string</code>。<em>当然，类型说明并非必须</em>。</p>
+<h1 id="类关系"><a href="#类关系" class="headerlink" title="类关系"></a>类关系</h1><p>类与类之间的关系主要有六种：<em>继承</em>、<em>实现</em>、<em>组合</em>、<em>聚合</em>、<em>关联</em>和<em>依赖</em>，这六种关系的箭头表示如：</p>
+<p><img src="/pic/arrow.png" alt="类关系"></p>
+<p>六种类关系中，<em>组合</em>、<em>聚合</em>、<em>关联</em>这三种类关系的代码结构一样，都是<strong>用属性来保存另一个类的引用</strong>，所以要通过内容间的关系来区别。</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p><strong>继承关系</strong>也称<em>泛化关系（Generalization）</em>，用于描述父类与子类之间的关系。父类又称作基类，子类又称作派生类。</p>
+<p>继承关系中，子类继承父类的所有功能，父类所具有的属性、方法，子类应该都有。子类中除了与父类一致的信息以外，还包括额外的信息。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><strong>实现关系（Implementation）</strong>，主要<em>用来规定接口和实现类的关系</em>。</p>
+<p>接口（包括抽象类）是方法的集合，在实现关系中，类实现了接口，类中的方法实现了接口声明的所有方法。</p>
+<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p><strong>组合关系（Composition）</strong>是整体与部分的关系，但是<em>整体与部分不可以分开</em>。</p>
+<p>组合关系表示类之间整体与部分的关系，整体和部分有一致的生存期。一旦整体对象不存在，部分对象也将不存在，是<em>同生共死</em>的关系。</p>
+<h2 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h2><p><strong>聚合关系（Aggregation）</strong>也是整体和部分的关系，<em>整体与部分可以分开</em>。</p>
+<p>聚合关系也表示类之间整体与部分的关系，成员对象是整体对象的一部分，但是成员对象可以脱离整体对象独立存在。</p>
+<h2 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h2><p><strong>关联关系（Association）</strong>，表示一个类的<em>属性保存了对另一个类的一个实例（或多个实例）的引用</em>。</p>
+<p>关联关系是类与类之间最常用的一种关系，表示一类对象与另一类对象之间有联系。<em>组合、聚合也属于关联关系</em>，只是关联关系的类间关系比其他两种要弱。</p>
+<p>关联关系有四种：双向关联、单向关联、自关联、多重数关联。在UML图中，双向的关联可以有两个箭头或者没有箭头，单向的关联或自关联有一个箭头。</p>
+<p>在多重性关系中，可以直接在关联直线上增加一个数字，表示与之对应的另一个类的对象的个数。</p>
+<ul>
+<li>1..1：仅一个</li>
+<li>0..*：零个或多个</li>
+<li>1..*：一个或多个</li>
+<li>0..1：零个或一个</li>
+<li>m..n：最少m、最多n个（m&lt;=n）</li>
+</ul>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p><strong>依赖关系（Dependence）：</strong>假设A类的变化引起了B类的变化，则说名B类<em>依赖于</em>A类。</p>
+<p>大多数情况下，<em>依赖关系体现在某个类的方法使用另一个类的对象作为参数</em>。</p>
+<p>依赖关系是一种“使用”关系，特定事物的改变有可能会影响到使用该事物的其他事物，在需要表示一个事物使用另一个事物时使用依赖关系。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这六种类关系中，组合、聚合和关联的代码结构一样，可以从关系的强弱来理解，各类关系从强到弱依次是：继承→实现→组合→聚合→关联→依赖。如下是完整的一张UML关系图：</p>
+<p><img src="/pic/whole.png" alt="UML关系图"></p>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持“杂记”</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wx.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-zfb.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/04/18/php-design-pattern.html">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/04/18/php-design-pattern-simple-factory.html">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

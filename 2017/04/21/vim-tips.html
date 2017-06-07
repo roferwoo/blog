@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>VIM操作技巧总结 | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,随笔,博客,好文,摄影,旅行,网球,blog.wuzhiwei.cn,wuzhiwei.cn" />
+  
+
+  <meta name="description" content="Vi最初是由Bill Joy于1976年编码实现的，而Vim(Vi IMproved)则是改进的Vi，由Bram Moolenaar在1991年开发并发布。Vi/Vim是所有Unix/Linux操作系统默认配备的编辑器。功能强大、操作高效，命令非常多、用法极为灵活。 “工欲善其事，必先利其器”。在Vi/Vim版本的选择上，原则是“能用Vim就不要使用Vi；能用最新版就不要守着旧版本”。Vim提供的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VIM操作技巧总结">
+<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/21/vim-tips.html">
+<meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
+<meta property="og:description" content="Vi最初是由Bill Joy于1976年编码实现的，而Vim(Vi IMproved)则是改进的Vi，由Bram Moolenaar在1991年开发并发布。Vi/Vim是所有Unix/Linux操作系统默认配备的编辑器。功能强大、操作高效，命令非常多、用法极为灵活。 “工欲善其事，必先利其器”。在Vi/Vim版本的选择上，原则是“能用Vim就不要使用Vi；能用最新版就不要守着旧版本”。Vim提供的">
+<meta property="og:updated_time" content="2017-06-06T01:40:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VIM操作技巧总结">
+<meta name="twitter:description" content="Vi最初是由Bill Joy于1976年编码实现的，而Vim(Vi IMproved)则是改进的Vi，由Bram Moolenaar在1991年开发并发布。Vi/Vim是所有Unix/Linux操作系统默认配备的编辑器。功能强大、操作高效，命令非常多、用法极为灵活。 “工欲善其事，必先利其器”。在Vi/Vim版本的选择上，原则是“能用Vim就不要使用Vi；能用最新版就不要守着旧版本”。Vim提供的">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0553623a66dcdf3168de8ecb48919f53";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">首页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">首页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#启动关闭命令"><span class="toc-text">启动关闭命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#移动光标命令"><span class="toc-text">移动光标命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本编辑命令"><span class="toc-text">文本编辑命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本命令"><span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高效命令"><span class="toc-text">高效命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搜索与替换命令"><span class="toc-text">搜索与替换命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文本搜索的基本命令"><span class="toc-text">文本搜索的基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本搜索的高效命令"><span class="toc-text">文本搜索的高效命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#替换命令"><span class="toc-text">替换命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#执行外部命令"><span class="toc-text">执行外部命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vi-Vim设置命令"><span class="toc-text">Vi/Vim设置命令</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-vim-tips" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">VIM操作技巧总结</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.04.21</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wzw</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a> / <a class="article-category-link" href="/categories/Linux/vim/">vim</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>Vi最初是由Bill Joy于1976年编码实现的，而Vim(Vi IMproved)则是改进的Vi，由Bram Moolenaar在1991年开发并发布。Vi/Vim是所有Unix/Linux操作系统默认配备的编辑器。功能强大、操作高效，命令非常多、用法极为灵活。</p>
+<p>“工欲善其事，必先利其器”。在Vi/Vim版本的选择上，原则是<strong>“能用Vim就不要使用Vi；能用最新版就不要守着旧版本”</strong>。Vim提供的功能和特性要比Vi多得多，如语法加亮着色功能等。</p>
+<h1 id="启动关闭命令"><a href="#启动关闭命令" class="headerlink" title="启动关闭命令"></a>启动关闭命令</h1><p>启动及关闭Vi/Vim的基本命令，见下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">启动</td>
+<td style="text-align:left"><code>vi</code>打开Vi/Vim<br><code>vi &lt;file&gt;</code>打开Vi/Vim，并加载文件<file></file></td>
+</tr>
+<tr>
+<td style="text-align:left">退出</td>
+<td style="text-align:left"><code>ZQ</code>/<code>:q!</code>无条件退出<br><code>ZZ</code>/<code>:wq</code>保存退出</td>
+</tr>
+<tr>
+<td style="text-align:left">保存部分文件</td>
+<td style="text-align:left"><code>:m,nw &lt;file&gt;</code>将m行到n行部分的内容保存到文件<file>中<br><code>:m,n &gt;&gt; &lt;file&gt;</code>将m行到n行的内容添加到文件<file>的末尾</file></file></td>
+</tr>
+</tbody>
+</table>
+<p>临时退出Vi/Vim、进入shell环境后再回来的方法：</p>
+<ul>
+<li><strong>方法一、使用<code>Ctrl+z</code>和<code>fg</code>这两个命令组合。</strong></li>
+</ul>
+<p>这一解决方法主要利用了Linux/Unix的作业机制。具体原理是：<code>Ctrl+z</code>命令将当前的Vi/Vim进程<em>放到后台执行</em>，之后shell环境即可为你所用；<code>fg</code>命令则将位于后台的Vi/Vim进程放到前台执行，这样我们就再次进入Vi/Vim操作界面并恢复到原先的编辑状态。</p>
+<ul>
+<li><strong>方法二、使用行命令<code>:sh</code>。</strong></li>
+</ul>
+<p>在Vi/Vim的命令模式下输入<code>:sh</code>即可进入Linux/Unix shell环境。在要返回到Vi/Vim编辑环境时，输入<code>exit</code>命令即可。</p>
+<h1 id="移动光标命令"><a href="#移动光标命令" class="headerlink" title="移动光标命令"></a>移动光标命令</h1><p>Vi/Vim中关于光标移动的命令非常多，这也是很多人经常困惑并且命令用不好的地方之一。其实Vi/Vim中很多命令是<em>针对不同的操作单位</em>而设的，<strong>不同的命令对应不同的操作单位</strong>。因而，在使用命令进行操作的时候，首先要搞清楚的就是要采用哪种<em>操作单位</em>，也就是说，是要操作<em>一个字符</em>，<em>一个句子</em>，<em>一个段落</em>，还是要操作<em>一行</em>，<em>一屏</em>、<em>一页</em>。单位不同，命令也就不同。只要单位选用得当，命令自然就恰当，操作也自然迅速高效；否则，只能是费时费力。这也可以说是最能体现Vi/Vim优越于其它编辑器的地方之一，也是Vi/Vim有人爱有人恨的地方之一。在操作单位确定之后，才是操作次数，即确定命令重复执行的次数。要正确高效的运用Vi/Vim的各种操作，一定要把握这一原则：<strong>先定单位再定量</strong>。操作对象的范围计算公式为：操作范围 = 操作次数 * 操作单位。比如：<code>5h</code>命令左移5个字符，<code>8w</code>命令右移8个单词。</p>
+<p>Vi/Vim中操作单位有很多，按从小到大的顺序为（括号内为相应的操作命令）：<em>字符（h、l）→ 单词 (w、W、b、B、e、E) → 行 (j、k、0、^、$、:n) → 句子（(、)）→ 段落（{、}）→ 屏 (H、M、L) → 页（Ctrl-f、Ctrl-b、Ctrl-u、Ctrl-d) → 文件（G、gg、:0、:$）</em>。</p>
+<p>具体命令解释如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作单位</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单词</td>
+<td style="text-align:left"><code>w</code>/<code>W</code>移动到下一单词的开头<br><code>b</code>/<code>B</code>移动到上一单词的开头<br><code>e</code>/<code>E</code>移动到光标所在单词的末尾</td>
+<td style="text-align:left"><code>W</code>、<code>B</code>、<code>E</code>命令操作的单词是以空白字符（空格、Tab）<br>分隔的字串，比如字符串“str1-str2 str3-str4”，<br>对<code>W</code>、<code>B</code>、<code>E</code>命令来说是两个单词，<br>而对<code>w</code>、<code>b</code>、<code>e</code>命令来说则是四个单词</td>
+</tr>
+<tr>
+<td style="text-align:left">行</td>
+<td style="text-align:left"><code>j</code>下移一行<br><code>k</code>上移一行<br><code>0</code>移到当前行形头<br><code>^</code>移到当前行的第一个非空字符<br><code>$</code>移到当前行末尾<br><code>:n</code>移动到第n行</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">句子</td>
+<td style="text-align:left"><code>)</code>移到当前句子的末尾<br><code>(</code>移到当前句子的开头</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">段落</td>
+<td style="text-align:left"><code>}</code>移到当前段落的末尾<br><code>{</code>移到当前段落的开头</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">屏</td>
+<td style="text-align:left"><code>H</code>移到屏幕的第一行<br><code>M</code>移到屏幕的中间一行<br><code>L</code>移到屏幕的最后一行</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">页</td>
+<td style="text-align:left"><code>Ctrl+f</code>向前滚动一页<br><code>Ctrl+b</code>向后滚动一页<br><code>Ctrl+u</code>向前滚动半页<br><code>Ctrl+d</code>向后滚动半页</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">文件</td>
+<td style="text-align:left"><code>G</code>移动到文件末尾<br><code>gg</code>移动到文件开头<br><code>:0</code>移动到文件第一行<br><code>:$</code>移动到文件最后一行</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="文本编辑命令"><a href="#文本编辑命令" class="headerlink" title="文本编辑命令"></a>文本编辑命令</h1><p>与光标移动一样，Vi/Vim中关于编辑操作的命令也比较多，但操作单位要比移动光标少得多。按从小到大的顺序为（括号内为相应的操作命令）：<em>字符 （x、c、s、r、i、a）→ 单词 (cw、cW、cb、cB、dw、dW、db、dB) → 行 (dd、d0、d$、I、A、o、O) → 句子（(、)）→ 段落（{、}）</em>。这些操作单位有些可以加操作次数。操作对象的范围计算公式为：操作范围 = 操作次数 * 操作单位。比如：<code>d3w</code>命令删除三个单词，<code>10dd</code>命令删除十行。</p>
+<p>具体命令解释如下：</p>
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">操作单位</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">字符</td>
+<td style="text-align:left"><code>x</code>删除光标位置的字符<br><code>c</code>更改当前字符并进入插入模式<br><code>s</code>替换光标位置的字符并进入插入模式<br><code>r</code>替换光标位置的字符但不进入插入模式<br><code>i</code>在当前位置的字符之前进入插入模式<br><code>a</code>在当前位置的字符之后进入插入模式</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">单词</td>
+<td style="text-align:left"><code>cw</code>/<code>cW</code>删除当前单词从光标开始的部分并进入插入模式<br><code>cb</code>/<code>cB</code>删除当前单词从光标所在位置至单词开始的部分并进入插入模式<br><code>dw</code>/<code>dW</code>删除当前单词从光标开始的部分但不进入插入模式<br><code>db</code>/<code>dB</code>删除当前单词从光标所在位置至单词开始的部分但不进入插入模式</td>
+<td style="text-align:left"><code>cW</code>、<code>cB</code>、<code>dW</code>、<code>dB</code>命令操作的单词是以空白字符（空格、Tab）<br>分隔的字串，比如字符串“str1-str2 str3-str4”，<br>对<code>cW</code>、<code>cB</code>、<code>dW</code>、<code>dB</code>命令来说是两个单词，<br>而对<code>cw</code>、<code>cb</code>、<code>dw</code>、<code>db</code>命令来说则是四个单词</td>
+</tr>
+<tr>
+<td style="text-align:left">行</td>
+<td style="text-align:left"><code>dd</code>删除当前行<br><code>d0</code>删除从当前光标开始到行首的内容<br><code>d$</code>删除从当前光标开始到行末的内容<br><code>I</code>在当前行的行首进入插入模式<br><code>A</code>在当前行的行尾进入插入模式<br><code>o</code>在当前行下方另起一行进入插入模式<br><code>O</code>在当前行上方另起一行进入插入模式</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">句子</td>
+<td style="text-align:left"><code>d)</code>删除当前句子从光标位置开始到句末的内容<br><code>d(</code>删除当前句子从光标位置开始到句首的内容</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">段落</td>
+<td style="text-align:left"><code>d}</code>删除当前段落从光标位置开始到段末的内容<br><code>d{</code>删除当前段落从光标位置开始到段首的内容</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="高效命令"><a href="#高效命令" class="headerlink" title="高效命令"></a>高效命令</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">复制与粘贴</td>
+<td style="text-align:left"><code>yw</code>复制当前单词从光标开始的部分<br><code>yy</code>复制光标所在行的所有字符<br><code>p</code>将最后一个删除或复制文本放在当前字符之后<br><code>P</code>将最后一个删除或复制文本放在当前字符之前</td>
+<td style="text-align:left">配合操作数使用可快速拷贝编辑文本</td>
+</tr>
+<tr>
+<td style="text-align:left">撤消与重做</td>
+<td style="text-align:left"><code>u</code>撤消更改<br><code>Ctrl+R</code>重做更改</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">重复操作</td>
+<td style="text-align:left"><code>.</code>重复上次操作</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">交换相邻<br>字符或行</td>
+<td style="text-align:left"><code>xp</code>交换光标位置的字符和它右边的字符<br><code>ddp</code>交换光标位置的行和它的下一行</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">大小写转换</td>
+<td style="text-align:left"><code>~</code>将光标下的字母大小写反向转换<br><code>guw</code>将光标所在的单词变为小写<br><code>gUw</code>将光标所在的单词变为大写<br><code>guu</code>光标所在的行所有字符变为小写<br><code>gUU</code>光标所在的行所有字符变为大写<br><code>g~~</code>光标所在的行所有字符大小写反向转换</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">取得外部输入</td>
+<td style="text-align:left"><code>:r!&lt;cmd&gt;</code>将命令<cmd>的输出结果插入到当前光标所在位置<br><code>:r &lt;file&gt;</code>将文件<file>读入到当前光标所在位置</file></cmd></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">排序</td>
+<td style="text-align:left"><code>:1,$!sort</code>将文件内的所有内容排序</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">加入行号</td>
+<td style="text-align:left"><code>:%!nl</code>在所有非空行前加入行号<br><code>:%!nl -ba</code>在所有行前加入行号</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">缩进</td>
+<td style="text-align:left"><code>&gt;&gt;</code>右缩进，可配合操作数使用<br><code>&lt;&lt;</code>左缩进，可配合操作数使用</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">自动补全</td>
+<td style="text-align:left"><code>Ctrl+p</code>自动补全</td>
+</tr>
+<tr>
+<td style="text-align:left">显示当前编辑文件名</td>
+<td style="text-align:left"><code>Ctrl+g</code>显示当前编辑文件名及行数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">显示字符内码</td>
+<td style="text-align:left"><code>ga</code>显示光标所在字符的内码（包括十进制码，十六进制码以及八进制码）</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="搜索与替换命令"><a href="#搜索与替换命令" class="headerlink" title="搜索与替换命令"></a>搜索与替换命令</h1><h2 id="文本搜索的基本命令"><a href="#文本搜索的基本命令" class="headerlink" title="文本搜索的基本命令"></a>文本搜索的基本命令</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">搜索</td>
+<td style="text-align:left"><code>/</code>在文件中向前搜索<br><code>?</code>在文件中向后搜索</td>
+<td style="text-align:left">可使用正则表达式<br>可配合操作数使用，比如<code>3/str</code>向前搜索字串str并将光标移到第三个找到的串</td>
+</tr>
+<tr>
+<td style="text-align:left">搜索下一个</td>
+<td style="text-align:left"><code>n</code>搜索下一个<br><code>N</code>反向搜索下一个</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="文本搜索的高效命令"><a href="#文本搜索的高效命令" class="headerlink" title="文本搜索的高效命令"></a>文本搜索的高效命令</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">快速搜索</td>
+<td style="text-align:left"><code>*</code>在文件中向前搜索当前光标所在的单词<br><code>#</code>在文件中向后搜索当前光标所在的单词</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">显示搜索命令历史</td>
+<td style="text-align:left"><code>q/</code>/<code>q?</code>显示搜索命令历史的窗口</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">查找帮助</td>
+<td style="text-align:left"><code>Shift+k</code>查找光标所在命令或函数的man帮助</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="替换命令"><a href="#替换命令" class="headerlink" title="替换命令"></a>替换命令</h2><p>关于替换主是要结合搜索使用行命令来实现，命令格式为：</p>
+<p><code>:m,ns/str1/str2/g</code>将m行到n行中的字串str1全部替换为字串str2。</p>
+<p>在众多使用正则表达式进行替换的命令中，平时需要掌握的一个命令是如何快速去除<em>^M</em>字符。在Linux/Unix系统中编辑Windows操作系统中生成的文件时，如果上传时回车换行符处理不正确的话，用Vi/Vim打开经常会出现<em>^M</em>字符。如果上传的文件是shell脚本的话，即使赋予了正确的执行权限该脚本还是无法运行。这也是各种文件在Linux/Unix和Windows中传输经常会出现问题的地方之一。其实，在Vi/Vim中使用替换命令<code>:1,$s/^M//g</code>即可以很容易地快速去掉<em>^M</em>字符。这里需要注意的是<em>^M</em>是使用<code>Ctrl+v</code>、<code>Ctrl+m</code>输入的。</p>
+<h1 id="执行外部命令"><a href="#执行外部命令" class="headerlink" title="执行外部命令"></a>执行外部命令</h1><p>在Vi/Vim中还可以在命令模式下执行各种外部命令，命令格式如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">执行外部命令</td>
+<td style="text-align:left"><code>:!&lt;cmd&gt;</code>执行外部命令<cmd></cmd></td>
+<td style="text-align:left">在命令模式下输入该命令</td>
+</tr>
+<tr>
+<td style="text-align:left">显示命令行命令历史</td>
+<td style="text-align:left"><code>q:</code>显示命令行命令历史的窗口</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="Vi-Vim设置命令"><a href="#Vi-Vim设置命令" class="headerlink" title="Vi/Vim设置命令"></a>Vi/Vim设置命令</h1><p>Vi/Vim有很多内部变量，可以根据需要进行相应的设置。变量类型不同往往设置方式也不一样，简单的只要设置特定的变量名即可，复杂的则需要指定和分配一个显式值来设置变量。在实际应用中，如果有需要，请参考Vi/Vim的使用手册。这里主要列出大家经常使用并能提高编辑效率的一些设置命令：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">查看设置的当前值</td>
+<td style="text-align:left"><code>:set all</code>查看Vi/Vim中设置的所有选项的当前值<br><code>:set &lt;option&gt;?</code>查看特定选项<option>的当前值</option></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">设置行号显示与否</td>
+<td style="text-align:left"><code>:set number</code>显示行号<br><code>:set no number</code>取消行号显示</td>
+<td style="text-align:left">命令的简写形式：<code>:set nu</code>、<code>:set no nu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">设置自动缩进</td>
+<td style="text-align:left"><code>:set autoindent</code>设置自动缩进<br><code>:set no autoindent</code>取消自动缩进设置</td>
+<td style="text-align:left">命令的简写形式：<code>:set ai</code>、<code>:set no ai</code></td>
+</tr>
+<tr>
+<td style="text-align:left">设置缩进宽度</td>
+<td style="text-align:left"><code>:set shiftwidth=4</code>设置缩进宽度为4</td>
+<td style="text-align:left">命令的简写形式：<code>:set sw=4</code></td>
+</tr>
+<tr>
+<td style="text-align:left">设置大小写忽略与否</td>
+<td style="text-align:left"><code>:set ignorecase</code>设置忽略大小<br><code>:set no ignorecase</code>取消忽略大小设置</td>
+<td style="text-align:left">命令的简写形式：<code>:set ic</code>、<code>:set no ic</code></td>
+</tr>
+<tr>
+<td style="text-align:left">设置不可见字符显示与否</td>
+<td style="text-align:left"><code>:set list</code>显示不可见字符<br><code>:set nolist</code>取消显示不可见字符设置</td>
+<td style="text-align:left">在显示不可见字符的情况下，TAB键显示为<code>^I</code>，而$显示在每行的结尾</td>
+</tr>
+</tbody>
+</table>
+<p>执行这些设置命令只修改当前会话的设置，退出或重启Vi/Vim这些设置就丢失了。要想保持住这些设置，就必须将这些设置写入Vi/Vim的<em>vimrc</em>文件。对Linux/Unix操作系统来说，每个用户的<em>vimrc</em>文件位于该用户的主目录下，文件名为<em>.vimrc</em>。Vi/Vim在每次启动的时候都会读取用户主目录下的<em>vimrc</em>文件并据此设置Vi/Vim的使用环境。</p>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持“杂记”</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wx.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-zfb.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/04/18/php-design-pattern-flyweight.html">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

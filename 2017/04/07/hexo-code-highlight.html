@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo代码高亮 | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,随笔,博客,好文,摄影,旅行,网球,blog.wuzhiwei.cn,wuzhiwei.cn" />
+  
+
+  <meta name="description" content="程序员博客会经常贴代码，并使其高亮显示。Hexo自带代码高亮功能。 写法格式``` + 语言名（如PHP） // 代码内容 ``` 常用语言对应表   语言 对应代码     Bash bash, sh, zsh   C# cs, csharp   C++ cpp, c, cc, h, c++, h++, hpp   CSS css   DOS dos, bat, cmd   HTML, XML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo代码高亮">
+<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/07/hexo-code-highlight.html">
+<meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
+<meta property="og:description" content="程序员博客会经常贴代码，并使其高亮显示。Hexo自带代码高亮功能。 写法格式``` + 语言名（如PHP） // 代码内容 ``` 常用语言对应表   语言 对应代码     Bash bash, sh, zsh   C# cs, csharp   C++ cpp, c, cc, h, c++, h++, hpp   CSS css   DOS dos, bat, cmd   HTML, XML">
+<meta property="og:updated_time" content="2017-06-06T01:40:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo代码高亮">
+<meta name="twitter:description" content="程序员博客会经常贴代码，并使其高亮显示。Hexo自带代码高亮功能。 写法格式``` + 语言名（如PHP） // 代码内容 ``` 常用语言对应表   语言 对应代码     Bash bash, sh, zsh   C# cs, csharp   C++ cpp, c, cc, h, c++, h++, hpp   CSS css   DOS dos, bat, cmd   HTML, XML">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0553623a66dcdf3168de8ecb48919f53";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">首页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">首页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#写法格式"><span class="toc-text">写法格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用语言对应表"><span class="toc-text">常用语言对应表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#所有语言对应表"><span class="toc-text">所有语言对应表</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-hexo-code-highlight" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Hexo代码高亮</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.04.07</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wzw</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>程序员博客会经常贴代码，并使其高亮显示。<em>Hexo</em>自带代码高亮功能。</p>
+<h1 id="写法格式"><a href="#写法格式" class="headerlink" title="写法格式"></a>写法格式</h1><p>``` + 语言名（如PHP）</p>
+<p>// 代码内容</p>
+<p>```</p>
+<h1 id="常用语言对应表"><a href="#常用语言对应表" class="headerlink" title="常用语言对应表"></a>常用语言对应表</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">语言</th>
+<th style="text-align:left">对应代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Bash</td>
+<td style="text-align:left">bash, sh, zsh</td>
+</tr>
+<tr>
+<td style="text-align:left">C#</td>
+<td style="text-align:left">cs, csharp</td>
+</tr>
+<tr>
+<td style="text-align:left">C++</td>
+<td style="text-align:left">cpp, c, cc, h, c++, h++, hpp</td>
+</tr>
+<tr>
+<td style="text-align:left">CSS</td>
+<td style="text-align:left">css</td>
+</tr>
+<tr>
+<td style="text-align:left">DOS</td>
+<td style="text-align:left">dos, bat, cmd</td>
+</tr>
+<tr>
+<td style="text-align:left">HTML, XML</td>
+<td style="text-align:left">xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist</td>
+</tr>
+<tr>
+<td style="text-align:left">JSON</td>
+<td style="text-align:left">json</td>
+</tr>
+<tr>
+<td style="text-align:left">Java</td>
+<td style="text-align:left">java, jsp</td>
+</tr>
+<tr>
+<td style="text-align:left">JavaScript</td>
+<td style="text-align:left">javascript, js, jsx</td>
+</tr>
+<tr>
+<td style="text-align:left">Objective C</td>
+<td style="text-align:left">objectivec, mm, objc, obj-c</td>
+</tr>
+<tr>
+<td style="text-align:left">PHP</td>
+<td style="text-align:left">php, php3, php4, php5, php6</td>
+</tr>
+<tr>
+<td style="text-align:left">Ruby</td>
+<td style="text-align:left">ruby, rb, gemspec, podspec, thor, irb</td>
+</tr>
+<tr>
+<td style="text-align:left">SQL</td>
+<td style="text-align:left">sql</td>
+</tr>
+<tr>
+<td style="text-align:left">Swift</td>
+<td style="text-align:left">swift</td>
+</tr>
+<tr>
+<td style="text-align:left">VB.Net</td>
+<td style="text-align:left">vbnet, vb</td>
+</tr>
+</tbody>
+</table>
+<h1 id="所有语言对应表"><a href="#所有语言对应表" class="headerlink" title="所有语言对应表"></a>所有语言对应表</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">语言</th>
+<th style="text-align:left">对应代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Zephir</td>
+<td style="text-align:left">Zephir</td>
+</tr>
+<tr>
+<td style="text-align:left">XQuery</td>
+<td style="text-align:left">xpath, xq</td>
+</tr>
+<tr>
+<td style="text-align:left">1C</td>
+<td style="text-align:left">1c</td>
+</tr>
+<tr>
+<td style="text-align:left">Access logs</td>
+<td style="text-align:left">accesslog</td>
+</tr>
+<tr>
+<td style="text-align:left">ARM assembler</td>
+<td style="text-align:left">armasm, arm</td>
+</tr>
+<tr>
+<td style="text-align:left">AVR assembler</td>
+<td style="text-align:left">avrasm</td>
+</tr>
+<tr>
+<td style="text-align:left">ActionScript</td>
+<td style="text-align:left">actionscript, as</td>
+</tr>
+<tr>
+<td style="text-align:left">Apache</td>
+<td style="text-align:left">apache, apacheconf</td>
+</tr>
+<tr>
+<td style="text-align:left">AppleScript</td>
+<td style="text-align:left">applescript, osascript</td>
+</tr>
+<tr>
+<td style="text-align:left">AsciiDoc</td>
+<td style="text-align:left">asciidoc, adoc</td>
+</tr>
+<tr>
+<td style="text-align:left">AspectJ</td>
+<td style="text-align:left">aspectj</td>
+</tr>
+<tr>
+<td style="text-align:left">AutoHotkey</td>
+<td style="text-align:left">autohotkey</td>
+</tr>
+<tr>
+<td style="text-align:left">AutoIt</td>
+<td style="text-align:left">autoit</td>
+</tr>
+<tr>
+<td style="text-align:left">Axapta</td>
+<td style="text-align:left">axapta</td>
+</tr>
+<tr>
+<td style="text-align:left">Bash</td>
+<td style="text-align:left">bash, sh, zsh</td>
+</tr>
+<tr>
+<td style="text-align:left">Basic</td>
+<td style="text-align:left">basic</td>
+</tr>
+<tr>
+<td style="text-align:left">Brainfuck</td>
+<td style="text-align:left">brainfuck, bf</td>
+</tr>
+<tr>
+<td style="text-align:left">C#</td>
+<td style="text-align:left">cs, csharp</td>
+</tr>
+<tr>
+<td style="text-align:left">C++</td>
+<td style="text-align:left">cpp, c, cc, h, c++, h++, hpp</td>
+</tr>
+<tr>
+<td style="text-align:left">C/AL</td>
+<td style="text-align:left">cal</td>
+</tr>
+<tr>
+<td style="text-align:left">Cache Object Script</td>
+<td style="text-align:left">cos, cls</td>
+</tr>
+<tr>
+<td style="text-align:left">CMake</td>
+<td style="text-align:left">cmake, cmake.in</td>
+</tr>
+<tr>
+<td style="text-align:left">CSP</td>
+<td style="text-align:left">csp</td>
+</tr>
+<tr>
+<td style="text-align:left">CSS</td>
+<td style="text-align:left">css</td>
+</tr>
+<tr>
+<td style="text-align:left">Cap’n Proto</td>
+<td style="text-align:left">capnproto, capnp</td>
+</tr>
+<tr>
+<td style="text-align:left">Clojure</td>
+<td style="text-align:left">clojure, clj</td>
+</tr>
+<tr>
+<td style="text-align:left">CoffeeScript</td>
+<td style="text-align:left">coffeescript, coffee, cson, iced</td>
+</tr>
+<tr>
+<td style="text-align:left">Crmsh</td>
+<td style="text-align:left">crmsh, crm, pcmk</td>
+</tr>
+<tr>
+<td style="text-align:left">Crystal</td>
+<td style="text-align:left">crystal, cr</td>
+</tr>
+<tr>
+<td style="text-align:left">D</td>
+<td style="text-align:left">d</td>
+</tr>
+<tr>
+<td style="text-align:left">DNS Zone file</td>
+<td style="text-align:left">dns, zone, bind</td>
+</tr>
+<tr>
+<td style="text-align:left">DOS</td>
+<td style="text-align:left">dos, bat, cmd</td>
+</tr>
+<tr>
+<td style="text-align:left">Dart</td>
+<td style="text-align:left">dart</td>
+</tr>
+<tr>
+<td style="text-align:left">Delphi</td>
+<td style="text-align:left">delphi, dpr, dfm, pas, pascal, freepascal, lazarus, lpr, lfm</td>
+</tr>
+<tr>
+<td style="text-align:left">Diff</td>
+<td style="text-align:left">diff, patch</td>
+</tr>
+<tr>
+<td style="text-align:left">Django</td>
+<td style="text-align:left">django, jinja</td>
+</tr>
+<tr>
+<td style="text-align:left">Dockerfile</td>
+<td style="text-align:left">dockerfile, docker</td>
+</tr>
+<tr>
+<td style="text-align:left">DTS (Device Tree)</td>
+<td style="text-align:left">dts</td>
+</tr>
+<tr>
+<td style="text-align:left">Dust</td>
+<td style="text-align:left">dust, dst</td>
+</tr>
+<tr>
+<td style="text-align:left">Elixir</td>
+<td style="text-align:left">elixir</td>
+</tr>
+<tr>
+<td style="text-align:left">Elm</td>
+<td style="text-align:left">elm</td>
+</tr>
+<tr>
+<td style="text-align:left">Erlang</td>
+<td style="text-align:left">erlang, erl</td>
+</tr>
+<tr>
+<td style="text-align:left">F#</td>
+<td style="text-align:left">fsharp, fs</td>
+</tr>
+<tr>
+<td style="text-align:left">FIX</td>
+<td style="text-align:left">fix</td>
+</tr>
+<tr>
+<td style="text-align:left">Fortran</td>
+<td style="text-align:left">fortran, f90, f95</td>
+</tr>
+<tr>
+<td style="text-align:left">G-Code</td>
+<td style="text-align:left">gcode, nc</td>
+</tr>
+<tr>
+<td style="text-align:left">Gams</td>
+<td style="text-align:left">gams, gms</td>
+</tr>
+<tr>
+<td style="text-align:left">GAUSS</td>
+<td style="text-align:left">gauss, gss</td>
+</tr>
+<tr>
+<td style="text-align:left">Gherkin</td>
+<td style="text-align:left">gherkin</td>
+</tr>
+<tr>
+<td style="text-align:left">Go</td>
+<td style="text-align:left">go, golang</td>
+</tr>
+<tr>
+<td style="text-align:left">Golo</td>
+<td style="text-align:left">golo, gololang</td>
+</tr>
+<tr>
+<td style="text-align:left">Gradle</td>
+<td style="text-align:left">gradle</td>
+</tr>
+<tr>
+<td style="text-align:left">Groovy</td>
+<td style="text-align:left">groovy</td>
+</tr>
+<tr>
+<td style="text-align:left">HTML, XML</td>
+<td style="text-align:left">xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist</td>
+</tr>
+<tr>
+<td style="text-align:left">HTTP</td>
+<td style="text-align:left">http, https</td>
+</tr>
+<tr>
+<td style="text-align:left">Haml</td>
+<td style="text-align:left">haml</td>
+</tr>
+<tr>
+<td style="text-align:left">Handlebars</td>
+<td style="text-align:left">handlebars, hbs, html.hbs, html.handlebars</td>
+</tr>
+<tr>
+<td style="text-align:left">Haskell</td>
+<td style="text-align:left">haskell, hs</td>
+</tr>
+<tr>
+<td style="text-align:left">Haxe</td>
+<td style="text-align:left">haxe, hx</td>
+</tr>
+<tr>
+<td style="text-align:left">Ini</td>
+<td style="text-align:left">ini</td>
+</tr>
+<tr>
+<td style="text-align:left">Inform7</td>
+<td style="text-align:left">inform7, i7</td>
+</tr>
+<tr>
+<td style="text-align:left">IRPF90</td>
+<td style="text-align:left">irpf90</td>
+</tr>
+<tr>
+<td style="text-align:left">JSON</td>
+<td style="text-align:left">json</td>
+</tr>
+<tr>
+<td style="text-align:left">Java</td>
+<td style="text-align:left">java, jsp</td>
+</tr>
+<tr>
+<td style="text-align:left">JavaScript</td>
+<td style="text-align:left">javascript, js, jsx</td>
+</tr>
+<tr>
+<td style="text-align:left">Lasso</td>
+<td style="text-align:left">lasso, ls, lassoscript</td>
+</tr>
+<tr>
+<td style="text-align:left">Less</td>
+<td style="text-align:left">less</td>
+</tr>
+<tr>
+<td style="text-align:left">Lisp</td>
+<td style="text-align:left">lisp</td>
+</tr>
+<tr>
+<td style="text-align:left">LiveCode Server</td>
+<td style="text-align:left">livecodeserver</td>
+</tr>
+<tr>
+<td style="text-align:left">LiveScript</td>
+<td style="text-align:left">livescript, ls</td>
+</tr>
+<tr>
+<td style="text-align:left">Lua</td>
+<td style="text-align:left">lua</td>
+</tr>
+<tr>
+<td style="text-align:left">Makefile</td>
+<td style="text-align:left">makefile, mk, mak</td>
+</tr>
+<tr>
+<td style="text-align:left">Markdown</td>
+<td style="text-align:left">markdown, md, mkdown, mkd</td>
+</tr>
+<tr>
+<td style="text-align:left">Mathematica</td>
+<td style="text-align:left">mathematica, mma</td>
+</tr>
+<tr>
+<td style="text-align:left">Matlab</td>
+<td style="text-align:left">matlab</td>
+</tr>
+<tr>
+<td style="text-align:left">Maxima</td>
+<td style="text-align:left">maxima</td>
+</tr>
+<tr>
+<td style="text-align:left">Maya Embedded Language</td>
+<td style="text-align:left">mel</td>
+</tr>
+<tr>
+<td style="text-align:left">Mercury</td>
+<td style="text-align:left">mercury</td>
+</tr>
+<tr>
+<td style="text-align:left">Mizar</td>
+<td style="text-align:left">mizar</td>
+</tr>
+<tr>
+<td style="text-align:left">Mojolicious</td>
+<td style="text-align:left">mojolicious</td>
+</tr>
+<tr>
+<td style="text-align:left">Monkey</td>
+<td style="text-align:left">monkey</td>
+</tr>
+<tr>
+<td style="text-align:left">Moonscript</td>
+<td style="text-align:left">moonscript, moon</td>
+</tr>
+<tr>
+<td style="text-align:left">NSIS</td>
+<td style="text-align:left">nsis</td>
+</tr>
+<tr>
+<td style="text-align:left">Nginx</td>
+<td style="text-align:left">nginx, nginxconf</td>
+</tr>
+<tr>
+<td style="text-align:left">Nimrod</td>
+<td style="text-align:left">nimrod, nim</td>
+</tr>
+<tr>
+<td style="text-align:left">Nix</td>
+<td style="text-align:left">nix</td>
+</tr>
+<tr>
+<td style="text-align:left">OCaml</td>
+<td style="text-align:left">ocaml, ml</td>
+</tr>
+<tr>
+<td style="text-align:left">Objective C</td>
+<td style="text-align:left">objectivec, mm, objc, obj-c</td>
+</tr>
+<tr>
+<td style="text-align:left">OpenGL Shading Language</td>
+<td style="text-align:left">glsl</td>
+</tr>
+<tr>
+<td style="text-align:left">OpenSCAD</td>
+<td style="text-align:left">openscad, scad</td>
+</tr>
+<tr>
+<td style="text-align:left">Oracle Rules Language</td>
+<td style="text-align:left">ruleslanguage</td>
+</tr>
+<tr>
+<td style="text-align:left">Oxygene</td>
+<td style="text-align:left">oxygene</td>
+</tr>
+<tr>
+<td style="text-align:left">PF</td>
+<td style="text-align:left">pf, pf.conf</td>
+</tr>
+<tr>
+<td style="text-align:left">PHP</td>
+<td style="text-align:left">php, php3, php4, php5, php6</td>
+</tr>
+<tr>
+<td style="text-align:left">Parser3</td>
+<td style="text-align:left">parser3</td>
+</tr>
+<tr>
+<td style="text-align:left">Perl</td>
+<td style="text-align:left">perl, pl, pm</td>
+</tr>
+<tr>
+<td style="text-align:left">PowerShell</td>
+<td style="text-align:left">powershell, ps</td>
+</tr>
+<tr>
+<td style="text-align:left">Processing</td>
+<td style="text-align:left">processing</td>
+</tr>
+<tr>
+<td style="text-align:left">Prolog</td>
+<td style="text-align:left">prolog</td>
+</tr>
+<tr>
+<td style="text-align:left">Protocol Buffers</td>
+<td style="text-align:left">protobuf</td>
+</tr>
+<tr>
+<td style="text-align:left">Puppet</td>
+<td style="text-align:left">puppet, pp</td>
+</tr>
+<tr>
+<td style="text-align:left">Python</td>
+<td style="text-align:left">python, py, gyp</td>
+</tr>
+<tr>
+<td style="text-align:left">Q</td>
+<td style="text-align:left">k, kdb</td>
+</tr>
+<tr>
+<td style="text-align:left">QML</td>
+<td style="text-align:left">qml</td>
+</tr>
+<tr>
+<td style="text-align:left">R</td>
+<td style="text-align:left">r</td>
+</tr>
+<tr>
+<td style="text-align:left">RenderMan RIB</td>
+<td style="text-align:left">rib</td>
+</tr>
+<tr>
+<td style="text-align:left">RenderMan RSL</td>
+<td style="text-align:left">rsl</td>
+</tr>
+<tr>
+<td style="text-align:left">Roboconf</td>
+<td style="text-align:left">graph, instances</td>
+</tr>
+<tr>
+<td style="text-align:left">Ruby</td>
+<td style="text-align:left">ruby, rb, gemspec, podspec, thor, irb</td>
+</tr>
+<tr>
+<td style="text-align:left">Rust</td>
+<td style="text-align:left">rust, rs</td>
+</tr>
+<tr>
+<td style="text-align:left">SCSS</td>
+<td style="text-align:left">scss</td>
+</tr>
+<tr>
+<td style="text-align:left">SQL</td>
+<td style="text-align:left">sql</td>
+</tr>
+<tr>
+<td style="text-align:left">STEP Part 21</td>
+<td style="text-align:left">p21, step, stp</td>
+</tr>
+<tr>
+<td style="text-align:left">Scala</td>
+<td style="text-align:left">scala</td>
+</tr>
+<tr>
+<td style="text-align:left">Scheme</td>
+<td style="text-align:left">scheme</td>
+</tr>
+<tr>
+<td style="text-align:left">Scilab</td>
+<td style="text-align:left">scilab, sci</td>
+</tr>
+<tr>
+<td style="text-align:left">Smali</td>
+<td style="text-align:left">smali</td>
+</tr>
+<tr>
+<td style="text-align:left">Smalltalk</td>
+<td style="text-align:left">smalltalk, st</td>
+</tr>
+<tr>
+<td style="text-align:left">Stan</td>
+<td style="text-align:left">stan</td>
+</tr>
+<tr>
+<td style="text-align:left">Stata</td>
+<td style="text-align:left">stata</td>
+</tr>
+<tr>
+<td style="text-align:left">Stylus</td>
+<td style="text-align:left">stylus, styl</td>
+</tr>
+<tr>
+<td style="text-align:left">Swift</td>
+<td style="text-align:left">swift</td>
+</tr>
+<tr>
+<td style="text-align:left">Tcl</td>
+<td style="text-align:left">tcl, tk</td>
+</tr>
+<tr>
+<td style="text-align:left">TeX</td>
+<td style="text-align:left">tex</td>
+</tr>
+<tr>
+<td style="text-align:left">Thrift</td>
+<td style="text-align:left">thrift</td>
+</tr>
+<tr>
+<td style="text-align:left">TP</td>
+<td style="text-align:left">tp</td>
+</tr>
+<tr>
+<td style="text-align:left">Twig</td>
+<td style="text-align:left">twig, craftcms</td>
+</tr>
+<tr>
+<td style="text-align:left">TypeScript</td>
+<td style="text-align:left">typescript, ts</td>
+</tr>
+<tr>
+<td style="text-align:left">VB.Net</td>
+<td style="text-align:left">vbnet, vb</td>
+</tr>
+<tr>
+<td style="text-align:left">VBScript</td>
+<td style="text-align:left">vbscript, vbs</td>
+</tr>
+<tr>
+<td style="text-align:left">VHDL</td>
+<td style="text-align:left">vhdl</td>
+</tr>
+<tr>
+<td style="text-align:left">Vala</td>
+<td style="text-align:left">vala</td>
+</tr>
+<tr>
+<td style="text-align:left">Verilog</td>
+<td style="text-align:left">verilog, v</td>
+</tr>
+<tr>
+<td style="text-align:left">Vim Script</td>
+<td style="text-align:left">vim</td>
+</tr>
+<tr>
+<td style="text-align:left">x86 Assembly</td>
+<td style="text-align:left">x86asm</td>
+</tr>
+<tr>
+<td style="text-align:left">XL</td>
+<td style="text-align:left">xl, tao</td>
+</tr>
+<tr>
+<td style="text-align:left">XQuery</td>
+<td style="text-align:left">xpath, xq</td>
+</tr>
+<tr>
+<td style="text-align:left">Zephir</td>
+<td style="text-align:left">zephir, zep</td>
+</tr>
+</tbody>
+</table>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持“杂记”</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wx.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-zfb.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/04/06/introduction-to-http-protocol.html">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/04/12/learn-to-be-calm.html">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

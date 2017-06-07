@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>诞生记——GitHub Pages+Hexo | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,随笔,博客,好文,摄影,旅行,网球,blog.wuzhiwei.cn,wuzhiwei.cn" />
+  
+
+  <meta name="description" content="GitHub Pages,Hexo,Git,静态博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="诞生记——GitHub Pages+Hexo">
+<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/01/gh-pages-hexo-blog.html">
+<meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
+<meta property="og:description" content="GitHub Pages,Hexo,Git,静态博客">
+<meta property="og:updated_time" content="2017-06-06T01:40:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="诞生记——GitHub Pages+Hexo">
+<meta name="twitter:description" content="GitHub Pages,Hexo,Git,静态博客">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0553623a66dcdf3168de8ecb48919f53";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">首页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">首页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要使用静态博客？"><span class="toc-text">为什么要使用静态博客？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境准备"><span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo"><span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目录介绍"><span class="toc-text">目录介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题设置"><span class="toc-text">主题设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#404页面"><span class="toc-text">404页面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附A：参考"><span class="toc-text">附A：参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附B：资源地址"><span class="toc-text">附B：资源地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附C：参考主题"><span class="toc-text">附C：参考主题</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-gh-pages-hexo-blog" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">诞生记——GitHub Pages+Hexo</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.04.01</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wzw</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a> / <a class="article-category-link" href="/categories/Hexo/GitHub/">GitHub</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="为什么要使用静态博客？"><a href="#为什么要使用静态博客？" class="headerlink" title="为什么要使用静态博客？"></a>为什么要使用静态博客？</h2><ul>
+<li>轻量级的博客系统，没有麻烦的配置，跨平台同步文件；</li>
+<li>无需自己搭建服务器；</li>
+<li>使用标记语言，如<a href="http://markdown.tw/" target="_blank" rel="external">Markdown</a>；</li>
+<li>根据Github的限制，对应的每个站有300MB空间；</li>
+<li>可以绑定自己的域名。</li>
+</ul>
+<blockquote>
+<p><a href="https://staticsitegenerators.net/" target="_blank" rel="external">静态站点生成器列表</a></p>
+</blockquote>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js官网</a>下载相应平台（注：此篇为<em>Windows</em>）的<a href="https://nodejs.org/en/download/" target="_blank" rel="external">最新版本</a>安装。</li>
+<li>Git使用msysgit，<a href="https://git-scm.com/download/" target="_blank" rel="external">下载安装</a>。</li>
+<li>注册<a href="https://github.com" target="_blank" rel="external">GitHub</a>账号，创建相应仓库，添加SSH公钥。<blockquote>
+<p>注意：<a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="external">个人（组织）主页与项目主页</a>区别！<a href="http://blog.wuzhiwei.cn">本博客</a>部署在项目主页（Project Pages）的<em>gh-pages</em>分支下，并<a href="https://help.github.com/articles/setting-up-a-custom-subdomain/" target="_blank" rel="external">绑定二级子域</a><em>blog.wuzhiwei.cn</em>。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p><a href="https://hexo.io/" target="_blank" rel="external">Hexo官网</a>，<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">中文文档传送门</a>。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><em>Node.js</em>和<em>Git</em>安装好后，可执行下面命令安装<em>Hexo</em>：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><em>cd</em>到目标目录（/path/to/hexo），执行下面命令进行初始化：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo init <span class="comment">#或 hexo init &lt;/path/to/hexo&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h3><p>初始化完成后，会产生如下目录：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy_git</div><div class="line">├── public <span class="comment"># 此目录是稍后，hexo generate生成的</span></div><div class="line">├── scaffolds</div><div class="line">├── <span class="built_in">source</span></div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure></p>
+<ul>
+<li><em>.deploy_git</em>：执行<code>hexo deploy</code>命令，部署到<em>GitHub</em>上的内容目录；</li>
+<li><em>public</em>：执行<code>hexo generate</code>命令，生成的静态网页内容目录；</li>
+<li><em>scaffolds</em>：<em>layout</em>模板文件目录，其中的<em>md</em>文件可以添加编辑；</li>
+<li><em>source</em>：文章源码目录，此目录下的<em>md</em>和<em>html</em>文件都会被Hexo处理；该目录对应<em>repo</em>的根目录，404文件、favicon.ico文件、CNAME文件都应该放这里；该目录下可以新建页面目录：<ul>
+<li><em>_drafts</em>：草稿文章；</li>
+<li><em>_posts</em>：发布文章；</li>
+</ul>
+</li>
+<li><em>themes</em>：主题文件目录；</li>
+<li><em>_config.yml</em>：全局配置文件；</li>
+<li><em>package.json</em>：应用程序数据，指明Hexo的版本等信息。</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo generate <span class="comment"># 生成静态文件，会在当前目录下生成一个pulic文件夹，可简写为：hexo g</span></div><div class="line">hexo server <span class="comment"># 启动本地WEB服务，用于博客的预览，可简写为：hexo s</span></div><div class="line">hexo deploy <span class="comment"># 部署到远端（如GitHub等），可简写为：hexo d</span></div><div class="line"></div><div class="line">hexo new <span class="string">"postName"</span> <span class="comment"># 新建文章</span></div><div class="line">hexo new page <span class="string">"pageName"</span> <span class="comment"># 新建页面</span></div><div class="line"><span class="comment"># 组合使用</span></div><div class="line">hexo d -g <span class="comment"># 生成部署</span></div><div class="line">hexo s -g <span class="comment"># 生成预览</span></div></pre></td></tr></table></figure>
+<p>更多命令可参阅<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo帮助文档</a>。</p>
+<h3 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h3><p><strong>安装主题</strong><br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo clean</div><div class="line">git <span class="built_in">clone</span> https://github.com/path/to/theme.git themes/theme</div></pre></td></tr></table></figure></p>
+<p><strong>启用主题</strong><br>修改Hexo目录下的<em>_config.yml</em>配置文件中的<em>theme</em>属性，指定对应的主题名即可。</p>
+<p><strong>更新主题</strong><br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">cd</span> themes/theme</div><div class="line">git pull</div><div class="line">hexo s -g</div></pre></td></tr></table></figure></p>
+<p>主题目录示例：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">.</div><div class="line">├── languages          <span class="comment">#多语言</span></div><div class="line">|   ├── default.yml    <span class="comment">#默认语言</span></div><div class="line">|   └── zh-CN.yml      <span class="comment">#中文语言</span></div><div class="line">├── layout             <span class="comment">#布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</span></div><div class="line">|   ├── _partial       <span class="comment">#局部的布局，此目录下的*.ejs是对头尾等局部的控制</span></div><div class="line">|   └── _widget        <span class="comment">#小挂件的布局，页面下方小挂件的控制</span></div><div class="line">├── <span class="built_in">source</span>             <span class="comment">#源码</span></div><div class="line">|   ├── css            <span class="comment">#css源码 </span></div><div class="line">|   |   ├── _base      <span class="comment">#*.styl基础css</span></div><div class="line">|   |   ├── _partial   <span class="comment">#*.styl局部css</span></div><div class="line">|   |   ├── fonts      <span class="comment">#字体</span></div><div class="line">|   |   ├── images     <span class="comment">#图片</span></div><div class="line">|   |   └── style.styl <span class="comment">#*.styl引入需要的css源码</span></div><div class="line">|   ├── fancybox       <span class="comment">#fancybox效果源码</span></div><div class="line">|   └── js             <span class="comment">#javascript源代码</span></div><div class="line">├── _config.yml        <span class="comment">#主题配置文件</span></div><div class="line">└── README.md          <span class="comment">#用GitHub的都知道</span></div></pre></td></tr></table></figure></p>
+<h3 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h3><p>制作404页面，直接在<em>/source/</em>目录下创建自己的<em>404.html</em>或<em>404.md</em>文件即可。GitHub Pages有提供制作404页面的指引：<a href="https://help.github.com/articles/custom-404-pages" target="_blank" rel="external">Custom 404 Pages</a>。</p>
+<p><strong>推荐</strong>使用<a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a>。</p>
+<h2 id="附A：参考"><a href="#附A：参考" class="headerlink" title="附A：参考"></a>附A：参考</h2><ul>
+<li>[x] <a href="http://alincode.github.io/blog/2016/03/05/hexo-deploy/" target="_blank" rel="external">將Hexo部署到GitHub Page</a></li>
+<li>[x] <a href="http://wiki.jikexueyuan.com/project/github-pages-basics/" target="_blank" rel="external">GitHub Pages指南</a></li>
+<li>[x] <a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="附B：资源地址"><a href="#附B：资源地址" class="headerlink" title="附B：资源地址"></a>附B：资源地址</h2><ul>
+<li><a href="http://www.webluker.com/" target="_blank" rel="external">Webluker-CDN网站加速</a></li>
+<li><a href="http://www.jiankongbao.com/" target="_blank" rel="external">监控宝-网站监控</a></li>
+<li><a href="http://www.google.com/intl/zh-CN/webmasters" target="_blank" rel="external">谷歌站长工具</a></li>
+<li><a href="http://zhanzhang.baidu.com/" target="_blank" rel="external">百度站长工具</a></li>
+<li><a href="http://tool.chinaz.com/" target="_blank" rel="external">站长之家工具</a></li>
+<li><a href="http://zhanzhang.so.com/" target="_blank" rel="external">360搜索站长平台</a></li>
+<li><a href="http://webscan.360.cn/" target="_blank" rel="external">360网站安全检测</a></li>
+<li><a href="http://jk.cloud.360.cn/" target="_blank" rel="external">360云监控</a></li>
+<li><a href="http://busuanzi.ibruce.info/" target="_blank" rel="external">不蒜子</a></li>
+<li><a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a></li>
+<li><a href="http://www.google.com/analytics/web/?hl=zh-CN" target="_blank" rel="external">Google Analytics</a></li>
+<li><a href="http://exmail.qq.com/" target="_blank" rel="external">腾讯企业邮箱</a></li>
+<li><a href="http://pic.sdodo.com/tool/mailpic" target="_blank" rel="external">邮箱地址生成图片</a></li>
+<li><a href="http://www.makepic.com/email.php" target="_blank" rel="external">MakePic.com邮址图片生成</a></li>
+<li><a href="http://tool.lu/favicon" target="_blank" rel="external">Favicon制作</a></li>
+<li><a href="http://www.wumii.com/widget/relatedItems" target="_blank" rel="external">无觅关联推荐</a></li>
+<li><a href="http://www.ujian.cc/" target="_blank" rel="external">友荐</a></li>
+<li><a href="http://tuijian.baidu.com/" target="_blank" rel="external">百度推荐</a></li>
+<li><a href="http://union.baidu.com/" target="_blank" rel="external">百度联盟</a></li>
+<li><a href="https://stackedit.io/" target="_blank" rel="external">StackEdit</a></li>
+<li><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">HexoThemes</a></li>
+<li><a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPod</a></li>
+<li><a href="http://www.sousuoyinqingtijiao.com/" target="_blank" rel="external">搜索引擎提交入口</a></li>
+<li><a href="https://qr.alipay.com/paipai/open.htm" target="_blank" rel="external">支付宝二维码</a></li>
+</ul>
+<h2 id="附C：参考主题"><a href="#附C：参考主题" class="headerlink" title="附C：参考主题"></a>附C：参考主题</h2><ul>
+<li><a href="https://github.com/forsigner/fexo" target="_blank" rel="external">fexo</a> | <a href="http://forsigner.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank" rel="external">Vno</a> | <a href="http://mlongbo.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/ken8203/hexo-theme-alberta" target="_blank" rel="external">Alberta</a> | <a href="http://jaychung.tw/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/willerce/hexo-theme-noderce" target="_blank" rel="external">Noderce</a> | <a href="http://willerce.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/tufu9441/maupassant-hexo" target="_blank" rel="external">Maupassant</a> | <a href="https://www.haomwei.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/7ye/maupassant-hexo" target="_blank" rel="external">Maupassant</a> | <a href="http://sevennight.cc/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a> | <a href="http://heroicyang.com" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/idhyt/hexo-theme-next/tree/magiclamp" target="_blank" rel="external">Mala</a> | <a href="http://blog.idhyt.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/someus/huno" target="_blank" rel="external">Huno</a> | <a href="http://letiantian.me/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/hustcer/hexo-theme-air" target="_blank" rel="external">Air</a> | <a href="http://topdna.org/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank" rel="external">Aloha</a> | <a href="http://huangyijie.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/steven5538/hexo-theme-athena" target="_blank" rel="external">Athena</a> | <a href="http://steven5538.tw/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/someus/huno" target="_blank" rel="external">Huno</a> | <a href="http://letiantian.me/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/wizicer/iceman" target="_blank" rel="external">Iceman</a> | <a href="http://icerdesign.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a> | <a href="http://notes.iissnan.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/henryhuang/oishi" target="_blank" rel="external">Oishi</a> | <a href="http://henryhuang.github.io/oishi/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/SuperKieran/TKL" target="_blank" rel="external">TKL</a> | <a href="http://go.kieran.top/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a> | <a href="http://litten.me/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/DrakeLeung/blog" target="_blank" rel="external">DrakeLeung</a> | <a href="https://lyyourc.com" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/Ben02/hexo-theme-Anatole" target="_blank" rel="external">Anatole</a> | <a href="http://anatole.munen.cc" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" rel="external">Apollo</a> | <a href="http://pinggod.com" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/CodeDaraW/Hacker" target="_blank" rel="external">Hacker</a> | <a href="https://blog.daraw.cn/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/stiekel/hexo-theme-random" target="_blank" rel="external">Random</a> | <a href="https://chensd.com/" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/geekplux/hexo-theme-typing" target="_blank" rel="external">Typing</a> | <a href="http://geekplux.com" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">Yelee</a> | <a href="http://moxfive.xyz" target="_blank" rel="external">Demo</a></li>
+<li><a href="https://github.com/icylogic/carbon" target="_blank" rel="external">Carbon</a> | <a href="https://icylogic.github.io/carbon/" target="_blank" rel="external">Demo</a></li>
+</ul>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持“杂记”</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wx.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-zfb.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/04/01/zaji-hi.html">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/04/01/mac-tools.html">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
