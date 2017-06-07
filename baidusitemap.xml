@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>享元模式（Flyweight Pattern）</title>
-        <pubTime>2017-04-18T10:59:55.000Z</pubTime>
+        <title>工厂方法模式（Factory Method Pattern）</title>
+        <pubTime>2017-04-18T09:34:21.000Z</pubTime>
         
          
            
@@ -61,6 +61,42 @@
 
     
   <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>抽象工厂模式（Abstract Factory Pattern）</title>
+        <pubTime>2017-04-18T09:58:09.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac开发常用工具汇总</title>
+        <pubTime>2017-04-01T03:49:14.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Mac" url="http://blog.wuzhiwei.cn/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/06/introduction-to-http-protocol.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
@@ -97,30 +133,12 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>Mac开发常用工具汇总</title>
-        <pubTime>2017-04-01T03:49:14.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Mac" url="http://blog.wuzhiwei.cn/categories/Mac/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>抽象工厂模式（Abstract Factory Pattern）</title>
-        <pubTime>2017-04-18T09:58:09.000Z</pubTime>
+        <title>桥接模式（Bridge Pattern）</title>
+        <pubTime>2017-04-18T10:48:55.000Z</pubTime>
         
          
            
@@ -157,24 +175,6 @@
         <display>
         <title>命令模式（Command Pattern）</title>
         <pubTime>2017-04-18T10:38:55.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>桥接模式（Bridge Pattern）</title>
-        <pubTime>2017-04-18T10:48:55.000Z</pubTime>
         
          
            
@@ -241,12 +241,12 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>工厂方法模式（Factory Method Pattern）</title>
-        <pubTime>2017-04-18T09:34:21.000Z</pubTime>
+        <title>中介者模式（Mediator Pattern）</title>
+        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
         
          
            
@@ -259,12 +259,12 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>中介者模式（Mediator Pattern）</title>
-        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
+        <title>享元模式（Flyweight Pattern）</title>
+        <pubTime>2017-04-18T10:59:55.000Z</pubTime>
         
          
            
@@ -313,12 +313,48 @@
 
     
   <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>简单工厂模式（Simple Factory Pattern）</title>
+        <pubTime>2017-04-18T08:48:04.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
         <title>代理模式（Proxy Pattern）</title>
         <pubTime>2017-04-18T10:38:55.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-singleton.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>单例模式（Singleton Pattern）</title>
+        <pubTime>2017-04-18T10:18:55.000Z</pubTime>
         
          
            
@@ -367,42 +403,6 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>简单工厂模式（Simple Factory Pattern）</title>
-        <pubTime>2017-04-18T08:48:04.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-singleton.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>单例模式（Singleton Pattern）</title>
-        <pubTime>2017-04-18T10:18:55.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
@@ -414,24 +414,6 @@
            
              
               <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/zaji-hi.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>杂记：Hi！</title>
-        <pubTime>2017-04-01T02:20:22.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="随笔" url="http://blog.wuzhiwei.cn/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -471,6 +453,24 @@
           
              
               <breadCrumb title="vim" url="http://blog.wuzhiwei.cn/categories/Linux/vim/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/zaji-hi.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>杂记：Hi！</title>
+        <pubTime>2017-04-01T02:20:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.wuzhiwei.cn/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
