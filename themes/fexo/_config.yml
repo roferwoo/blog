@@ -45,7 +45,7 @@ page_nav:
     url: /atom.xml
     target_blank: true # 在新页面打开
   - name: 搜索
-    url: /search/duoshuo_shortname
+    url: /search/
     target_blank: false # 在新页面打开
 
 # 设置页面导航样式
