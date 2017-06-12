@@ -2,7 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
+    
+    <lastmod>2017-06-12T15:10:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/06/introduction-to-http-protocol.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -30,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/06/introduction-to-http-protocol.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -51,21 +65,7 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -86,7 +86,7 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-facade.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -100,7 +100,7 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-facade.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -114,13 +114,6 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
@@ -128,7 +121,14 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-singleton.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-singleton.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -163,6 +163,13 @@
   </url>
   
   <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/21/vim-tips.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
@@ -171,13 +178,6 @@
   
   <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/01/zaji-hi.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/about/index.html</loc>
+    <loc>http://blog.wuzhiwei.cn/category/index.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/category/index.html</loc>
+    <loc>http://blog.wuzhiwei.cn/about/index.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
