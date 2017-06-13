@@ -2,107 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/27/git-stash.html</loc>
     
-    <lastmod>2017-06-13T08:40:45.000Z</lastmod>
+    <lastmod>2017-06-13T13:20:59.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/25/iterm2-shortcut-key.html</loc>
     
-    <lastmod>2017-06-13T08:39:36.000Z</lastmod>
+    <lastmod>2017-06-13T08:55:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
     
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/gh-pages-hexo-blog.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/12/learn-to-be-calm.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/06/introduction-to-http-protocol.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-composite.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <lastmod>2017-06-13T08:40:45.000Z</lastmod>
     
   </url>
   
@@ -121,6 +37,90 @@
   </url>
   
   <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/06/introduction-to-http-protocol.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/12/learn-to-be-calm.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-composite.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/gh-pages-hexo-blog.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-state.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -149,7 +149,35 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-state.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
+    
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/21/vim-tips.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
@@ -170,27 +198,6 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/21/vim-tips.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.wuzhiwei.cn/404.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
@@ -205,14 +212,14 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/about/index.html</loc>
+    <loc>http://blog.wuzhiwei.cn/category/index.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/category/index.html</loc>
+    <loc>http://blog.wuzhiwei.cn/about/index.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     
