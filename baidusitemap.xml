@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
-    <lastmod>2017-06-12T15:10:24.000Z</lastmod>
+    <lastmod>2017-06-13T08:40:45.000Z</lastmod>
     <data>
         <display>
         <title>Mac开发常用工具汇总</title>
@@ -22,11 +22,182 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/25/iterm2-shortcut-key.html</loc>
+    <lastmod>2017-06-13T08:39:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>iTerm2常用快捷键</title>
+        <pubTime>2017-04-25T07:39:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Mac" url="http://blog.wuzhiwei.cn/categories/Mac/"/>
+          
+             
+              <breadCrumb title="Tools" url="http://blog.wuzhiwei.cn/categories/Mac/Tools/"/>
+          
+             
+              <breadCrumb title="iTerms" url="http://blog.wuzhiwei.cn/categories/Mac/Tools/iTerms/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>观察者模式（Observer Pattern）</title>
+        <title>享元模式（Flyweight Pattern）</title>
+        <pubTime>2017-04-18T10:59:55.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/gh-pages-hexo-blog.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>诞生记——GitHub Pages+Hexo</title>
+        <pubTime>2017-04-01T03:20:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://blog.wuzhiwei.cn/categories/Hexo/"/>
+          
+             
+              <breadCrumb title="GitHub" url="http://blog.wuzhiwei.cn/categories/Hexo/GitHub/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>桥接模式（Bridge Pattern）</title>
+        <pubTime>2017-04-18T10:48:55.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/12/learn-to-be-calm.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>学会冷静，也是一种智慧！</title>
+        <pubTime>2017-04-12T00:50:13.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.wuzhiwei.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>适配器模式（Adapter Pattern）</title>
+        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>命令模式（Command Pattern）</title>
+        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>抽象工厂模式（Abstract Factory Pattern）</title>
+        <pubTime>2017-04-18T09:58:09.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>建造者模式（Builder Pattern）</title>
+        <pubTime>2017-04-18T10:18:44.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>装饰模式（Decorator Pattern）</title>
         <pubTime>2017-04-18T10:38:55.000Z</pubTime>
         
          
@@ -58,158 +229,11 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/gh-pages-hexo-blog.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>诞生记——GitHub Pages+Hexo</title>
-        <pubTime>2017-04-01T03:20:22.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://blog.wuzhiwei.cn/categories/Hexo/"/>
-          
-             
-              <breadCrumb title="GitHub" url="http://blog.wuzhiwei.cn/categories/Hexo/GitHub/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/12/learn-to-be-calm.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>学会冷静，也是一种智慧！</title>
-        <pubTime>2017-04-12T00:50:13.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="随笔" url="http://blog.wuzhiwei.cn/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>抽象工厂模式（Abstract Factory Pattern）</title>
-        <pubTime>2017-04-18T09:58:09.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>适配器模式（Adapter Pattern）</title>
-        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>建造者模式（Builder Pattern）</title>
-        <pubTime>2017-04-18T10:18:44.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>桥接模式（Bridge Pattern）</title>
-        <pubTime>2017-04-18T10:48:55.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>命令模式（Command Pattern）</title>
-        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-composite.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
         <title>组合模式（Composite Pattern）</title>
-        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>装饰模式（Decorator Pattern）</title>
         <pubTime>2017-04-18T10:38:55.000Z</pubTime>
         
          
@@ -295,24 +319,6 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>享元模式（Flyweight Pattern）</title>
-        <pubTime>2017-04-18T10:59:55.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
@@ -349,11 +355,11 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-state.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>策略模式（Strategy Pattern）</title>
+        <title>状态模式（State Pattern）</title>
         <pubTime>2017-04-18T10:38:55.000Z</pubTime>
         
          
@@ -385,11 +391,11 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-state.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>状态模式（State Pattern）</title>
+        <title>观察者模式（Observer Pattern）</title>
         <pubTime>2017-04-18T10:38:55.000Z</pubTime>
         
          
@@ -421,12 +427,30 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/zaji-hi.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>PHP设计模式——简介</title>
-        <pubTime>2017-04-18T06:27:55.000Z</pubTime>
+        <title>杂记：Hi！</title>
+        <pubTime>2017-04-01T02:20:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.wuzhiwei.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</loc>
+    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>策略模式（Strategy Pattern）</title>
+        <pubTime>2017-04-18T10:38:55.000Z</pubTime>
         
          
            
@@ -460,17 +484,17 @@
 
     
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/zaji-hi.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     <data>
         <display>
-        <title>杂记：Hi！</title>
-        <pubTime>2017-04-01T02:20:22.000Z</pubTime>
+        <title>PHP设计模式——简介</title>
+        <pubTime>2017-04-18T06:27:55.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="随笔" url="http://blog.wuzhiwei.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+              <breadCrumb title="PHP" url="http://blog.wuzhiwei.cn/categories/PHP/"/>
           
         </display>
     </data>

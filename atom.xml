@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.wuzhiwei.cn/"/>
-  <updated>2017-06-06T01:40:43.000Z</updated>
+  <updated>2017-06-13T08:39:36.000Z</updated>
   <id>http://blog.wuzhiwei.cn/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iTerm2常用快捷键</title>
+    <link href="http://blog.wuzhiwei.cn/2017/04/25/iterm2-shortcut-key.html"/>
+    <id>http://blog.wuzhiwei.cn/2017/04/25/iterm2-shortcut-key.html</id>
+    <published>2017-04-25T07:39:30.000Z</published>
+    <updated>2017-06-13T08:39:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>iTerm2</strong>开源免费，与<em>zsh</em>搭配差不多已经取代了<em>Terminal + bash</em>成为Mac上终端工具的标准配置。下面整理<strong>iTerm2</strong>使用过程中常用的快捷键。</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ul>
+<li>新建标签：<code>command + t</code></li>
+<li>关闭标签：<code>command + w</code></li>
+<li>切换标签：<code>command + 数字</code>或<code>command + 左右方向键</code></li>
+<li>切换全屏：<code>command + enter</code></li>
+<li>全文查找：<code>command + f</code></li>
+</ul>
+<h2 id="分屏"><a href="#分屏" class="headerlink" title="分屏"></a>分屏</h2><ul>
+<li>垂直分屏：<code>command + d</code></li>
+<li>水平分屏：<code>command + shift + d</code></li>
+<li>切换屏幕：<code>command + option + 方向键</code>或<code>command + [</code>或<code>command + ]</code></li>
+<li>查看历史命令：<code>command + ;</code></li>
+<li>查看剪贴板历史：<code>command + shift + h</code></li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>打开文件、文件夹和链接：<code>command + Click</code></li>
+<li>新建窗口：<code>command + n</code></li>
+<li>清除当前行：<code>ctrl + u</code></li>
+<li>到行首：<code>ctrl + a</code></li>
+<li>到行尾：<code>ctrl + e</code></li>
+<li>上一条命令：<code>ctrl + p</code></li>
+<li>搜索命令历史：<code>ctrl + r</code></li>
+<li>删除当前光标的字符：<code>ctrl + d</code></li>
+<li>删除光标之前的字符：<code>ctrl + h</code></li>
+<li>删除光标之前的单词：<code>ctrl + w</code></li>
+<li>删除到文本末尾：<code>ctrl + k</code></li>
+<li>交换光标处广本：<code>ctrl + t</code></li>
+<li>清屏：<code>command + r</code>或<code>ctrl + l</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      iTerms,Shortcut key,快捷键,iTerms快捷建,MacBook Pro,Mac,Tools,Mac开发常用工具
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://blog.wuzhiwei.cn/categories/Mac/"/>
+    
+      <category term="Tools" scheme="http://blog.wuzhiwei.cn/categories/Mac/Tools/"/>
+    
+      <category term="iTerms" scheme="http://blog.wuzhiwei.cn/categories/Mac/Tools/iTerms/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>VIM操作技巧总结</title>
@@ -505,6 +559,58 @@
   </entry>
   
   <entry>
+    <title>装饰模式（Decorator Pattern）</title>
+    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html"/>
+    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</id>
+    <published>2017-04-18T10:38:55.000Z</published>
+    <updated>2017-06-06T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>装饰模式(Decorator Pattern)：</strong>动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。其别名也可以称为<em>包装器(Wrapper)</em>，与适配器模式的别名相同，但它们适用于不同的场合。根据翻译的不同，装饰模式也有人称之为“油漆工模式”，它是一种对象结构型模式。</p>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象构件角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 装饰角色</span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Decorator</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">protected</span>  $_component;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_component = $component;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_component-&gt;operation();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 具体装饰类A</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorA</span> <span class="keyword">extends</span> <span class="title">Decorator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::__construct($component);</div><div class="line"> </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::operation(); <span class="comment">// 调用装饰类的操作</span></div><div class="line">        <span class="keyword">$this</span>-&gt;addedOperationA(); <span class="comment">// 新增加的操作</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 新增加的操作A，即装饰上的功能</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">addedOperationA</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Add Operation A &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体装饰类B</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorB</span> <span class="keyword">extends</span> <span class="title">Decorator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::__construct($component);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::operation();</div><div class="line">        <span class="keyword">$this</span>-&gt;addedOperationB();</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 新增加的操作B，即装饰上的功能</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">addedOperationB</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Add Operation B &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 具体构件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteComponent</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line"> </div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Concrete Component operation &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $component = <span class="keyword">new</span> ConcreteComponent();</div><div class="line">        $decoratorA = <span class="keyword">new</span> ConcreteDecoratorA($component);</div><div class="line">        $decoratorB = <span class="keyword">new</span> ConcreteDecoratorB($decoratorA);</div><div class="line"> </div><div class="line">        $decoratorA-&gt;operation();</div><div class="line">        $decoratorB-&gt;operation();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><ol>
+<li>与继承关系相比，关联关系的主要优势在于不会破坏类的封装性，而且继承是一种耦合度较大的静态关系，无法在程序运行时动态扩展。在软件开发阶段，关联关系虽然不会比继承关系减少编码量，但是到了软件维护阶段，由于关联关系使系统具有较好的松耦合性，因此使得系统更加容易维护。当然，关联关系的缺点是比继承关系要创建更多的对象。</li>
+<li>使用装饰模式来实现扩展比继承更加灵活，它以对客户透明的方式动态地给一个对象附加更多的责任。装饰模式可以在不需要创造更多子类的情况下，将对象的功能加以扩展。</li>
+</ol>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>装饰模式的优点:</p>
+<ol>
+<li>装饰模式与继承关系的目的都是要扩展对象的功能，但是装饰模式可以提供比继承更多的灵活性。</li>
+<li>可以通过一种动态的方式来扩展一个对象的功能，通过配置文件可以在运行时选择不同的装饰器，从而实现不同的行为。</li>
+<li>通过使用不同的具体装饰类以及这些装饰类的排列组合，可以创造出很多不同行为的组合。可以使用多个具体装饰类来装饰同一对象，得到功能更为强大的对象。</li>
+<li>具体构件类与具体装饰类可以独立变化，用户可以根据需要增加新的具体构件类和具体装饰类，在使用时再对其进行组合，原有代码无须改变，符合“开闭原则”。</li>
+</ol>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>装饰模式的缺点:</p>
+<ol>
+<li>使用装饰模式进行系统设计时将产生很多小对象，这些对象的区别在于它们之间相互连接的方式有所不同，而不是它们的类或者属性值有所不同，同时还将产生很多具体装饰类。这些装饰类和小对象的产生将增加系统的复杂度，加大学习与理解的难度。</li>
+<li>这种比继承更加灵活机动的特性，也同时意味着装饰模式比继承更加易于出错，排错也很困难，对于多次装饰的对象，调试时寻找错误可能需要逐级排查，较为烦琐。</li>
+</ol>
+<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用装饰模式：</p>
+<ol>
+<li>在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。</li>
+<li>需要动态地给一个对象增加功能，这些功能也可以动态地被撤销。</li>
+<li>当不能采用继承的方式对系统进行扩充或者采用继承不利于系统扩展和维护时。不能采用继承的情况主要有两类：第一类是系统中存在大量独立的扩展，为支持每一种组合将产生大量的子类，使得子类数目呈爆炸性增长；第二类是因为类定义不能继承（如final类）.</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>装饰模式用于动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。它是一种对象结构型模式。</li>
+<li>装饰模式包含四个角色：抽象构件定义了对象的接口，可以给这些对 象动态增加职责（方法）；具体构件定义了具体的构件对象，实现了 在抽象构件中声明的方法，装饰器可以给它增加额外的职责（方法）； 抽象装饰类是抽象构件类的子类，用于给具体构件增加职责，但是具 体职责在其子类中实现；具体装饰类是抽象装饰类的子类，负责向构 件添加新的职责。</li>
+<li>使用装饰模式来实现扩展比继承更加灵活，它以对客户透明的方式动 态地给一个对象附加更多的责任。装饰模式可以在不需要创造更多子 类的情况下，将对象的功能加以扩展。</li>
+<li>装饰模式的主要优点在于可以提供比继承更多的灵活性，可以通过一种动态的 方式来扩展一个对象的功能，并通过使用不同的具体装饰类以及这些装饰类的 排列组合，可以创造出很多不同行为的组合，而且具体构件类与具体装饰类可 以独立变化，用户可以根据需要增加新的具体构件类和具体装饰类；其主要缺 点在于使用装饰模式进行系统设计时将产生很多小对象，而且装饰模式比继承 更加易于出错，排错也很困难，对于多次装饰的对象，调试时寻找错误可能需 要逐级排查，较为烦琐。</li>
+<li>装饰模式适用情况包括：在不影响其他对象的情况下，以动态、透明的方式给 单个对象添加职责；需要动态地给一个对象增加功能，这些功能也可以动态地 被撤销；当不能采用继承的方式对系统进行扩充或者采用继承不利于系统扩展 和维护时。</li>
+<li>装饰模式可分为透明装饰模式和半透明装饰模式：在透明装饰模式中，要求客 户端完全针对抽象编程，装饰模式的透明性要求客户端程序不应该声明具体构 件类型和具体装饰类型，而应该全部声明为抽象构件类型；半透明装饰模式允 许用户在客户端声明具体装饰者类型的对象，调用在具体装饰者中新增的方法。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;装饰模式(Decorator Pattern)：&lt;/strong&gt;动态地给一个对象增加一些额外的职责(Res
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://blog.wuzhiwei.cn/categories/PHP/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>代理模式（Proxy Pattern）</title>
     <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html"/>
     <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</id>
@@ -548,102 +654,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;代理模式(Proxy Pattern)：&lt;/strong&gt;给某一个对象提供一个代理，并由代理对象控制对原对象
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://blog.wuzhiwei.cn/categories/PHP/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>适配器模式（Adapter Pattern）</title>
-    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html"/>
-    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</id>
-    <published>2017-04-18T10:38:55.000Z</published>
-    <updated>2017-06-06T01:40:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>适配器模式(Adapter Pattern)：</strong>将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为<em>包装器(Wrapper)</em>。适配器模式既可以作为<em>类结构型模式</em>，也可以作为<em>对象结构型模式</em>。</p>
-<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><h2 id="类适配器模式"><a href="#类适配器模式" class="headerlink" title="类适配器模式"></a>类适配器模式</h2><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 目标角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类也有的方法1</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">// 源类没有的方法2</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 源角色 适配者</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类含有的方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adaptee sampleMethod1 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 类适配器角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">extends</span> <span class="title">Adaptee</span> <span class="keyword">implements</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类中没有sampleMethod2方法，在此补充</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adapter sampleMethod2 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $adapter = <span class="keyword">new</span> Adapter();</div><div class="line">        $adapter-&gt;sampleMethod1();</div><div class="line">        $adapter-&gt;sampleMethod2();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
-<h2 id="对象适配器模式"><a href="#对象适配器模式" class="headerlink" title="对象适配器模式"></a>对象适配器模式</h2><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 目标角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类也有的方法1</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">// 源类没有的方法2</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 源角色 适配者</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类含有的方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adaptee sampleMethod1 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 类适配器角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">implements</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_adaptee;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Adaptee $adaptee)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_adaptee = $adaptee;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 委派调用Adaptee的sampleMethod1方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_adaptee-&gt;sampleMethod1();</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 源类中没有sampleMethod2方法，在此补充</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adapter sampleMethod2 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $adaptee = <span class="keyword">new</span> Adaptee();</div><div class="line">        $adapter = <span class="keyword">new</span> Adapter($adaptee);</div><div class="line">        $adapter-&gt;sampleMethod1();</div><div class="line">        $adapter-&gt;sampleMethod2();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
-<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><ol>
-<li>将目标类和适配者类解耦，通过引入一个适配器类来重用现有的适配者类，而无须修改原有代码。</li>
-<li>增加了类的透明性和复用性，将具体的实现封装在适配者类中，对于客户端类来说是透明的，而且提高了适配者的复用性。</li>
-<li>灵活性和扩展性都非常好，通过使用配置文件，可以很方便地更换适配器，也可以在不修改原有代码的基础上增加新的适配器类，完全符合“开闭原则”。</li>
-</ol>
-<p><em>类适配器模式</em>还具有如下优点：<br>由于适配器类是适配者类的子类，因此可以在适配器类中置换一些适配者的方法，使得适配器的灵活性更强。<br><em>对象适配器模式</em>还具有如下优点：<br>一个对象适配器可以把多个不同的适配者适配到同一个目标，也就是说，同一个适配器可以把适配者类和它的子类都适配到目标接口。</p>
-<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p><em>类适配器模式</em>的缺点如下：<br>对于Java、C#等不支持多重继承的语言，一次最多只能适配一个适配者类，而且目标抽象类只能为抽象类，不能为具体类，其使用有一定的局限性，不能将一个适配者类和它的子类都适配到目标接口。<br><em>对象适配器模式</em>的缺点如下：<br>与类适配器模式相比，要想置换适配者类的方法就不容易。如果一定要置换掉适配者类的一个或多个方法，就只好先做一个适配者类的子类，将适配者类的方法置换掉，然后再把适配者类的子类当做真正的适配者进行适配，实现过程较为复杂。</p>
-<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用适配器模式：</p>
-<ol>
-<li>系统需要使用现有的类，而这些类的接口不符合系统的需要。</li>
-<li>想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类，包括一些可能在将来引进的类一起工作。</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>结构型模式描述如何将类或者对象结合在一起形成更大的结构。</li>
-<li>适配器模式用于将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为包装器。适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。</li>
-<li>适配器模式包含四个角色：目标抽象类定义客户要用的特定领域的接口；适配器类可以调用另一个接口，作为一个转换器，对适配者和抽象目标类进行适配，它是适配器模式的核心；适配者类是被适配的角色，它定义了一个已经存在的接口，这个接口需要适配；在客户类中针对目标抽象类进行编程，调用在目标抽象类中定义的业务方法。</li>
-<li>在类适配器模式中，适配器类实现了目标抽象类接口并继承了适配者类，并在目标抽象类的实现方法中调用所继承的适配者类的方法；在对象适配器模式中，适配器类继承了目标抽象类并定义了一个适配者类的对象实例，在所继承的目标抽象类方法中调用适配者类的相应业务方法。</li>
-<li>适配器模式的主要优点是将目标类和适配者类解耦，增加了类的透明性和复用性，同时系统的灵活性和扩展性都非常好，更换适配器或者增加新的适配器都非常方便，符合“开闭原则”；类适配器模式的缺点是适配器类在很多编程语言中不能同时适配多个适配者类，对象适配器模式的缺点是很难置换适配者类的方法。</li>
-<li>适配器模式适用情况包括：系统需要使用现有的类，而这些类的接口不符合系统的需要；想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类一起工作。</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;适配器模式(Adapter Pattern)：&lt;/strong&gt;将一个接口转换成客户希望的另一个接口，适配器
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://blog.wuzhiwei.cn/categories/PHP/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>中介者模式（Mediator Pattern）</title>
-    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html"/>
-    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</id>
-    <published>2017-04-18T10:38:55.000Z</published>
-    <updated>2017-06-06T01:40:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>中介者模式(Mediator Pattern)</strong>定义：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式，它是一种对象行为型模式。</p>
-<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象中介类</span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Mediator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send</span><span class="params">($message, $colleague)</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 抽象同事类</span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Colleague</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_mediator = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($mediator)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_mediator = $mediator;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send</span><span class="params">($message)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_mediators-&gt;send($message, <span class="keyword">$this</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">notify</span><span class="params">($message)</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体中介类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteMediator</span> <span class="keyword">extends</span> <span class="title">Mediator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_colleague1 = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> $_colleague2 = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send</span><span class="params">($message, $colleague)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> ($colleague == <span class="keyword">$this</span>-&gt;_colleague1) &#123;</div><div class="line">            <span class="keyword">$this</span>-&gt;_colleague1-&gt;notify($message);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">$this</span>-&gt;_colleague2-&gt;notify($message);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span><span class="params">($colleague1, $colleague2)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_colleague1 = $colleague1;</div><div class="line">        <span class="keyword">$this</span>-&gt;_colleague2 = $colleague2;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体同事类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Colleague1</span> <span class="keyword">extends</span> <span class="title">Colleague</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">notify</span><span class="params">($message)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Colleague1 Message is :"</span>.$message.<span class="string">"&lt;br/&gt;"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体同事类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Colleague2</span> <span class="keyword">extends</span> <span class="title">Colleague</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">notify</span><span class="params">($message)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Colleague2 Message is :"</span>.$message.<span class="string">"&lt;br/&gt;"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> funciton main()</div><div class="line">    &#123;</div><div class="line">        $mediator = <span class="keyword">new</span> ConcreteMediator();</div><div class="line">        $c1 = <span class="keyword">new</span> Colleague1($mediator);</div><div class="line">        $c2 = <span class="keyword">new</span> Colleague2($mediator);</div><div class="line">        $mediator-&gt;set($c1, $c2);</div><div class="line">        $c1-&gt;send(<span class="string">'to c2 from c1'</span>);</div><div class="line">        $c2-&gt;send(<span class="string">'to c1 from c2'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
-<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><p>中介者模式可以使对象之间的关系数量急剧减少。</p>
-<p>中介者承担两方面的职责：</p>
-<ol>
-<li>中转作用（结构性）：通过中介者提供的中转作用，各个同事对象就不再需要显式引用其他同事，当需要和其他同事进行通信时，通过中介者即可。该中转作用属于中介者在结构上的支持。</li>
-<li>协调作用（行为性）：中介者可以更进一步的对同事之间的关系进行封装，同事可以一致地和中介者进行交互，而不需要指明中介者需要具体怎么做，中介者根据封装在自身内部的协调逻辑，对同事的请求进行进一步处理，将同事成员之间的关系行为进行分离和封装。该协调作用属于中介者在行为上的支持。</li>
-</ol>
-<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>中介者模式的优点：</p>
-<ol>
-<li>简化了对象之间的交互。</li>
-<li>将各同事解耦。</li>
-<li>减少子类生成。</li>
-<li>可以简化各同事类的设计和实现。</li>
-</ol>
-<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>中介者模式的缺点：</p>
-<ol>
-<li>在具体中介者类中包含了同事之间的交互细节，可能会导致具体中介者类非常复杂，使得系统难以维护。</li>
-</ol>
-<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用中介者模式：</p>
-<ol>
-<li>系统中对象之间存在复杂的引用关系，产生的相互依赖关系结构混乱且难以理解。</li>
-<li>一个对象由于引用了其他很多对象并且直接和这些对象通信，导致难以复用该对象。</li>
-<li>想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。可以通过引入中介者类来实现，在中介者中定义对象。</li>
-<li>交互的公共行为，如果需要改变行为则可以增加新的中介者类。</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>中介者模式用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式，它是一种对象行为型模式。</li>
-<li>中介者模式包含四个角色：抽象中介者用于定义一个接口，该接口用于与各同事对象之间的通信；具体中介者是抽象中介者的子类，通过协调各个同事对象来实现协作行为，了解并维护它的各个同事对象的引用；抽象同事类定义各同事的公有方法；具体同事类是抽象同事类的子类，每一个同事对象都引用一个中介者对象；每一个同事对象在需要和其他同事对象通信时，先与中介者通信，通过中介者来间接完成与其他同事类的通信；在具体同事类中实现了在抽象同事类中定义的方法。</li>
-<li>通过引入中介者对象，可以将系统的网状结构变成以中介者为中心的星形结构，中介者承担了中转作用和协调作用。中介者类是中介者模式的核心，它对整个系统进行控制和协调，简化了对象之间的交互，还可以对对象间的交互进行进一步的控制。</li>
-<li>中介者模式的主要优点在于简化了对象之间的交互，将各同事解耦，还可以减少子类生成，对于复杂的对象之间的交互，通过引入中介者，可以简化各同事类的设计和实现；中介者模式主要缺点在于具体中介者类中包含了同事之间的交互细节，可能会导致具体中介者类非常复杂，使得系统难以维护。</li>
-<li>中介者模式适用情况包括：系统中对象之间存在复杂的引用关系，产生的相互依赖关系结构混乱且难以理解；一个对象由于引用了其他很多对象并且直接和这些对象通信，导致难以复用该对象；想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;中介者模式(Mediator Pattern)&lt;/strong&gt;定义：用一个中介对象来封装一系列的对象交互，
     
     </summary>
     
@@ -710,51 +720,94 @@
   </entry>
   
   <entry>
-    <title>命令模式（Command Pattern）</title>
-    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html"/>
-    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</id>
+    <title>策略模式（Strategy Pattern）</title>
+    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html"/>
+    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</id>
     <published>2017-04-18T10:38:55.000Z</published>
     <updated>2017-06-06T01:40:43.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>命令模式(Command Pattern)：</strong>将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。命令模式是一种<em>对象行为型模式</em>，其别名为<strong>动作(Action)模式</strong>或<strong>事务(Transaction)模式</strong>。</p>
-<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 命令角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Command</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 执行方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">execute</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体命令角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteCommand</span> <span class="keyword">implements</span> <span class="title">Command</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_receiver;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Receiver $receiver)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_receiver = $receiver;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 执行方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">execute</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_receiver-&gt;action();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 接收者角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Receiver</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">/* 接收者名称 */</span></div><div class="line">    <span class="keyword">private</span> $_name;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($name)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_name = $name;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 行动方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">action</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;_name, <span class="string">' do action.&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 请求者角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Invoker</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_command;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Command $command)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_command = $command;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">action</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_command-&gt;execute();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $receiver = <span class="keyword">new</span> Receiver(<span class="string">'woophp'</span>);</div><div class="line">        $command = <span class="keyword">new</span> ConcreteCommand($receiver);</div><div class="line">        $invoker = <span class="keyword">new</span> Invoker($command);</div><div class="line">        $invoker-&gt;action();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">Client::main();</div></pre></td></tr></table></figure>
-<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><p>命令模式的本质是对命令进行封装，将发出命令的责任和执行命令的责任分割开。</p>
+    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>策略模式(Strategy Pattern)：</strong>定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式(Policy)。</p>
+<p>策略模式是一种对象行为型模式。</p>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象策略角色，以接口实现</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体策略角色A</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteStrategyA</span> <span class="keyword">implements</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'algorithmInterface A&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体策略角色B</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteStrategyB</span> <span class="keyword">implements</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'algorithmInterface B&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体策略角色C</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteStrategyC</span> <span class="keyword">implements</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'algorithmInterface C&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 环境角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Context</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">/* 引用的策略 */</span></div><div class="line">    <span class="keyword">private</span> $_strategy;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Strategy $strategy)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_strategy = $strategy;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">contextInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_strategy-&gt;algorithmInterface();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $strategyA = <span class="keyword">new</span> ConcreteStrategyA();</div><div class="line">        $context = <span class="keyword">new</span> Context($strategyA);</div><div class="line">        $context-&gt;contextInterface();</div><div class="line"></div><div class="line">        $strategyB = <span class="keyword">new</span> ConcreteStrategyB();</div><div class="line">        $context = <span class="keyword">new</span> Context($strategyB);</div><div class="line">        $context-&gt;contextInterface();</div><div class="line"></div><div class="line">        $strategyC = <span class="keyword">new</span> ConcreteStrategyC();</div><div class="line">        $context = <span class="keyword">new</span> Context($strategyC);</div><div class="line">        $context-&gt;contextInterface();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><ol>
+<li>策略模式是一个比较容易理解和使用的设计模式，策略模式是对算法的封装，它把算法的责任和算法本身分割开，委派给不同的对象管理。策略模式通常把一个系列的算法封装到一系列的策略类里面，作为一个抽象策略类的子类。用一句话来说，就是“准备一组算法，并将每一个算法封装起来，使得它们可以互换”。</li>
+<li>在策略模式中，应当由客户端自己决定在什么情况下使用什么具体策略角色。</li>
+<li>策略模式仅仅封装算法，提供新算法插入到已有系统中，以及老算法从系统中“退休”的方便，策略模式并不决定在何时使用何种算法，算法的选择由客户端来决定。这在一定程度上提高了系统的灵活性，但是客户端需要理解所有具体策略类之间的区别，以便选择合适的算法，这也是策略模式的缺点之一，在一定程度上增加了客户端的使用难度。</li>
+</ol>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>策略模式的优点：</p>
+<ol>
+<li>策略模式提供了对“开闭原则”的完美支持，用户可以在不修改原有系统的基础上选择算法或行为，也可以灵活地增加新的算法或行为。</li>
+<li>策略模式提供了管理相关的算法族的办法。</li>
+<li>策略模式提供了可以替换继承关系的办法。</li>
+<li>使用策略模式可以避免使用多重条件转移语句。</li>
+</ol>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>策略模式的缺点：</p>
+<ol>
+<li>客户端必须知道所有的策略类，并自行决定使用哪一个策略类。</li>
+<li>策略模式将造成产生很多策略类，可以通过使用享元模式在一定程度上减少对象的数量。</li>
+</ol>
+<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用策略模式：</p>
 <ul>
-<li>每一个命令都是一个操作：请求的一方发出请求，要求执行一个操作；接收的一方收到请求，并执行操作。</li>
-<li>命令模式允许请求的一方和接收的一方独立开来，使得请求的一方不必知道接收请求的一方的接口，更不必知道请求是怎么被接收，以及操作是否被执行、何时被执行，以及是怎么被执行的。</li>
-<li>命令模式使请求本身成为一个对象，这个对象和其他对象一样可以被存储和传递。</li>
-<li>命令模式的关键在于引入了抽象命令接口，且发送者针对抽象命令接口编程，只有实现了抽象命令接口的具体命令才能与接收者相关联。</li>
+<li>如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。</li>
+<li>一个系统需要动态地在几种算法中选择一种。</li>
+<li>如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。</li>
+<li>不希望客户端知道复杂的、与算法相关的数据结构，在具体策略类中封装算法和相关的数据结构，提高算法的保密性与安全性。</li>
 </ul>
-<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>命令模式的优点：</p>
-<ol>
-<li>降低系统的耦合度。</li>
-<li>新的命令可以很容易地加入到系统中。</li>
-<li>可以比较容易地设计一个命令队列和宏命令（组合命令）。</li>
-<li>可以方便地实现对请求的Undo和Redo。</li>
-</ol>
-<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>命令模式的缺点：</p>
-<ol>
-<li>使用命令模式可能会导致某些系统有过多的具体命令类。因为针对每一个命令都需要设计一个具体命令类，因此某些系统可能需要大量具体命令类，这将影响命令模式的使用。</li>
-</ol>
-<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用命令模式：</p>
-<ol>
-<li>系统需要将请求调用者和请求接收者解耦，使得调用者和接收者不直接交互。</li>
-<li>系统需要在不同的时间指定请求、将请求排队和执行请求。</li>
-<li>系统需要支持命令的撤销(Undo)操作和恢复(Redo)操作。</li>
-<li>系统需要将一组操作组合在一起，即支持宏命令。</li>
-</ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>在命令模式中，将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。命令模式是一种对象行为型模式，其别名为动作模式或事务模式。</li>
-<li>命令模式包含四个角色：抽象命令类中声明了用于执行请求的<code>execute()</code>等方法，通过这些方法可以调用请求接收者的相关操作；具体命令类是抽象命令类的子类，实现了在抽象命令类中声明的方法，它对应具体的接收者对象，将接收者对象的动作绑定其中；调用者即请求的发送者，又称为请求者，它通过命令对象来执行请求；接收者执行与请求相关的操作，它具体实现对请求的业务处理。</li>
-<li>令模式的本质是对命令进行封装，将发出命令的责任和执行命令的责任分割开。命令模式使请求本身成为一个对象，这个对象和其他对象一样可以被存储和传递。</li>
-<li>命令模式的主要优点在于降低系统的耦合度，增加新的命令很方便，而且可以比较容易地设计一个命令队列和宏命令，并方便地实现对请求的撤销和恢复；其主要缺点在于可能会导致某些系统有过多的具体命令类。</li>
-<li>命令模式适用情况包括：需要将请求调用者和请求接收者解耦，使得调用者和接收者不直接交互；需要在不同的时间指定请求、将请求排队和执行请求；需要支持命令的撤销操作和恢复操作，需要将一组操作组合在一起，即支持宏命令。</li>
+<li>在策略模式中定义了一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式。策略模式是一种对象行为型模式。</li>
+<li>策略模式包含三个角色：环境类在解决某个问题时可以采用多种策略，在环境类中维护一个对抽象策略类的引用实例；抽象策略类为所支持的算法声明了抽象方法，是所有策略类的父类；具体策略类实现了在抽象策略类中定义的算法。</li>
+<li>策略模式是对算法的封装，它把算法的责任和算法本身分割开，委派给不同的对象管理。策略模式通常把一个系列的算法封装到一系列的策略类里面，作为一个抽象策略类的子类。</li>
+<li>策略模式主要优点在于对“开闭原则”的完美支持，在不修改原有系统的基础上可以更换算法或者增加新的算法，它很好地管理算法族，提高了代码的复用性，是一种替换继承，避免多重条件转移语句的实现方式；其缺点在于客户端必须知道所有的策略类，并理解其区别，同时在一定程度上增加了系统中类的个数，可能会存在很多策略类。</li>
+<li>策略模式适用情况包括：在一个系统里面有许多类，它们之间的区别仅在于它们的行为，使用策略模式可以动态地让一个对象在许多行为中选择一种行为；一个系统需要动态地在几种算法中选择一种；避免使用难以维护的多重条件选择语句；希望在具体策略类中封装算法和与相关的数据结构。</li>
 </ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;命令模式(Command Pattern)：&lt;/strong&gt;将一个请求封装为一个对象，从而使我们可用不同的
+      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;策略模式(Strategy Pattern)：&lt;/strong&gt;定义一系列算法，将每一个算法封装起来，并让它
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://blog.wuzhiwei.cn/categories/PHP/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>适配器模式（Adapter Pattern）</title>
+    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html"/>
+    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</id>
+    <published>2017-04-18T10:38:55.000Z</published>
+    <updated>2017-06-06T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>适配器模式(Adapter Pattern)：</strong>将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为<em>包装器(Wrapper)</em>。适配器模式既可以作为<em>类结构型模式</em>，也可以作为<em>对象结构型模式</em>。</p>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><h2 id="类适配器模式"><a href="#类适配器模式" class="headerlink" title="类适配器模式"></a>类适配器模式</h2><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 目标角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类也有的方法1</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">// 源类没有的方法2</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 源角色 适配者</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类含有的方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adaptee sampleMethod1 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 类适配器角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">extends</span> <span class="title">Adaptee</span> <span class="keyword">implements</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类中没有sampleMethod2方法，在此补充</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adapter sampleMethod2 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $adapter = <span class="keyword">new</span> Adapter();</div><div class="line">        $adapter-&gt;sampleMethod1();</div><div class="line">        $adapter-&gt;sampleMethod2();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h2 id="对象适配器模式"><a href="#对象适配器模式" class="headerlink" title="对象适配器模式"></a>对象适配器模式</h2><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 目标角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类也有的方法1</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">// 源类没有的方法2</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 源角色 适配者</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 源类含有的方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adaptee sampleMethod1 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 类适配器角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">implements</span> <span class="title">Target</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_adaptee;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Adaptee $adaptee)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_adaptee = $adaptee;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 委派调用Adaptee的sampleMethod1方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod1</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_adaptee-&gt;sampleMethod1();</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 源类中没有sampleMethod2方法，在此补充</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod2</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Adapter sampleMethod2 &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $adaptee = <span class="keyword">new</span> Adaptee();</div><div class="line">        $adapter = <span class="keyword">new</span> Adapter($adaptee);</div><div class="line">        $adapter-&gt;sampleMethod1();</div><div class="line">        $adapter-&gt;sampleMethod2();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><ol>
+<li>将目标类和适配者类解耦，通过引入一个适配器类来重用现有的适配者类，而无须修改原有代码。</li>
+<li>增加了类的透明性和复用性，将具体的实现封装在适配者类中，对于客户端类来说是透明的，而且提高了适配者的复用性。</li>
+<li>灵活性和扩展性都非常好，通过使用配置文件，可以很方便地更换适配器，也可以在不修改原有代码的基础上增加新的适配器类，完全符合“开闭原则”。</li>
+</ol>
+<p><em>类适配器模式</em>还具有如下优点：<br>由于适配器类是适配者类的子类，因此可以在适配器类中置换一些适配者的方法，使得适配器的灵活性更强。<br><em>对象适配器模式</em>还具有如下优点：<br>一个对象适配器可以把多个不同的适配者适配到同一个目标，也就是说，同一个适配器可以把适配者类和它的子类都适配到目标接口。</p>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p><em>类适配器模式</em>的缺点如下：<br>对于Java、C#等不支持多重继承的语言，一次最多只能适配一个适配者类，而且目标抽象类只能为抽象类，不能为具体类，其使用有一定的局限性，不能将一个适配者类和它的子类都适配到目标接口。<br><em>对象适配器模式</em>的缺点如下：<br>与类适配器模式相比，要想置换适配者类的方法就不容易。如果一定要置换掉适配者类的一个或多个方法，就只好先做一个适配者类的子类，将适配者类的方法置换掉，然后再把适配者类的子类当做真正的适配者进行适配，实现过程较为复杂。</p>
+<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用适配器模式：</p>
+<ol>
+<li>系统需要使用现有的类，而这些类的接口不符合系统的需要。</li>
+<li>想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类，包括一些可能在将来引进的类一起工作。</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>结构型模式描述如何将类或者对象结合在一起形成更大的结构。</li>
+<li>适配器模式用于将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为包装器。适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。</li>
+<li>适配器模式包含四个角色：目标抽象类定义客户要用的特定领域的接口；适配器类可以调用另一个接口，作为一个转换器，对适配者和抽象目标类进行适配，它是适配器模式的核心；适配者类是被适配的角色，它定义了一个已经存在的接口，这个接口需要适配；在客户类中针对目标抽象类进行编程，调用在目标抽象类中定义的业务方法。</li>
+<li>在类适配器模式中，适配器类实现了目标抽象类接口并继承了适配者类，并在目标抽象类的实现方法中调用所继承的适配者类的方法；在对象适配器模式中，适配器类继承了目标抽象类并定义了一个适配者类的对象实例，在所继承的目标抽象类方法中调用适配者类的相应业务方法。</li>
+<li>适配器模式的主要优点是将目标类和适配者类解耦，增加了类的透明性和复用性，同时系统的灵活性和扩展性都非常好，更换适配器或者增加新的适配器都非常方便，符合“开闭原则”；类适配器模式的缺点是适配器类在很多编程语言中不能同时适配多个适配者类，对象适配器模式的缺点是很难置换适配者类的方法。</li>
+<li>适配器模式适用情况包括：系统需要使用现有的类，而这些类的接口不符合系统的需要；想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类一起工作。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;适配器模式(Adapter Pattern)：&lt;/strong&gt;将一个接口转换成客户希望的另一个接口，适配器
     
     </summary>
     
@@ -788,58 +841,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;组合模式（Composite）：&lt;/strong&gt;将对象组合成树形结构以表示“部分-整体”的层次结构。组合模
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://blog.wuzhiwei.cn/categories/PHP/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>装饰模式（Decorator Pattern）</title>
-    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html"/>
-    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</id>
-    <published>2017-04-18T10:38:55.000Z</published>
-    <updated>2017-06-06T01:40:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>装饰模式(Decorator Pattern)：</strong>动态地给一个对象增加一些额外的职责(Responsibility)，就增加对象功能来说，装饰模式比生成子类实现更为灵活。其别名也可以称为<em>包装器(Wrapper)</em>，与适配器模式的别名相同，但它们适用于不同的场合。根据翻译的不同，装饰模式也有人称之为“油漆工模式”，它是一种对象结构型模式。</p>
-<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象构件角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 装饰角色</span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Decorator</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">protected</span>  $_component;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_component = $component;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_component-&gt;operation();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 具体装饰类A</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorA</span> <span class="keyword">extends</span> <span class="title">Decorator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::__construct($component);</div><div class="line"> </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::operation(); <span class="comment">// 调用装饰类的操作</span></div><div class="line">        <span class="keyword">$this</span>-&gt;addedOperationA(); <span class="comment">// 新增加的操作</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 新增加的操作A，即装饰上的功能</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">addedOperationA</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Add Operation A &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体装饰类B</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorB</span> <span class="keyword">extends</span> <span class="title">Decorator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Component $component)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::__construct($component);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">parent</span>::operation();</div><div class="line">        <span class="keyword">$this</span>-&gt;addedOperationB();</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 新增加的操作B，即装饰上的功能</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">addedOperationB</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Add Operation B &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 具体构件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteComponent</span> <span class="keyword">implements</span> <span class="title">Component</span></span></div><div class="line">&#123;</div><div class="line"> </div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">operation</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'Concrete Component operation &lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $component = <span class="keyword">new</span> ConcreteComponent();</div><div class="line">        $decoratorA = <span class="keyword">new</span> ConcreteDecoratorA($component);</div><div class="line">        $decoratorB = <span class="keyword">new</span> ConcreteDecoratorB($decoratorA);</div><div class="line"> </div><div class="line">        $decoratorA-&gt;operation();</div><div class="line">        $decoratorB-&gt;operation();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
-<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><ol>
-<li>与继承关系相比，关联关系的主要优势在于不会破坏类的封装性，而且继承是一种耦合度较大的静态关系，无法在程序运行时动态扩展。在软件开发阶段，关联关系虽然不会比继承关系减少编码量，但是到了软件维护阶段，由于关联关系使系统具有较好的松耦合性，因此使得系统更加容易维护。当然，关联关系的缺点是比继承关系要创建更多的对象。</li>
-<li>使用装饰模式来实现扩展比继承更加灵活，它以对客户透明的方式动态地给一个对象附加更多的责任。装饰模式可以在不需要创造更多子类的情况下，将对象的功能加以扩展。</li>
-</ol>
-<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>装饰模式的优点:</p>
-<ol>
-<li>装饰模式与继承关系的目的都是要扩展对象的功能，但是装饰模式可以提供比继承更多的灵活性。</li>
-<li>可以通过一种动态的方式来扩展一个对象的功能，通过配置文件可以在运行时选择不同的装饰器，从而实现不同的行为。</li>
-<li>通过使用不同的具体装饰类以及这些装饰类的排列组合，可以创造出很多不同行为的组合。可以使用多个具体装饰类来装饰同一对象，得到功能更为强大的对象。</li>
-<li>具体构件类与具体装饰类可以独立变化，用户可以根据需要增加新的具体构件类和具体装饰类，在使用时再对其进行组合，原有代码无须改变，符合“开闭原则”。</li>
-</ol>
-<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>装饰模式的缺点:</p>
-<ol>
-<li>使用装饰模式进行系统设计时将产生很多小对象，这些对象的区别在于它们之间相互连接的方式有所不同，而不是它们的类或者属性值有所不同，同时还将产生很多具体装饰类。这些装饰类和小对象的产生将增加系统的复杂度，加大学习与理解的难度。</li>
-<li>这种比继承更加灵活机动的特性，也同时意味着装饰模式比继承更加易于出错，排错也很困难，对于多次装饰的对象，调试时寻找错误可能需要逐级排查，较为烦琐。</li>
-</ol>
-<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用装饰模式：</p>
-<ol>
-<li>在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。</li>
-<li>需要动态地给一个对象增加功能，这些功能也可以动态地被撤销。</li>
-<li>当不能采用继承的方式对系统进行扩充或者采用继承不利于系统扩展和维护时。不能采用继承的情况主要有两类：第一类是系统中存在大量独立的扩展，为支持每一种组合将产生大量的子类，使得子类数目呈爆炸性增长；第二类是因为类定义不能继承（如final类）.</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>装饰模式用于动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。它是一种对象结构型模式。</li>
-<li>装饰模式包含四个角色：抽象构件定义了对象的接口，可以给这些对 象动态增加职责（方法）；具体构件定义了具体的构件对象，实现了 在抽象构件中声明的方法，装饰器可以给它增加额外的职责（方法）； 抽象装饰类是抽象构件类的子类，用于给具体构件增加职责，但是具 体职责在其子类中实现；具体装饰类是抽象装饰类的子类，负责向构 件添加新的职责。</li>
-<li>使用装饰模式来实现扩展比继承更加灵活，它以对客户透明的方式动 态地给一个对象附加更多的责任。装饰模式可以在不需要创造更多子 类的情况下，将对象的功能加以扩展。</li>
-<li>装饰模式的主要优点在于可以提供比继承更多的灵活性，可以通过一种动态的 方式来扩展一个对象的功能，并通过使用不同的具体装饰类以及这些装饰类的 排列组合，可以创造出很多不同行为的组合，而且具体构件类与具体装饰类可 以独立变化，用户可以根据需要增加新的具体构件类和具体装饰类；其主要缺 点在于使用装饰模式进行系统设计时将产生很多小对象，而且装饰模式比继承 更加易于出错，排错也很困难，对于多次装饰的对象，调试时寻找错误可能需 要逐级排查，较为烦琐。</li>
-<li>装饰模式适用情况包括：在不影响其他对象的情况下，以动态、透明的方式给 单个对象添加职责；需要动态地给一个对象增加功能，这些功能也可以动态地 被撤销；当不能采用继承的方式对系统进行扩充或者采用继承不利于系统扩展 和维护时。</li>
-<li>装饰模式可分为透明装饰模式和半透明装饰模式：在透明装饰模式中，要求客 户端完全针对抽象编程，装饰模式的透明性要求客户端程序不应该声明具体构 件类型和具体装饰类型，而应该全部声明为抽象构件类型；半透明装饰模式允 许用户在客户端声明具体装饰者类型的对象，调用在具体装饰者中新增的方法。</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;装饰模式(Decorator Pattern)：&lt;/strong&gt;动态地给一个对象增加一些额外的职责(Res
     
     </summary>
     
@@ -904,51 +905,104 @@
   </entry>
   
   <entry>
-    <title>策略模式（Strategy Pattern）</title>
-    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html"/>
-    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</id>
+    <title>中介者模式（Mediator Pattern）</title>
+    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html"/>
+    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</id>
     <published>2017-04-18T10:38:55.000Z</published>
     <updated>2017-06-06T01:40:43.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>策略模式(Strategy Pattern)：</strong>定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式(Policy)。</p>
-<p>策略模式是一种对象行为型模式。</p>
-<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象策略角色，以接口实现</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体策略角色A</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteStrategyA</span> <span class="keyword">implements</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'algorithmInterface A&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体策略角色B</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteStrategyB</span> <span class="keyword">implements</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'algorithmInterface B&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体策略角色C</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteStrategyC</span> <span class="keyword">implements</span> <span class="title">Strategy</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">algorithmInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'algorithmInterface C&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 环境角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Context</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">/* 引用的策略 */</span></div><div class="line">    <span class="keyword">private</span> $_strategy;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Strategy $strategy)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_strategy = $strategy;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">contextInterface</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_strategy-&gt;algorithmInterface();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $strategyA = <span class="keyword">new</span> ConcreteStrategyA();</div><div class="line">        $context = <span class="keyword">new</span> Context($strategyA);</div><div class="line">        $context-&gt;contextInterface();</div><div class="line"></div><div class="line">        $strategyB = <span class="keyword">new</span> ConcreteStrategyB();</div><div class="line">        $context = <span class="keyword">new</span> Context($strategyB);</div><div class="line">        $context-&gt;contextInterface();</div><div class="line"></div><div class="line">        $strategyC = <span class="keyword">new</span> ConcreteStrategyC();</div><div class="line">        $context = <span class="keyword">new</span> Context($strategyC);</div><div class="line">        $context-&gt;contextInterface();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
-<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><ol>
-<li>策略模式是一个比较容易理解和使用的设计模式，策略模式是对算法的封装，它把算法的责任和算法本身分割开，委派给不同的对象管理。策略模式通常把一个系列的算法封装到一系列的策略类里面，作为一个抽象策略类的子类。用一句话来说，就是“准备一组算法，并将每一个算法封装起来，使得它们可以互换”。</li>
-<li>在策略模式中，应当由客户端自己决定在什么情况下使用什么具体策略角色。</li>
-<li>策略模式仅仅封装算法，提供新算法插入到已有系统中，以及老算法从系统中“退休”的方便，策略模式并不决定在何时使用何种算法，算法的选择由客户端来决定。这在一定程度上提高了系统的灵活性，但是客户端需要理解所有具体策略类之间的区别，以便选择合适的算法，这也是策略模式的缺点之一，在一定程度上增加了客户端的使用难度。</li>
-</ol>
-<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>策略模式的优点：</p>
+    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>中介者模式(Mediator Pattern)</strong>定义：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式，它是一种对象行为型模式。</p>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 抽象中介类</span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Mediator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send</span><span class="params">($message, $colleague)</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 抽象同事类</span></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Colleague</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_mediator = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($mediator)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_mediator = $mediator;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send</span><span class="params">($message)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_mediators-&gt;send($message, <span class="keyword">$this</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">notify</span><span class="params">($message)</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体中介类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteMediator</span> <span class="keyword">extends</span> <span class="title">Mediator</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_colleague1 = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> $_colleague2 = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">send</span><span class="params">($message, $colleague)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> ($colleague == <span class="keyword">$this</span>-&gt;_colleague1) &#123;</div><div class="line">            <span class="keyword">$this</span>-&gt;_colleague1-&gt;notify($message);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">$this</span>-&gt;_colleague2-&gt;notify($message);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span><span class="params">($colleague1, $colleague2)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_colleague1 = $colleague1;</div><div class="line">        <span class="keyword">$this</span>-&gt;_colleague2 = $colleague2;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体同事类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Colleague1</span> <span class="keyword">extends</span> <span class="title">Colleague</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">notify</span><span class="params">($message)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Colleague1 Message is :"</span>.$message.<span class="string">"&lt;br/&gt;"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体同事类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Colleague2</span> <span class="keyword">extends</span> <span class="title">Colleague</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">notify</span><span class="params">($message)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"Colleague2 Message is :"</span>.$message.<span class="string">"&lt;br/&gt;"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> funciton main()</div><div class="line">    &#123;</div><div class="line">        $mediator = <span class="keyword">new</span> ConcreteMediator();</div><div class="line">        $c1 = <span class="keyword">new</span> Colleague1($mediator);</div><div class="line">        $c2 = <span class="keyword">new</span> Colleague2($mediator);</div><div class="line">        $mediator-&gt;set($c1, $c2);</div><div class="line">        $c1-&gt;send(<span class="string">'to c2 from c1'</span>);</div><div class="line">        $c2-&gt;send(<span class="string">'to c1 from c2'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><p>中介者模式可以使对象之间的关系数量急剧减少。</p>
+<p>中介者承担两方面的职责：</p>
 <ol>
-<li>策略模式提供了对“开闭原则”的完美支持，用户可以在不修改原有系统的基础上选择算法或行为，也可以灵活地增加新的算法或行为。</li>
-<li>策略模式提供了管理相关的算法族的办法。</li>
-<li>策略模式提供了可以替换继承关系的办法。</li>
-<li>使用策略模式可以避免使用多重条件转移语句。</li>
+<li>中转作用（结构性）：通过中介者提供的中转作用，各个同事对象就不再需要显式引用其他同事，当需要和其他同事进行通信时，通过中介者即可。该中转作用属于中介者在结构上的支持。</li>
+<li>协调作用（行为性）：中介者可以更进一步的对同事之间的关系进行封装，同事可以一致地和中介者进行交互，而不需要指明中介者需要具体怎么做，中介者根据封装在自身内部的协调逻辑，对同事的请求进行进一步处理，将同事成员之间的关系行为进行分离和封装。该协调作用属于中介者在行为上的支持。</li>
 </ol>
-<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>策略模式的缺点：</p>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>中介者模式的优点：</p>
 <ol>
-<li>客户端必须知道所有的策略类，并自行决定使用哪一个策略类。</li>
-<li>策略模式将造成产生很多策略类，可以通过使用享元模式在一定程度上减少对象的数量。</li>
+<li>简化了对象之间的交互。</li>
+<li>将各同事解耦。</li>
+<li>减少子类生成。</li>
+<li>可以简化各同事类的设计和实现。</li>
 </ol>
-<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用策略模式：</p>
-<ul>
-<li>如果在一个系统里面有许多类，它们之间的区别仅在于它们的行为，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。</li>
-<li>一个系统需要动态地在几种算法中选择一种。</li>
-<li>如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。</li>
-<li>不希望客户端知道复杂的、与算法相关的数据结构，在具体策略类中封装算法和相关的数据结构，提高算法的保密性与安全性。</li>
-</ul>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>中介者模式的缺点：</p>
+<ol>
+<li>在具体中介者类中包含了同事之间的交互细节，可能会导致具体中介者类非常复杂，使得系统难以维护。</li>
+</ol>
+<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用中介者模式：</p>
+<ol>
+<li>系统中对象之间存在复杂的引用关系，产生的相互依赖关系结构混乱且难以理解。</li>
+<li>一个对象由于引用了其他很多对象并且直接和这些对象通信，导致难以复用该对象。</li>
+<li>想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。可以通过引入中介者类来实现，在中介者中定义对象。</li>
+<li>交互的公共行为，如果需要改变行为则可以增加新的中介者类。</li>
+</ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>在策略模式中定义了一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式。策略模式是一种对象行为型模式。</li>
-<li>策略模式包含三个角色：环境类在解决某个问题时可以采用多种策略，在环境类中维护一个对抽象策略类的引用实例；抽象策略类为所支持的算法声明了抽象方法，是所有策略类的父类；具体策略类实现了在抽象策略类中定义的算法。</li>
-<li>策略模式是对算法的封装，它把算法的责任和算法本身分割开，委派给不同的对象管理。策略模式通常把一个系列的算法封装到一系列的策略类里面，作为一个抽象策略类的子类。</li>
-<li>策略模式主要优点在于对“开闭原则”的完美支持，在不修改原有系统的基础上可以更换算法或者增加新的算法，它很好地管理算法族，提高了代码的复用性，是一种替换继承，避免多重条件转移语句的实现方式；其缺点在于客户端必须知道所有的策略类，并理解其区别，同时在一定程度上增加了系统中类的个数，可能会存在很多策略类。</li>
-<li>策略模式适用情况包括：在一个系统里面有许多类，它们之间的区别仅在于它们的行为，使用策略模式可以动态地让一个对象在许多行为中选择一种行为；一个系统需要动态地在几种算法中选择一种；避免使用难以维护的多重条件选择语句；希望在具体策略类中封装算法和与相关的数据结构。</li>
+<li>中介者模式用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。中介者模式又称为调停者模式，它是一种对象行为型模式。</li>
+<li>中介者模式包含四个角色：抽象中介者用于定义一个接口，该接口用于与各同事对象之间的通信；具体中介者是抽象中介者的子类，通过协调各个同事对象来实现协作行为，了解并维护它的各个同事对象的引用；抽象同事类定义各同事的公有方法；具体同事类是抽象同事类的子类，每一个同事对象都引用一个中介者对象；每一个同事对象在需要和其他同事对象通信时，先与中介者通信，通过中介者来间接完成与其他同事类的通信；在具体同事类中实现了在抽象同事类中定义的方法。</li>
+<li>通过引入中介者对象，可以将系统的网状结构变成以中介者为中心的星形结构，中介者承担了中转作用和协调作用。中介者类是中介者模式的核心，它对整个系统进行控制和协调，简化了对象之间的交互，还可以对对象间的交互进行进一步的控制。</li>
+<li>中介者模式的主要优点在于简化了对象之间的交互，将各同事解耦，还可以减少子类生成，对于复杂的对象之间的交互，通过引入中介者，可以简化各同事类的设计和实现；中介者模式主要缺点在于具体中介者类中包含了同事之间的交互细节，可能会导致具体中介者类非常复杂，使得系统难以维护。</li>
+<li>中介者模式适用情况包括：系统中对象之间存在复杂的引用关系，产生的相互依赖关系结构混乱且难以理解；一个对象由于引用了其他很多对象并且直接和这些对象通信，导致难以复用该对象；想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。</li>
 </ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;策略模式(Strategy Pattern)：&lt;/strong&gt;定义一系列算法，将每一个算法封装起来，并让它
+      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;中介者模式(Mediator Pattern)&lt;/strong&gt;定义：用一个中介对象来封装一系列的对象交互，
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://blog.wuzhiwei.cn/categories/PHP/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>命令模式（Command Pattern）</title>
+    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html"/>
+    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</id>
+    <published>2017-04-18T10:38:55.000Z</published>
+    <updated>2017-06-06T01:40:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><p><strong>命令模式(Command Pattern)：</strong>将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。命令模式是一种<em>对象行为型模式</em>，其别名为<strong>动作(Action)模式</strong>或<strong>事务(Transaction)模式</strong>。</p>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 命令角色</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Command</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 执行方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">execute</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 具体命令角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteCommand</span> <span class="keyword">implements</span> <span class="title">Command</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_receiver;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Receiver $receiver)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_receiver = $receiver;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 执行方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">execute</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_receiver-&gt;action();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 接收者角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Receiver</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">/* 接收者名称 */</span></div><div class="line">    <span class="keyword">private</span> $_name;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($name)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_name = $name;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 行动方法</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">action</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">$this</span>-&gt;_name, <span class="string">' do action.&lt;br /&gt;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 请求者角色</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Invoker</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $_command;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Command $command)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_command = $command;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">action</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;_command-&gt;execute();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        $receiver = <span class="keyword">new</span> Receiver(<span class="string">'woophp'</span>);</div><div class="line">        $command = <span class="keyword">new</span> ConcreteCommand($receiver);</div><div class="line">        $invoker = <span class="keyword">new</span> Invoker($command);</div><div class="line">        $invoker-&gt;action();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">Client::main();</div></pre></td></tr></table></figure>
+<h1 id="模式分析"><a href="#模式分析" class="headerlink" title="模式分析"></a>模式分析</h1><p>命令模式的本质是对命令进行封装，将发出命令的责任和执行命令的责任分割开。</p>
+<ul>
+<li>每一个命令都是一个操作：请求的一方发出请求，要求执行一个操作；接收的一方收到请求，并执行操作。</li>
+<li>命令模式允许请求的一方和接收的一方独立开来，使得请求的一方不必知道接收请求的一方的接口，更不必知道请求是怎么被接收，以及操作是否被执行、何时被执行，以及是怎么被执行的。</li>
+<li>命令模式使请求本身成为一个对象，这个对象和其他对象一样可以被存储和传递。</li>
+<li>命令模式的关键在于引入了抽象命令接口，且发送者针对抽象命令接口编程，只有实现了抽象命令接口的具体命令才能与接收者相关联。</li>
+</ul>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>命令模式的优点：</p>
+<ol>
+<li>降低系统的耦合度。</li>
+<li>新的命令可以很容易地加入到系统中。</li>
+<li>可以比较容易地设计一个命令队列和宏命令（组合命令）。</li>
+<li>可以方便地实现对请求的Undo和Redo。</li>
+</ol>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>命令模式的缺点：</p>
+<ol>
+<li>使用命令模式可能会导致某些系统有过多的具体命令类。因为针对每一个命令都需要设计一个具体命令类，因此某些系统可能需要大量具体命令类，这将影响命令模式的使用。</li>
+</ol>
+<h1 id="适用环境"><a href="#适用环境" class="headerlink" title="适用环境"></a>适用环境</h1><p>在以下情况下可以使用命令模式：</p>
+<ol>
+<li>系统需要将请求调用者和请求接收者解耦，使得调用者和接收者不直接交互。</li>
+<li>系统需要在不同的时间指定请求、将请求排队和执行请求。</li>
+<li>系统需要支持命令的撤销(Undo)操作和恢复(Redo)操作。</li>
+<li>系统需要将一组操作组合在一起，即支持宏命令。</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>在命令模式中，将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。命令模式是一种对象行为型模式，其别名为动作模式或事务模式。</li>
+<li>命令模式包含四个角色：抽象命令类中声明了用于执行请求的<code>execute()</code>等方法，通过这些方法可以调用请求接收者的相关操作；具体命令类是抽象命令类的子类，实现了在抽象命令类中声明的方法，它对应具体的接收者对象，将接收者对象的动作绑定其中；调用者即请求的发送者，又称为请求者，它通过命令对象来执行请求；接收者执行与请求相关的操作，它具体实现对请求的业务处理。</li>
+<li>令模式的本质是对命令进行封装，将发出命令的责任和执行命令的责任分割开。命令模式使请求本身成为一个对象，这个对象和其他对象一样可以被存储和传递。</li>
+<li>命令模式的主要优点在于降低系统的耦合度，增加新的命令很方便，而且可以比较容易地设计一个命令队列和宏命令，并方便地实现对请求的撤销和恢复；其主要缺点在于可能会导致某些系统有过多的具体命令类。</li>
+<li>命令模式适用情况包括：需要将请求调用者和请求接收者解耦，使得调用者和接收者不直接交互；需要在不同的时间指定请求、将请求排队和执行请求；需要支持命令的撤销操作和恢复操作，需要将一组操作组合在一起，即支持宏命令。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;模式定义&quot;&gt;&lt;a href=&quot;#模式定义&quot; class=&quot;headerlink&quot; title=&quot;模式定义&quot;&gt;&lt;/a&gt;模式定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;命令模式(Command Pattern)：&lt;/strong&gt;将一个请求封装为一个对象，从而使我们可用不同的
     
     </summary>
     
@@ -1259,118 +1313,6 @@
     </summary>
     
       <category term="UML" scheme="http://blog.wuzhiwei.cn/categories/UML/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>PHP设计模式——简介</title>
-    <link href="http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html"/>
-    <id>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</id>
-    <published>2017-04-18T06:27:55.000Z</published>
-    <updated>2017-06-06T01:40:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>在我们的编程过程中，所遇到的大部分问题其实都已经被其他程序员碰到过，并一再的处理了；不论是使用什么编程语言。<strong>设计模式</strong>提取了共同问题，定义了经过测试的解决方案，并描述了可能的结果。</p>
-<p><strong>设计模式</strong>是一些可以<em>在项目中重复使用的解决方案</em>，是<em>解决一般性问题的通用方法</em>。</p>
-<p>通俗来说，设计模式就是一些编程的套路。</p>
-<p>面向对象的原则是<strong>“组合优于继承”</strong>，因为组合可以以多种方式动态的处理任务。虽然对象的组合会导致代码的可读性下降，但会让系统更加灵活，复用性更高。</p>
-<p><strong>设计模式</strong>是很多前辈花费大量精力总结的经验，是经过检验的高效的一系列对象组合方式；可以通过不同的语言来实现，下面特整理了一份PHP语言的设计模式实现，共12种经典的设计模式：</p>
-<h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h2><p><strong>创建型模式(Creational Pattern)</strong>对类的实例化过程进行了抽象，能够将软件模块中对象的创建和对象的使用分离。为了使软件的结构更加清晰，外界对于这些对象只需要知道它们共同的接口，而不清楚其具体的实现细节，使整个系统的设计更加符合单一职责原则。</p>
-<p>创建型模式<em>在创建什么(What)</em>，<em>由谁创建(Who)</em>，<em>何时创建(When)</em>等方面都为软件设计者提供了尽可能大的灵活性。创建型模式隐藏了类的实例的创建细节，通过隐藏对象如何被创建和组合在一起达到使整个系统独立的目的。</p>
-<ol>
-<li><a href="php-design-pattern-simple-factory.html">简单工厂模式（Simple Factory Pattern）</a></li>
-<li><a href="php-design-pattern-factory-method.html">工厂方法模式（Factory Method Pattern）</a></li>
-<li><a href="php-design-pattern-abstract-factory.html">抽象工厂模式（Abstract Factory Pattern）</a></li>
-<li><a href="php-design-pattern-builder.html">建造者模式（Builder Pattern）</a></li>
-<li><a href="php-design-pattern-singleton.html">单例模式（Singleton Pattern）</a></li>
-</ol>
-<h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h2><p><strong>结构型模式(Structural Pattern)</strong>描述如何将类或者对 象结合在一起形成更大的结构，就像搭积木，可以通过 简单积木的组合形成复杂的、功能更为强大的结构。</p>
-<p>结构型模式可以分为<em>类结构型模式</em>和<em>对象结构型模式</em>：</p>
-<ul>
-<li>类结构型模式关心类的组合，由多个类可以组合成一个更大的系统，在类结构型模式中一般只存在继承关系和实现关系。</li>
-<li>对象结构型模式关心类与对象的组合，通过关联关系使得在一 个类中定义另一个类的实例对象，然后通过该对象调用其方法。根据“合成复用原则”，在系统中尽量使用关联关系来替代继 承关系，因此大部分结构型模式都是对象结构型模式。</li>
-</ul>
-<ol>
-<li><a href="php-design-pattern-adapter.html">适配器模式（Adapter Pattern）</a></li>
-<li><a href="php-design-pattern-bridge.html">桥接模式（Bridge Pattern）</a></li>
-<li><a href="php-design-pattern-composite.html">组合模式（Composite Pattern）</a></li>
-<li><a href="php-design-pattern-decorator.html">装饰模式（Decorator Pattern）</a></li>
-<li><a href="php-design-pattern-facade.html">外观模式（Facade Pattern）</a></li>
-<li><a href="php-design-pattern-flyweight.html">享元模式（Flyweight Pattern）</a></li>
-<li><a href="php-design-pattern-proxy.html">代理模式（Proxy Pattern）</a></li>
-</ol>
-<h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><p><strong>行为型模式(Behavioral Pattern)</strong>是对在不同的对象之间划分责任和算法的抽象化。</p>
-<p>行为型模式不仅仅关注类和对象的结构，而且重点关注它们之间的相互作用。</p>
-<p>通过行为型模式，可以更加清晰地划分类与对象的职责，并研究系统在运行时实例对象之间的交互。在系统运行时，对象并不是孤立的，它们可以通过相互通信与协作完成某些复杂功能，一个对象在运行时也将影响到其他对象的运行。</p>
-<p>行为型模式分为<em>类行为型模式</em>和<em>对象行为型模式</em>两种：</p>
-<ul>
-<li>类行为型模式：类的行为型模式使用继承关系在几个类之间分配行为，类行为型模式主要通过多态等方式来分配父类与子类的职责。</li>
-<li>对象行为型模式：对象的行为型模式则使用对象的聚合关联关系来分配行为，对象行为型模式主要是通过对象关联等方式来分配两个或多个类的职责。根据“合成复用原则”，系统中要尽量使用关联关系来取代继承关系，因此大部分行为型设计模式都属于对象行为型设计模式。</li>
-</ul>
-<ol>
-<li><a href="php-design-pattern-command.html">命令模式（Command Pattern）</a></li>
-<li><a href="php-design-pattern-mediator.html">中介者模式（Mediator Pattern）</a></li>
-<li><a href="php-design-pattern-observer.html">观察者模式（Observer Pattern）</a></li>
-<li><a href="php-design-pattern-state.html">状态模式（State Pattern）</a></li>
-<li><a href="php-design-pattern-strategy.html">策略模式（Strategy Pattern）</a></li>
-</ol>
-<p>设计模式的<strong>宗旨就是：重用</strong>；在面向对象中，<em>类是用于生成对象的代码模版</em>，而<em>设计模式是用于解决共性问题的代码模版</em>。遵循这样的模板，我们可以设快速地设计出优秀的代码。</p>
-<blockquote>
-<p>注意，设计模式只是模板，不是具体的代码。它是为了代码复用，增加可维护性。</p>
-</blockquote>
-<h1 id="设计基础"><a href="#设计基础" class="headerlink" title="设计基础"></a>设计基础</h1><p>在学习设计模式之前，有几个概念应该深入理解。<br>假设有一个这样的类：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $name = <span class="string">'Human'</span>;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="变量保存对象"><a href="#变量保存对象" class="headerlink" title="变量保存对象"></a>变量保存对象</h2><figure class="highlight php"><table><tr><td class="code"><pre><div class="line">$man = <span class="keyword">new</span> Person(); <span class="comment">// 变量不仅能保存整形数字、数组和字符串等；还可以保存对象。</span></div><div class="line"><span class="keyword">echo</span> $man-&gt;getName();</div></pre></td></tr></table></figure>
-<h2 id="传递对象参数"><a href="#传递对象参数" class="headerlink" title="传递对象参数"></a>传递对象参数</h2><p>如果另一个类用到了<code>Person</code>类的属性或方法，可以直接传进去：<br><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> funciton __construct($person)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> $person-&gt;getName();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 传递对象</span></div><div class="line">$jack = <span class="keyword">new</span> Student(<span class="keyword">new</span> Person());</div></pre></td></tr></table></figure></p>
-<h2 id="限定传递参数的类型"><a href="#限定传递参数的类型" class="headerlink" title="限定传递参数的类型"></a>限定传递参数的类型</h2><p>在传递参数的时候，就限定参数的类型：<br><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(Person $person)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> $person-&gt;getName();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 传递对象</span></div><div class="line">$jack = <span class="keyword">new</span> Student(<span class="keyword">new</span> Person());</div></pre></td></tr></table></figure></p>
-<p>这样，传给<code>new Studen()</code>的参数必须是<code>Person</code>的实例。</p>
-<h2 id="用类属性保存对象"><a href="#用类属性保存对象" class="headerlink" title="用类属性保存对象"></a>用类属性保存对象</h2><p>一种经常用到的做法，是用一个类的属性保存对象或对象集合。<br><figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Life</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> $persons = [];</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">addPerson</span><span class="params">(Person $person)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;persons[] = $person;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">$cls = <span class="keyword">new</span> Life();</div><div class="line">$cls-&gt;addPerson(<span class="keyword">new</span> Person());</div><div class="line">$cls-&gt;addPerson(<span class="keyword">new</span> Person());</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>面向对象的设计模式都是围绕上面的情形，做一些组合之后形成的。</p>
-</blockquote>
-<h1 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h1><p>设计模式有六大原则，这些原则是经过代码大神们不断总结的规律，目的是提高代码的复用性，降低耦合。</p>
-<h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><p>1988年，勃兰特·梅耶（Bertrand Meyer）在他的著作《面向对象软件构造（Object Oriented Software Construction）》中提出了开闭原则（Open Close Principle），它的原文是这样：“Software entities should be open for extension,but closed for modification”。</p>
-<ul>
-<li><strong>意思：</strong>软件模块应该对扩展开放，对修改关闭。</li>
-<li><strong>举例：</strong>在程序需要进行新增功能的时候，不能去修改原有的代码，而是新增代码，实现一个热插拔的效果（<em>热插拔：灵活的去除或添加功能，不影响到原有的功能</em>）。</li>
-<li><strong>目的：</strong>为了使程序的扩展性好，易于维护和升级。</li>
-</ul>
-<h2 id="里氏代换原则"><a href="#里氏代换原则" class="headerlink" title="里氏代换原则"></a>里氏代换原则</h2><ul>
-<li><strong>意思：</strong>里氏代换原则（Liskov Substitution Principle）是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。</li>
-<li><strong>举例：</strong>球类，原本是一种体育用品，它的衍生类有篮球、足球、排球、羽毛球等等，如果衍生类替换了基类的原本方法，如把体育用品改成了食用品（那么软件单位的功能受到影响），就不符合里氏代换原则。</li>
-<li><strong>目的：</strong>对实现抽象化的具体步骤的规范。</li>
-</ul>
-<h2 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h2><ul>
-<li><strong>意思：</strong>依赖倒转原则（Dependence Inversion Principle）即针对接口编程，而不是针对实现编程。</li>
-<li><strong>举例：</strong>以计算机系统为例,无论主板、CPU、内存、硬件都是在针对接口设计的，如果针对实现来设计，内存就要对应到针对某个品牌的主板，那么会出现换内存需要把主板也换掉的尴尬。</li>
-<li><strong>目的：</strong>降低模块间的耦合。</li>
-</ul>
-<h2 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h2><ul>
-<li><strong>意思：</strong>接口隔离原则（Interface Segregation Principle）即使用多个隔离的接口，比使用单个接口要好。</li>
-<li><strong>举例：</strong>比如：登录，注册时属于用户模块的两个接口，比写成一个接口好。</li>
-<li><strong>目的：</strong>提高程序设计灵活性。</li>
-</ul>
-<h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><p>迪米特法则（Demeter Principle）也称最少知道原则，1987年秋天由美国Northeastern University的Ian Holland提出，被UML的创始者之一Booch等普及。后来，因为在经典著作《 The Pragmatic Programmer》而广为人知。</p>
-<ul>
-<li><strong>意思：</strong>一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</li>
-<li><strong>举例：</strong>一个类公开的public属性或方法越多，修改时涉及的面也就越大，变更引起的风险扩散也就越大。</li>
-<li><strong>目的：</strong>降低类之间的耦合，减少对其他类的依赖。</li>
-</ul>
-<h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><p>单一职责原则（ Single responsibility principle ）由罗伯特·C·马丁（Robert C. Martin）于《敏捷软件开发：原则、模式和实践》一书中给出的。马丁表示此原则是基于汤姆·狄马克(Tom DeMarco)和Meilir Page-Jones的著作中的内聚性原则发展出的。</p>
-<ul>
-<li><strong>意思：</strong>一个类只负责一个功能领域中的相应职责，或者可以定义为：就一个类而言，应该只有一个引起它变化的原因。</li>
-<li><strong>举例：</strong>该原则意思简单到不需要举例！</li>
-<li><strong>目的：</strong>类的复杂性降低，可读性提高，可维护性提高。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;在我们的编程过程中，所遇到的大部分问题其实都已经被其他程序员碰到过，并一再的处理了；不论是使用什么编程语言。&lt;strong&gt;设计模式&lt;/st
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://blog.wuzhiwei.cn/categories/PHP/"/>
     
     
   </entry>
