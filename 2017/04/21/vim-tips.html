@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/21/vim-tips.html">
 <meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
 <meta property="og:description" content="Vi最初是由Bill Joy于1976年编码实现的，而Vim(Vi IMproved)则是改进的Vi，由Bram Moolenaar在1991年开发并发布。Vi/Vim是所有Unix/Linux操作系统默认配备的编辑器。功能强大、操作高效，命令非常多、用法极为灵活。 “工欲善其事，必先利其器”。在Vi/Vim版本的选择上，原则是“能用Vim就不要使用Vi；能用最新版就不要守着旧版本”。Vim提供的">
-<meta property="og:updated_time" content="2017-06-06T01:40:43.000Z">
+<meta property="og:updated_time" content="2017-06-16T00:52:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VIM操作技巧总结">
 <meta name="twitter:description" content="Vi最初是由Bill Joy于1976年编码实现的，而Vim(Vi IMproved)则是改进的Vi，由Bram Moolenaar在1991年开发并发布。Vi/Vim是所有Unix/Linux操作系统默认配备的编辑器。功能强大、操作高效，命令非常多、用法极为灵活。 “工欲善其事，必先利其器”。在Vi/Vim版本的选择上，原则是“能用Vim就不要使用Vi；能用最新版就不要守着旧版本”。Vim提供的">
@@ -412,7 +412,7 @@
 <tr>
 <td style="text-align:left">搜索</td>
 <td style="text-align:left"><code>/</code>在文件中向前搜索<br><code>?</code>在文件中向后搜索</td>
-<td style="text-align:left">可使用正则表达式<br>可配合操作数使用，比如<code>3/str</code>向前搜索字串str并将光标移到第三个找到的串</td>
+<td style="text-align:left">可使用正则表达式，可配合操作数使用，<br>比如<code>3/str</code>向前搜索字串str并将光标移到第三个找到的串</td>
 </tr>
 <tr>
 <td style="text-align:left">搜索下一个</td>
@@ -489,13 +489,13 @@
 </tr>
 <tr>
 <td style="text-align:left">设置行号显示与否</td>
-<td style="text-align:left"><code>:set number</code>显示行号<br><code>:set no number</code>取消行号显示</td>
-<td style="text-align:left">命令的简写形式：<code>:set nu</code>、<code>:set no nu</code></td>
+<td style="text-align:left"><code>:set number</code>显示行号<br><code>:set nonumber</code>取消行号显示</td>
+<td style="text-align:left">命令的简写形式：<code>:set nu</code>、<code>:set nonu</code></td>
 </tr>
 <tr>
 <td style="text-align:left">设置自动缩进</td>
-<td style="text-align:left"><code>:set autoindent</code>设置自动缩进<br><code>:set no autoindent</code>取消自动缩进设置</td>
-<td style="text-align:left">命令的简写形式：<code>:set ai</code>、<code>:set no ai</code></td>
+<td style="text-align:left"><code>:set autoindent</code>设置自动缩进<br><code>:set noautoindent</code>取消自动缩进设置</td>
+<td style="text-align:left">命令的简写形式：<code>:set ai</code>、<code>:set noai</code></td>
 </tr>
 <tr>
 <td style="text-align:left">设置缩进宽度</td>
@@ -504,13 +504,13 @@
 </tr>
 <tr>
 <td style="text-align:left">设置大小写忽略与否</td>
-<td style="text-align:left"><code>:set ignorecase</code>设置忽略大小<br><code>:set no ignorecase</code>取消忽略大小设置</td>
-<td style="text-align:left">命令的简写形式：<code>:set ic</code>、<code>:set no ic</code></td>
+<td style="text-align:left"><code>:set ignorecase</code>设置忽略大小<br><code>:set noignorecase</code>取消忽略大小设置</td>
+<td style="text-align:left">命令的简写形式：<code>:set ic</code>、<code>:set noic</code></td>
 </tr>
 <tr>
 <td style="text-align:left">设置不可见字符显示与否</td>
 <td style="text-align:left"><code>:set list</code>显示不可见字符<br><code>:set nolist</code>取消显示不可见字符设置</td>
-<td style="text-align:left">在显示不可见字符的情况下，TAB键显示为<code>^I</code>，而$显示在每行的结尾</td>
+<td style="text-align:left">在显示不可见字符的情况下，<br>TAB键显示为<code>^I</code>，而$显示在每行的结尾</td>
 </tr>
 </tbody>
 </table>

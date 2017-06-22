@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git Stash用法 | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
+  <title>Mac下Java开发环境搭建 | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,16 +15,16 @@
     <meta name="keywords" content="PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,随笔,博客,好文,摄影,旅行,网球,blog.wuzhiwei.cn,wuzhiwei.cn" />
   
 
-  <meta name="description" content="Git,Stash,Git命令,MacBook Pro,Mac,Tools,Mac开发常用工具">
+  <meta name="description" content="Mac,Java,JDK8,Java开发环境">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Stash用法">
-<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/27/git-stash.html">
+<meta property="og:title" content="Mac下Java开发环境搭建">
+<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/06/16/mac-java-start.html">
 <meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
-<meta property="og:description" content="Git,Stash,Git命令,MacBook Pro,Mac,Tools,Mac开发常用工具">
-<meta property="og:updated_time" content="2017-06-13T13:20:59.000Z">
+<meta property="og:description" content="Mac,Java,JDK8,Java开发环境">
+<meta property="og:updated_time" content="2017-06-22T13:48:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Stash用法">
-<meta name="twitter:description" content="Git,Stash,Git命令,MacBook Pro,Mac,Tools,Mac开发常用工具">
+<meta name="twitter:title" content="Mac下Java开发环境搭建">
+<meta name="twitter:description" content="Mac,Java,JDK8,Java开发环境">
 
   
 
@@ -159,17 +159,22 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装JDK"><span class="toc-text">一、安装JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置环境变量"><span class="toc-text">二、配置环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、配置服务器tomcat"><span class="toc-text">三、配置服务器tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、开发工具IDE"><span class="toc-text">四、开发工具IDE</span></a></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
-   <article id="post-git-stash" class="article article-type-post" itemprop="blogPost">
+   <article id="post-mac-java-start" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">Git Stash用法</h1>
+    <h1 class="post-title">Mac下Java开发环境搭建</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2017.04.27</span>
+        <span>2017.06.16</span>
       </span>
 
       
@@ -182,7 +187,7 @@
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/Git/">Git</a>
+    <a class="article-category-link" href="/categories/Mac/">Mac</a> / <a class="article-category-link" href="/categories/Mac/Java/">Java</a>
   </span>
 
 
@@ -204,19 +209,21 @@
 
   <div class="article-content">
     
-      <p>在编码过程中经常会碰到突发BUG，需要紧急修复的场景（<em>BUG高于需求</em>）。可能与你写到一半的代码（<em>没有完成，不该提交</em>）产生冲突，这时Git为我们提供<code>git stash</code>命令将工作现场<strong>暂存</strong>起来，等以后恢复现场后继续之前未完成的编码。相关命令参考：</p>
-<blockquote>
-<p>注：[]方括号中内容为可选，[<stash>]里面的stash代表进度的编号形如：stash@{0}, &lt;&gt;尖括号内的必填。</stash></p>
-</blockquote>
-<ul>
-<li><code>git stash</code><br>对当前的暂存区和工作区状态进行保存。</li>
-<li><code>git stash list</code><br>列出所有保存的进度列表。</li>
-<li><code>git stash pop [--index] [&lt;stash&gt;]</code><br>恢复工作进度现场。<br><code>--index</code>参数表示不仅恢复工作区，还恢复暂存区；<br><code>&lt;stash&gt;</code>指定定恢复某个具体进度，如果没有这个参数，则默认恢复最新的进度。如：<code>git stash pop --index stash@{0}</code>表示恢复编号为0的进度的工作区和暂存区。</li>
-<li><code>git stash [save message] [-k|--no-keep-index] [--patch]</code><br><strong>这是<code>git stash</code>最完整的命令形式</strong>。使用<code>save</code>可以对进度添加备注，如<code>git stash save &quot;备注&quot;</code>。<br><code>-k</code>和<code>--no-keep-index</code>指定保存进度后，是否重置暂存区。<br><code>--patch</code>会显示工作区和HEAD的差异，通过编辑差异文件，排除不需要保存的内容。</li>
-<li><code>git stash apply [--index] [&lt;stash&gt;]</code><br>不删除已恢复的进度，其他同<code>git stash pop</code>。</li>
-<li><code>git stash drop [&lt;stash&gt;]</code><br>删除某一个进度，默认删除最新进度。</li>
-<li><code>git stash clear</code><br>删除所有进度。</li>
-<li><code>git stash branch &lt;branchname&gt; &lt;stash&gt;</code><br>基于进度创建分支。</li>
+      <p>最近公司要求几个Java项目，所以要把大学时期学习的Java捡起来，虽然在学校学习的是Java、JSP的一套，但毕业后就没写过了，一直做的PHP。也好借此机会重新学习一下吧，首先需要的当然是搭建开发环境，没有环境怎么玩！一步一步来吧~</p>
+<h2 id="一、安装JDK"><a href="#一、安装JDK" class="headerlink" title="一、安装JDK"></a>一、安装JDK</h2><p><strong>JDK</strong>是Java语言的软件开发工具包，主要用于移动设备、嵌入式设备上的java应用程序。JDK是整个Java开发的核心，它包含了Java的运行环境，Java工具和Java基础的类库。<br>没有JDK的话，无法编译Java程序。</p>
+<figure class="highlight haml"><table><tr><td class="code"><pre><div class="line">-<span class="ruby">&gt; java -version</span></div><div class="line">No Java runtime present, requesting install.</div></pre></td></tr></table></figure>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">官网下载</a>相应的JDK版本，然后安装（傻瓜式）。安装完成后，再打开Terminal，执行命令<code>java -version</code>即可查看到我们安装的JDK版本信息。</p>
+<h2 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h2><figure class="highlight haml"><table><tr><td class="code"><pre><div class="line">-<span class="ruby">&gt; <span class="regexp">/usr/libexec</span><span class="regexp">/java_home -v # 查看JDK真实路径</span></span></div><div class="line"><span class="comment">/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home</span></div></pre></td></tr></table></figure>
+<p>复制以上路径，编辑配置文件：<code>sudo vim /etc/profile</code>添加Java环境变量配置，如下：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Java环境变量配置</span></div><div class="line"><span class="attribute">JAVA_HOME</span>=<span class="string">"/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"</span></div><div class="line"><span class="attribute">CLASS_PATH</span>=<span class="string">".:<span class="variable">$JAVA_HOME</span>/lib"</span></div><div class="line"><span class="comment"># 把JAVA添加到环境变量PATH中</span></div><div class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin"</span></div></pre></td></tr></table></figure>
+<h2 id="三、配置服务器tomcat"><a href="#三、配置服务器tomcat" class="headerlink" title="三、配置服务器tomcat"></a>三、配置服务器tomcat</h2><p><a href="http://tomcat.apache.org/download-90.cgi" target="_blank" rel="external">官网下载</a>对应版本，解压到自己想放置的位置。<code>sudo vim /etc/profile</code>添加Tomcat环境变量配置，如下：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Tomcat环境变量配置</span></div><div class="line"><span class="attribute">TOMCAT_HOME</span>=<span class="string">"/usr/local/tomcat"</span></div><div class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$TOMCAT_HOME</span>/bin"</span></div></pre></td></tr></table></figure>
+<p>设置完成后，执行<code>sudo chmod +x $TOMCAT_HOME/bin/*.sh</code>，之后可以使用<code>$TOMCAT_HOME/bin/startup.sh</code>启动Tomcat，默认端口为8080。浏览器访问<em>localhost:8080</em>即可看到Tomcat的相关信息界面。</p>
+<h2 id="四、开发工具IDE"><a href="#四、开发工具IDE" class="headerlink" title="四、开发工具IDE"></a>四、开发工具IDE</h2><ul>
+<li><a href="https://www.jetbrains.com/idea/" target="_blank" rel="external">IntelliJ IDEA</a>，<a href="http://www.phperz.com/special/83.html" target="_blank" rel="external">IntelliJ IDEA使用教程</a>。</li>
+<li><a href="http://www.eclipse.org/downloads/" target="_blank" rel="external">Eclipse</a></li>
+<li><a href="https://www.eclipse.org/che/getting-started/download/" target="_blank" rel="external">Eclipse Che</a></li>
+<li><a href="https://netbeans.org/downloads/index.html" target="_blank" rel="external">NetBeans</a></li>
 </ul>
 
     
@@ -248,10 +255,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/04/25/iterm2-shortcut-key.html">
+    <a class="show pull-left" href="/2017/04/27/git-stash.html">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/06/16/mac-java-start.html">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
