@@ -2,7 +2,7 @@
 title: Mac开发常用工具汇总
 date: 2017-04-01 11:49:14
 categories: [Mac]
-description: iHosts,MacBook Pro,Mac,Tools,Mac开发常用工具
+description: iHosts,iTerms,MacBook Pro,Mac,Tools,Mac开发常用工具
 ---
 汇总记录一些自己平常在Mac下开发时经常使用到的工具软件。
 
@@ -40,4 +40,14 @@ description: iHosts,MacBook Pro,Mac,Tools,Mac开发常用工具
 - `command + ;`自动补全命令
 
 - 定义专属快捷键
-*iTerm2->Preferences->Keys*可以根据自己的习惯定义自己的专属快捷键。
+*iTerm2->Preferences->Keys*可以根据自己的习惯定义自己的专属快捷键[（常用快捷键参考）](/2017/04/25/iterm2-shortcut-key.html)。
+
+## [PhpStorm](https://www.jetbrains.com/phpstorm/)
+**PhpStorm**主要用于开发*PHP*。
+
+## [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+**IntelliJ IDEA**主要用于支持Java、Scala、Groovy等语言的开发工具，同时具备支持目前主流的技术和框架，擅长于企业应用、移动应用和Web应用的开发。
+
+[IntelliJ IDEA使用教程1](http://www.phperz.com/special/83.html)，[IntelliJ IDEA使用教程2](http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/)。
+
+>**IntelliJ IDEA 是目前所有 IDE 中最具备沉浸式的 IDE，没有之一。**
