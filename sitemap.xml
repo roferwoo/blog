@@ -2,212 +2,233 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/07/07/iterm2-rz-sz.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/07/08/java-learn-02.html</loc>
     
-    <lastmod>2017-07-07T02:16:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/25/iterm2-shortcut-key.html</loc>
-    
-    <lastmod>2017-07-06T06:15:45.000Z</lastmod>
+    <lastmod>2017-09-04T13:53:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/06/16/mac-java-start.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/07/07/java-learn-01.html</loc>
     
-    <lastmod>2017-06-22T13:48:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
-    
-    <lastmod>2017-06-21T01:22:56.000Z</lastmod>
+    <lastmod>2017-09-04T13:53:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/21/vim-tips.html</loc>
+    <loc>http://blog.wuzhiwei.cn/2017/04/22/nginx.html</loc>
     
-    <lastmod>2017-06-16T00:52:33.000Z</lastmod>
+    <lastmod>2017-08-02T03:20:46.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/27/git-stash.html</loc>
     
-    <lastmod>2017-06-13T13:20:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/12/learn-to-be-calm.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/search/index.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <lastmod>2017-08-02T01:38:21.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/01/gh-pages-hexo-blog.html</loc>
     
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-composite.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-facade.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <lastmod>2017-08-02T01:38:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/07/hexo-code-highlight.html</loc>
     
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-singleton.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-state.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/01/zaji-hi.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/uml-class-diagram.html</loc>
-    
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <lastmod>2017-08-02T01:37:25.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.wuzhiwei.cn/2017/04/06/introduction-to-http-protocol.html</loc>
     
-    <lastmod>2017-06-06T01:40:43.000Z</lastmod>
+    <lastmod>2017-08-02T01:36:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/07/07/iterm2-rz-sz.html</loc>
+    
+    <lastmod>2017-08-02T01:36:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/25/iterm2-shortcut-key.html</loc>
+    
+    <lastmod>2017-08-02T01:35:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/12/learn-to-be-calm.html</loc>
+    
+    <lastmod>2017-08-02T01:34:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/06/16/mac-java-start.html</loc>
+    
+    <lastmod>2017-08-02T01:33:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/mac-tools.html</loc>
+    
+    <lastmod>2017-08-02T01:33:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-singleton.html</loc>
+    
+    <lastmod>2017-08-02T01:32:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-simple-factory.html</loc>
+    
+    <lastmod>2017-08-02T01:31:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-proxy.html</loc>
+    
+    <lastmod>2017-08-02T01:31:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-observer.html</loc>
+    
+    <lastmod>2017-08-02T01:30:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-mediator.html</loc>
+    
+    <lastmod>2017-08-02T01:30:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-flyweight.html</loc>
+    
+    <lastmod>2017-08-02T01:29:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
+    
+    <lastmod>2017-08-02T01:29:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-facade.html</loc>
+    
+    <lastmod>2017-08-02T01:29:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-decorator.html</loc>
+    
+    <lastmod>2017-08-02T01:28:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-composite.html</loc>
+    
+    <lastmod>2017-08-02T01:28:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-command.html</loc>
+    
+    <lastmod>2017-08-02T01:27:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-builder.html</loc>
+    
+    <lastmod>2017-08-02T01:27:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-bridge.html</loc>
+    
+    <lastmod>2017-08-02T01:27:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-adapter.html</loc>
+    
+    <lastmod>2017-08-02T01:26:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-abstract-factory.html</loc>
+    
+    <lastmod>2017-08-02T01:26:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-state.html</loc>
+    
+    <lastmod>2017-08-02T01:25:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-strategy.html</loc>
+    
+    <lastmod>2017-08-02T01:25:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern.html</loc>
+    
+    <lastmod>2017-08-02T01:24:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/18/uml-class-diagram.html</loc>
+    
+    <lastmod>2017-08-02T01:23:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/01/zaji-hi.html</loc>
+    
+    <lastmod>2017-08-02T01:23:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.wuzhiwei.cn/2017/04/21/vim-tips.html</loc>
+    
+    <lastmod>2017-08-02T01:23:27.000Z</lastmod>
     
   </url>
   
@@ -240,7 +261,7 @@
   </url>
   
   <url>
-    <loc>http://blog.wuzhiwei.cn/2017/04/18/php-design-pattern-factory-method.html</loc>
+    <loc>http://blog.wuzhiwei.cn/search/index.html</loc>
     
     <lastmod>2017-06-06T01:40:43.000Z</lastmod>
     

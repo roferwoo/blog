@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Nginx笔记 | 杂记 | 我的博客（blog.wuzhiwei.cn）</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="PHP,JavaScript,Html,Linux,WEB开发,Mac,后端开发,程序员,杂记,随笔,博客,好文,摄影,旅行,网球,blog.wuzhiwei.cn,wuzhiwei.cn" />
+  
+
+  <meta name="description" content="Nginx,Web服务器,Mac开发,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx笔记">
+<meta property="og:url" content="http://blog.wuzhiwei.cn/2017/04/22/nginx.html">
+<meta property="og:site_name" content="杂记 | 我的博客（blog.wuzhiwei.cn）">
+<meta property="og:description" content="Nginx,Web服务器,Mac开发,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn">
+<meta property="og:updated_time" content="2017-08-02T03:20:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nginx笔记">
+<meta name="twitter:description" content="Nginx,Web服务器,Mac开发,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0553623a66dcdf3168de8ecb48919f53";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">首页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">首页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-text">Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac"><span class="toc-text">Mac</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#location匹配规则"><span class="toc-text">location匹配规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#location匹配命令"><span class="toc-text">location匹配命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#location匹配的优先级"><span class="toc-text">location匹配的优先级</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx-PHP"><span class="toc-text">Nginx+PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-1"><span class="toc-text">Windows</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附：nginx-conf"><span class="toc-text">附：nginx.conf</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-nginx" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Nginx笔记</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.04.22</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>wzw</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Nginx/">Nginx</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p><a href="http://nginx.org/" target="_blank" rel="external">官网</a></p>
+</blockquote>
+<p><strong>Nginx</strong>（”engine x”）是一个高性能、轻量级的Web服务器/反向代理服务器及电子邮件（IMAP/POP3/SMTP）服务器。Nginx是由<em>Igor Sysoev</em>为俄罗斯访问量第二的Rambler.ru站点开发的。其特点是<strong>占有内存少、并发能力强</strong>。</p>
+<blockquote>
+<p>第一个公开版本0.1.0发布于2004年10月4日。将源代码以类BSD许可证的形式发布。</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p><a href="http://nginx.org/en/download.html" target="_blank" rel="external">下载</a>最新稳定版本，解压至相应目录即可<strong>（绿色文件，无须安装）</strong>。安装完成后，可通过以下方式启动：</p>
+<ol>
+<li>双击<em>nginx.exe</em>运行，可见黑窗口一闪而过，启动完毕；</li>
+<li>命令行到<em>nginx</em>目录，输入<code>nginx -c conf/nginx.conf</code><em>（可指定配置文件）</em>启动。<blockquote>
+<p>注：此方式命令行窗口无任何提示，且<strong>被锁定</strong>。</p>
+</blockquote>
+</li>
+<li>命令行到<em>nginx</em>目录，输入<code>start nginx</code>启动，此方式<strong>不锁定</strong>。</li>
+</ol>
+<p>关闭Nginx服务：<br><figure class="highlight dos"><table><tr><td class="code"><pre><div class="line">/<span class="built_in">path</span>/to/nginx &gt; nginx -s stop （或在任何目录下执行：<span class="built_in">taskkill</span> /F /IM nginx.exe &gt; <span class="built_in">nul</span>）</div></pre></td></tr></table></figure></p>
+<p>查看Nginx进程：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">tasklist /<span class="keyword">fi</span> <span class="string">"imagename eq nginx.exe"</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>nginx -V</code>可查看编译版本支持哪些模块。</p>
+</blockquote>
+<h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h3><p>通过<em>Homebrew</em>安装，在命令行终端执行：<br><figure class="highlight mipsasm"><table><tr><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>nginx</div></pre></td></tr></table></figure></p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><div class="line">nginx -s stop <span class="comment"># 强制关闭</span></div><div class="line">nginx -s <span class="keyword">quit</span> <span class="comment"># 安全关闭</span></div><div class="line">nginx -s <span class="keyword">reload</span> <span class="comment"># 改变配置文件的时候，重启nginx工作进程，来使配置文件生效</span></div><div class="line">nginx -s reopen <span class="comment"># 打开日志文件</span></div><div class="line">nginx -t <span class="comment"># 测试配置是否正确</span></div></pre></td></tr></table></figure>
+<h2 id="location匹配规则"><a href="#location匹配规则" class="headerlink" title="location匹配规则"></a><em>location</em>匹配规则</h2><h3 id="location匹配命令"><a href="#location匹配命令" class="headerlink" title="location匹配命令"></a><em>location</em>匹配命令</h3><ul>
+<li><code>~</code>：波浪线表示执行一个正则匹配，<em>区分大小写</em>。</li>
+<li><code>~*</code>：表示执行一个正则匹配，<em>不区分大小写</em>。</li>
+<li><code>^~</code>：表示普通字符匹配，如果该选项匹配，只匹配该选项，不匹配别的选项，一般用来匹配目录。</li>
+<li><code>=</code>：进行普通字符精确匹配。</li>
+<li><code>@</code>：定义一个命名的<em>location</em>，使用在内部定向时，例如<em>error_page</em>、<em>try_files</em>。</li>
+</ul>
+<h3 id="location匹配的优先级"><a href="#location匹配的优先级" class="headerlink" title="location匹配的优先级"></a><em>location</em>匹配的优先级</h3><blockquote>
+<p>优先级与<em>location</em>在配置文件中的顺序无关。</p>
+</blockquote>
+<p><code>=</code><em>精确匹配</em>会第一个被处理。如果发现精确匹配，nginx停止搜索其他匹配。</p>
+<p><em>普通字符匹配</em>、<em>正则表达式规则</em>和<em>长的块规则</em>将被优先和查询匹配，也就是说如果该项匹配还需去看有没有正则表达式匹配和更长的匹配。<br><code>^~</code>则只匹配该规则，nginx停止搜索其他匹配，否则nginx会继续处理其他<em>location</em>指令。</p>
+<p>最后匹配理带有<code>~</code>和<code>~*</code>的指令，如果找到相应的匹配，则nginx停止搜索其他匹配；当没有正则表达式或者没有正则表达式被匹配的情况下，那么匹配程度最高的逐字匹配指令会被使用。</p>
+<p>例如：<br><figure class="highlight shell"><table><tr><td class="code"><pre><div class="line">location  = / &#123;</div><div class="line"><span class="meta">  #</span><span class="bash"> 只匹配<span class="string">"/"</span></span></div><div class="line">  [ configuration A ]</div><div class="line">&#125;</div><div class="line">location  / &#123;</div><div class="line"><span class="meta">  #</span><span class="bash"> 匹配任何请求，因为所有请求都是以<span class="string">"/"</span>开始</span></div><div class="line"><span class="meta">  #</span><span class="bash"> 但是更长字符匹配或者正则表达式匹配会优先匹配</span></div><div class="line">  [ configuration B ]</div><div class="line">&#125;</div><div class="line">location ^~ /images/ &#123;</div><div class="line"><span class="meta">  #</span><span class="bash"> 匹配任何以 /images/ 开始的请求，并停止匹配 其它location</span></div><div class="line">  [ configuration C ]</div><div class="line">&#125;</div><div class="line">location ~* .(gif|jpg|jpeg)$ &#123;</div><div class="line"><span class="meta">  #</span><span class="bash"> 匹配以 gif, jpg, or jpeg结尾的请求</span></div><div class="line"><span class="meta">  #</span><span class="bash"> 但是所有 /images/ 目录的请求将由 [Configuration C]处理</span></div><div class="line">  [ configuration D ]</div><div class="line">&#125;</div><div class="line"><span class="meta"></span></div><div class="line">#<span class="bash"> 请求URI示例</span></div><div class="line"><span class="meta">#</span><span class="bash"> / -&gt; 符合configuration A</span></div><div class="line"><span class="meta">#</span><span class="bash"> /documents/document.html -&gt; 符合configuration B</span></div><div class="line"><span class="meta">#</span><span class="bash"> /images/1.gif -&gt; 符合configuration C</span></div><div class="line"><span class="meta">#</span><span class="bash"> /documents/1.jpg -&gt;符合 configuration D</span></div><div class="line"><span class="meta"></span></div><div class="line">#<span class="bash"> @ location例子</span></div><div class="line">error_page 404 = @fetch;</div><div class="line"></div><div class="line">location @fetch(</div><div class="line">  proxy_pass http://fetch;</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<h2 id="Nginx-PHP"><a href="#Nginx-PHP" class="headerlink" title="Nginx+PHP"></a>Nginx+PHP</h2><p>Apache一般把PHP当做自己的一个模块来启动；而Nginx则是把HTTP请求变量（如<em>get</em>、<em>user_agent</em>等）转发给PHP进程，即PHP独立进程与Nginx进行通信，称为<strong>fastcgi</strong>运行方式。</p>
+<h3 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h3><p><a href="http://windows.php.net/download/" target="_blank" rel="external">下载最新版PHP</a>，解压，重命名<em>php.ini-development</em>为<em>php.ini</em>，修改配置：<br><figure class="highlight nix"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 指定win7下的扩展目录。</span></div><div class="line"><span class="attr">extension_dir</span> = <span class="string">"./ext"</span></div><div class="line"><span class="comment"># 允许用户在运行时加载PHP扩展，即在脚本运行期间加载。</span></div><div class="line"><span class="attr">enable_dl</span> = On</div><div class="line"><span class="comment"># 启用时, 防止任何人通过如http://my.host/cgi-bin/php/secretdir/script.php这样的URL直接调用PHP。PHP在此模式下只会解析已经通过了web服务器的重定向规则的URL。在大多数web服务器中以CGI方式运行PHP时很有必要用cgi.force_redirect提供安全。PHP默认其为On。可以将其关闭，但风险自担。注: Windows用户，可以安全地在IIS之下将其关闭，事实上必须这么做。要在OmniHTTPD或Xitami之下使用也必须将其关闭。</span></div><div class="line">cgi.<span class="attr">force_redirect</span> = <span class="number">0</span></div><div class="line"><span class="comment"># 1:PHP CGI以/为分隔符号从后向前依次检查请求的路径, 对CGI提供了真正的PATH_INFO/PATH_TRANSLATED支持。以前PHP的行为是将PATH_TRANSLATED设为SCRIPT_FILENAME，而不管PATH_INFO是什么。有关PATH_INFO的更多信息见cgi规格。将此值设为1将使PHP CGI修正其路径以遵守规格。设为0 将使PHP的行为和从前一样。默认为零。用户应该修正其脚本使用SCRIPT_FILENAME而不是PATH_TRANSLATED。</span></div><div class="line">cgi.<span class="attr">fix_pathinfo</span> = <span class="number">1</span></div><div class="line"><span class="comment"># IIS（在基于 WINNT 的操作系统上）中的FastCGI支持模仿客户端安全令牌的能力。这使得IIS能够定义运行时所基于的请求的安全上下文。Apache中的mod_fastcgi不支持此特性（03/17/2002）。如果在IIS 中运行则设为1。默认为 0。</span></div><div class="line">fastcgi.<span class="attr">impersonate</span> = <span class="number">1</span></div><div class="line"><span class="comment"># 指定PHP在发送HTTP响应代码时使用何种报头。如果设定为0，PHP发送一个Status: 报头，Apache和其它web server都支持。如果此选项设定为1，PHP将发送RFC 2616兼容的报头。除非你知道自己在做什么，否则保留其值为 0。</span></div><div class="line">cgi.<span class="attr">rfc2616_headers</span> = <span class="number">1</span></div><div class="line">date.<span class="attr">timezone</span> = Asia/ChongQing</div></pre></td></tr></table></figure></p>
+<p>启动PHP-FPM：<code>php-cgi.exe -b 127.0.0.1:9000</code>。</p>
+<p>停止PHP-FPM：<code>taskkill /fi &quot;imagename eq php-cgi.exe&quot;</code>或<code>taskkill /F /IM php-cgi.exe &gt; nul</code>。</p>
+<p>修改Nginx配置文件以支持PHP-FPM比较简单，核心就一句话——<em>把请求的信息转发给9000端口的PHP进程，让PHP进程处理指定目录下的PHP文件</em>。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><div class="line"><span class="attribute">location</span> <span class="regexp">~ \.php$</span> &#123;</div><div class="line">    <span class="comment">#root html; # 提取到server块中</span></div><div class="line">    <span class="attribute">fastcgi_pass</span>   <span class="number">127.0.0.1:9000</span>;</div><div class="line">    <span class="attribute">fastcgi_index</span>  index.php;</div><div class="line">    <span class="attribute">fastcgi_param</span>  SCRIPT_FILENAME  <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;</div><div class="line">    <span class="attribute">include</span>        fastcgi_params;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="附：nginx-conf"><a href="#附：nginx-conf" class="headerlink" title="附：nginx.conf"></a>附：nginx.conf</h2><figure class="highlight nginx"><table><tr><td class="code"><pre><div class="line"><span class="comment">#user  nobody; #运行用户</span></div><div class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>; <span class="comment">#启动进程，通常设置成和cpu的数量相等</span></div><div class="line"></div><div class="line"><span class="comment">#全局错误日志 定义类型[ debug | info | notice | warn | error | crit ]</span></div><div class="line"><span class="comment">#error_log  logs/error.log;</span></div><div class="line"><span class="comment">#error_log  logs/error.log  notice;</span></div><div class="line"><span class="comment">#error_log  logs/error.log  info;</span></div><div class="line"></div><div class="line"><span class="comment">#pid        logs/nginx.pid; #进程文件 PID文件</span></div><div class="line"></div><div class="line"><span class="comment">#指定一个nginx进程可以打开的最多文件描述符数目</span></div><div class="line"><span class="attribute">worker_rlimit_nofile</span> <span class="number">51200</span>;</div><div class="line"></div><div class="line"><span class="comment">#工作模式及连接数上限</span></div><div class="line"><span class="section">events</span> &#123;</div><div class="line">    <span class="comment">#参考事件模型，use [ kqueue | rtsig | epoll | /dev/poll | select | poll ];</span></div><div class="line">    <span class="comment">#epoll模型是Linux 2.6以上版本内核中的高性能网络I/O模型，如果跑在FreeBSD上面，就用kqueue模型。</span></div><div class="line">    <span class="comment">#use   epoll;</span></div><div class="line"></div><div class="line">    <span class="comment">#单个后台worker process进程的最大并发连接数（最大连接数=连接数*进程数）</span></div><div class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">#设定http服务器</span></div><div class="line"><span class="section">http</span> &#123;</div><div class="line">    <span class="attribute">include</span>       mime.types; <span class="comment">#文件扩展名与文件类型映射表，由mime.type文件定义</span></div><div class="line">    <span class="attribute">default_type</span>  application/octet-stream; <span class="comment">#默认文件类型</span></div><div class="line">    <span class="comment">#charset utf-8; #默认编码</span></div><div class="line"></div><div class="line">    <span class="comment">#server_names_hash_bucket_size 128; #服务器名字的hash表大小</span></div><div class="line">    <span class="comment">#client_header_buffer_size 32k; #上传文件大小限制</span></div><div class="line">    <span class="comment">#large_client_header_buffers 4 64k; #设定请求缓</span></div><div class="line">    <span class="comment">#client_max_body_size 8m; #设定请求缓</span></div><div class="line"></div><div class="line">    <span class="comment">#设定日志格式</span></div><div class="line">    <span class="comment">#log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '</span></div><div class="line">    <span class="comment">#                  '$status $body_bytes_sent "$http_referer" '</span></div><div class="line">    <span class="comment">#                  '"$http_user_agent" "$http_x_forwarded_for"';</span></div><div class="line"></div><div class="line">    <span class="comment">#access_log  logs/access.log  main;</span></div><div class="line"></div><div class="line">    <span class="comment">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，</span></div><div class="line">    <span class="comment">#对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。</span></div><div class="line">    <span class="comment">#注意：如果图片显示不正常把这个改 成off。</span></div><div class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</div><div class="line">    <span class="comment">#autoindex on; #开启目录列表访问，适合下载服务器，默认关闭。</span></div><div class="line">    <span class="comment">#tcp_nopush     on; #防止网络阻塞</span></div><div class="line">    <span class="comment">#tcp_nodelay on; #防止网络阻塞</span></div><div class="line"></div><div class="line">    <span class="comment">#长连接超时时间，单位是秒</span></div><div class="line">    <span class="comment">#keepalive_timeout  0;</span></div><div class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</div><div class="line"></div><div class="line">    <span class="comment">#FastCGI相关参数是为了改善网站的性能：减少资源占用，提高访问速度。下面参数看字面意思都能理解。</span></div><div class="line">    <span class="comment">#fastcgi_connect_timeout 300;</span></div><div class="line">    <span class="comment">#fastcgi_send_timeout 300;</span></div><div class="line">    <span class="comment">#fastcgi_read_timeout 300;</span></div><div class="line">    <span class="comment">#fastcgi_buffer_size 64k;</span></div><div class="line">    <span class="comment">#fastcgi_buffers 4 64k;</span></div><div class="line">    <span class="comment">#fastcgi_busy_buffers_size 128k;</span></div><div class="line">    <span class="comment">#fastcgi_temp_file_write_size 128k;</span></div><div class="line"></div><div class="line">    <span class="comment">#gzip模块设置</span></div><div class="line">    <span class="comment">#gzip  on; #开启gzip压缩</span></div><div class="line"></div><div class="line">    <span class="comment">#gzip_min_length 1k; #最小压缩文件大小</span></div><div class="line">    <span class="comment">#gzip_buffers 4 16k; #压缩缓冲区</span></div><div class="line">    <span class="comment">#gzip_http_version 1.0; #压缩版本（默认1.1，前端如果是squid2.5请使用1.0）</span></div><div class="line">    <span class="comment">#gzip_comp_level 2; #压缩等级</span></div><div class="line">    <span class="comment">#gzip_types text/plain application/x-javascript text/css application/xml; #压缩类型，默认就已经包含text/html，所以下面就不用再写了，写上去也不会有问题，但是会有一个warn。</span></div><div class="line">    <span class="comment">#gzip_vary on;</span></div><div class="line">    <span class="comment">#limit_zone crawler $binary_remote_addr 10m; #开启限制IP连接数的时候需要使用</span></div><div class="line"></div><div class="line">    <span class="comment">#负载均衡设置</span></div><div class="line">    <span class="comment">#upstream www.example.com &#123;</span></div><div class="line">    <span class="comment">#upstream的负载均衡，weight是权重，可以根据机器配置定义权重。weigth参数表示权值，权值越高被分配到的几率越大。</span></div><div class="line">    <span class="comment">#    server 192.168.80.121:80 weight=3;</span></div><div class="line">    <span class="comment">#    server 192.168.80.122:80 weight=2;</span></div><div class="line">    <span class="comment">#    server 192.168.80.123:80 weight=3;</span></div><div class="line">    <span class="comment">#&#125;</span></div><div class="line"></div><div class="line">    <span class="comment">#设定虚拟主机配置</span></div><div class="line">    <span class="section">server</span> &#123;</div><div class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;<span class="comment">#侦听80端口</span></div><div class="line">        <span class="attribute">server_name</span>  localhost;<span class="comment">#域名可以有多个，用空格隔开</span></div><div class="line"></div><div class="line">        <span class="comment">#charset koi8-r;#默认编码</span></div><div class="line"></div><div class="line">        <span class="comment">#access_log  logs/host.access.log  main;#设定本虚拟主机的访问日志</span></div><div class="line"></div><div class="line">        <span class="comment">#默认请求</span></div><div class="line">        <span class="attribute">location</span> / &#123;</div><div class="line">            <span class="attribute">root</span>   html;<span class="comment">#定义服务器的默认网站根目录位置</span></div><div class="line">            <span class="attribute">index</span>  index.html index.htm;<span class="comment">#定义首页索引文件的名称</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">#图片缓存时间设置</span></div><div class="line">        <span class="attribute">location</span> <span class="regexp">~ .*.(gif|jpg|jpeg|png|bmp|swf)$</span> &#123;</div><div class="line">            <span class="attribute">expires</span> <span class="number">10d</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">#JS和CSS缓存时间设置</span></div><div class="line">        <span class="attribute">location</span> <span class="regexp">~ .*.(js|css)?$</span> &#123;</div><div class="line">            <span class="attribute">expires</span> <span class="number">1h</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">#error_page  404              /404.html;# 定义错误提示页面</span></div><div class="line"></div><div class="line">        <span class="comment">#重定向服务器错误页面到静态页面/50x.html</span></div><div class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;</div><div class="line">        <span class="attribute">location</span> = /50x.html &#123;</div><div class="line">            <span class="attribute">root</span>   html;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">#代理PHP脚本到Apache监听的127.0.0.1:80</span></div><div class="line">        <span class="comment">#location ~ \.php$ &#123;</span></div><div class="line">        <span class="comment">#    proxy_pass   http://127.0.0.1;</span></div><div class="line">        <span class="comment">#&#125;</span></div><div class="line"></div><div class="line">        <span class="comment">#PHP脚本请求全部转发到FastCGI处理，使用FastCGI默认配置。</span></div><div class="line">        <span class="comment">#location ~ \.php$ &#123;</span></div><div class="line">        <span class="comment">#    root           html;</span></div><div class="line">        <span class="comment">#    fastcgi_pass   127.0.0.1:9000;</span></div><div class="line">        <span class="comment">#    fastcgi_index  index.php;</span></div><div class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></div><div class="line">        <span class="comment">#    include        fastcgi_params;</span></div><div class="line">        <span class="comment">#&#125;</span></div><div class="line"></div><div class="line">        <span class="comment">#拒绝访问.htaccess文件，如果Apache的文档根与nginx的一致</span></div><div class="line">        <span class="comment">#location ~ /\.ht &#123;</span></div><div class="line">        <span class="comment">#    deny  all;</span></div><div class="line">        <span class="comment">#&#125;</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">#另一个虚拟主机使用基于IP，基于名称和基于端口的配置的混合</span></div><div class="line">    <span class="comment">#server &#123;</span></div><div class="line">    <span class="comment">#    listen       8000;</span></div><div class="line">    <span class="comment">#    listen       somename:8080;</span></div><div class="line">    <span class="comment">#    server_name  somename  alias  another.alias;</span></div><div class="line"></div><div class="line">    <span class="comment">#    location / &#123;</span></div><div class="line">    <span class="comment">#        root   html;</span></div><div class="line">    <span class="comment">#        index  index.html index.htm;</span></div><div class="line">    <span class="comment">#    &#125;</span></div><div class="line">    <span class="comment">#&#125;</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">#HTTPS服务器</span></div><div class="line">    <span class="comment">#server &#123;</span></div><div class="line">    <span class="comment">#    listen       443 ssl;</span></div><div class="line">    <span class="comment">#    server_name  localhost;</span></div><div class="line"></div><div class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></div><div class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></div><div class="line"></div><div class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></div><div class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></div><div class="line"></div><div class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></div><div class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></div><div class="line"></div><div class="line">    <span class="comment">#    location / &#123;</span></div><div class="line">    <span class="comment">#        root   html;</span></div><div class="line">    <span class="comment">#        index  index.html index.htm;</span></div><div class="line">    <span class="comment">#    &#125;</span></div><div class="line">    <span class="comment">#&#125;</span></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[x] <a href="http://www.nginx.cn" target="_blank" rel="external">Nginx中文手册</a></p>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持“杂记”</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wx.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-zfb.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/04/21/vim-tips.html">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/04/25/iterm2-shortcut-key.html">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
