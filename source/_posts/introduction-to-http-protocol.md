@@ -2,7 +2,7 @@
 title: HTTP协议——历史演变
 date: 2017-04-06 16:32:05
 categories: [HTTP]
-description: HTTP Protocol，协议，blog.wuzhiwei.cn
+description: HTTP,HTTP Protocol,HTTP协议,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 **HTTP协议**是*HyperText Transfer Protocol*（超文本传输协议）的缩写，用于从万维网（World Wide Web，简称WWW）服务器传输超文本到本地浏览器的传送协议。主要规定了客户端和服务器之间的通信格式，默认使用80端口。
 

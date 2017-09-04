@@ -2,6 +2,7 @@
 title: 外观模式（Facade Pattern）
 date: 2017-04-18 18:58:55
 categories: [PHP]
+description: 外观模式,Facade Pattern,PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 模式定义
 

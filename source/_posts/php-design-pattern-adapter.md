@@ -2,6 +2,7 @@
 title: 适配器模式（Adapter Pattern）
 date: 2017-04-18 18:38:55
 categories: [PHP]
+description: 适配器模式,Adapter Pattern,PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 模式定义
 

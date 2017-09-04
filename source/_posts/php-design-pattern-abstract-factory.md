@@ -2,6 +2,7 @@
 title: 抽象工厂模式（Abstract Factory Pattern）
 date: 2017-04-18 17:58:09
 categories: [PHP]
+description: 抽象工厂模式,Abstract Factory Pattern,PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 模式定义
 

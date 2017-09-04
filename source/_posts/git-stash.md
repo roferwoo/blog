@@ -2,7 +2,7 @@
 title: Git Stash用法
 date: 2017-04-27 16:55:33
 categories: [Git]
-description: Git,Stash,Git命令,MacBook Pro,Mac,Tools,Mac开发常用工具
+description: Git,Stash,Git命令,MacBook Pro,Mac,Tools,Mac开发常用工具,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 在编码过程中经常会碰到突发BUG，需要紧急修复的场景（*BUG高于需求*）。可能与你写到一半的代码（*没有完成，不该提交*）产生冲突，这时Git为我们提供`git stash`命令将工作现场**暂存**起来，等以后恢复现场后继续之前未完成的编码。相关命令参考：
 

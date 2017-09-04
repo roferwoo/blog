@@ -2,6 +2,7 @@
 title: PHP设计模式——简介
 date: 2017-04-18 14:27:55
 categories: [PHP]
+description: PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 简介
 在我们的编程过程中，所遇到的大部分问题其实都已经被其他程序员碰到过，并一再的处理了；不论是使用什么编程语言。**设计模式**提取了共同问题，定义了经过测试的解决方案，并描述了可能的结果。

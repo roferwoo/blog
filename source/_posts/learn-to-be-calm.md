@@ -2,6 +2,7 @@
 title: 学会冷静，也是一种智慧！
 date: 2017-04-12 08:50:13
 categories: [随笔]
+description: 随笔,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 某人得一宝贝：紫砂壶，每夜都放在床头。一次失手将紫砂壶壶盖打翻到地上，惊醒后，甚恼。壶盖没了，留壶身何用？于是抓起壶扔到窗外。
 

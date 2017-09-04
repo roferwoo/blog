@@ -2,6 +2,7 @@
 title: 策略模式（Strategy Pattern）
 date: 2017-04-18 18:38:55
 categories: [PHP]
+description: 策略模式,Strategy Pattern,PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 模式定义
 

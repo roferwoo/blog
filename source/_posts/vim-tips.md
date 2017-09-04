@@ -1,7 +1,8 @@
 ---
 title: VIM操作技巧总结
 date: 2017-04-21 14:21:10
-categories: [Linux, vim]
+categories: [Vim]
+description: Vim,Vim命令,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 Vi最初是由Bill Joy于1976年编码实现的，而Vim(Vi IMproved)则是改进的Vi，由Bram Moolenaar在1991年开发并发布。Vi/Vim是所有Unix/Linux操作系统默认配备的编辑器。功能强大、操作高效，命令非常多、用法极为灵活。
 

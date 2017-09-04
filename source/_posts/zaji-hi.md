@@ -2,7 +2,7 @@
 title: 杂记：Hi！
 date: 2017-04-01 10:20:22
 categories: [随笔]
-description: 杂记,随笔,blog.wuzhiwei.cn
+description: 杂记,随笔,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 欢迎来到[杂记](http://blog.wuzhiwei.cn/)！
 

@@ -2,6 +2,7 @@
 title: UML类图介绍
 date: 2017-04-18 15:52:51
 categories: [UML]
+description: UML,类图,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 **UML类图**是一种结构图，用于描述一个系统的静态结构。类图以反映类结构和类之间关系为目的，用以描述软件系统的结构，是一种静态建模方法。*类图中的类，与面向对象语言中的类的概念是对应的*。
 

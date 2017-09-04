@@ -1,8 +1,8 @@
 ---
 title: iTerm2常用快捷键
 date: 2017-04-25 15:39:30
-categories: [Mac,iTerms]
-description: iTerms,Shortcut key,快捷键,iTerms快捷建,MacBook Pro,Mac,Tools,Mac开发常用工具
+categories: [iTerm2]
+description: iTerm2,Shortcut key,快捷键,iTerms快捷建,MacBook Pro,Mac,Tools,Mac开发常用工具,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 **iTerm2**开源免费，与*zsh*搭配差不多已经取代了*Terminal + bash*成为Mac上终端工具的标准配置。下面整理**iTerm2**使用过程中常用的快捷键。
 
@@ -32,6 +32,6 @@ description: iTerms,Shortcut key,快捷键,iTerms快捷建,MacBook Pro,Mac,Tools
 - 删除光标之前的字符：`ctrl + h`
 - 删除光标之前的单词：`ctrl + w`
 - 删除到文本末尾：`ctrl + k`
-- 交换光标处广本：`ctrl + t`
+- 交换光标处文本：`ctrl + t`
 - 清屏：`command + r`或`ctrl + l`
 

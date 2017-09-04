@@ -2,6 +2,7 @@
 title: Hexo代码高亮
 date: 2017-04-07 10:35:37
 categories: [Hexo]
+description: Hexo,Hexo代码高亮,MacBook Pro,Mac,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 程序员博客会经常贴代码，并使其高亮显示。*Hexo*自带代码高亮功能。
 

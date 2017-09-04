@@ -2,6 +2,7 @@
 title: 中介者模式（Mediator Pattern）
 date: 2017-04-18 18:38:55
 categories: [PHP]
+description: 中介者模式,Mediator Pattern,PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 模式定义
 

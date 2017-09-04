@@ -1,8 +1,8 @@
 ---
 title: 诞生记——GitHub Pages+Hexo
 date: 2017-04-01 11:20:22
-categories: [Hexo,GitHub]
-description: GitHub Pages,Hexo,Git,静态博客
+categories: [Hexo]
+description: GitHub Pages,Hexo,Git,静态博客,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 ## 为什么要使用静态博客？
 - 轻量级的博客系统，没有麻烦的配置，跨平台同步文件；

@@ -1,8 +1,8 @@
 ---
 title: Mac下Java开发环境搭建
 date: 2017-06-16 09:16:03
-categories: [Mac, Java]
-description: Mac,Java,JDK8,Java开发环境
+categories: [Java]
+description: Mac,Java,JDK 8,Java开发环境,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 最近公司要求几个Java项目，所以要把大学时期学习的Java捡起来，虽然在学校学习的是Java、JSP的一套，但毕业后就没写过了，一直做的PHP。也好借此机会重新学习一下吧，首先需要的当然是搭建开发环境，没有环境怎么玩！一步一步来吧~
 

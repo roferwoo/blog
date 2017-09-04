@@ -2,6 +2,7 @@
 title: 工厂方法模式（Factory Method Pattern）
 date: 2017-04-18 17:34:21
 categories: [PHP]
+description: 工厂方法模式,Factory Method Pattern,PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 模式定义
 

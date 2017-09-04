@@ -2,6 +2,7 @@
 title: 代理模式（Proxy Pattern）
 date: 2017-04-18 18:38:55
 categories: [PHP]
+description: 代理模式,Proxy Pattern,PHP,设计模式,博客,http://blog.wuzhiwei.cn,http://wuzhiwei.cn
 ---
 # 模式定义
 
